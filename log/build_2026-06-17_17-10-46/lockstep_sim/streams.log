@@ -1,0 +1,28 @@
+[0.006s] Invoking command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim': AMENT_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/lockstep_sim -- -j28 -l28
+[0.035s] [35m[1mConsolidate compiler generated dependencies of target lockstep_sim[0m
+[0.047s] [ 25%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/main.cpp.o[0m
+[1.340s] [ 50%] [32m[1mLinking CXX executable lockstep_sim[0m
+[1.443s] [100%] Built target lockstep_sim
+[1.451s] Invoked command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim' returned '0': AMENT_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/lockstep_sim -- -j28 -l28
+[1.452s] Invoking command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim': AMENT_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/lockstep_sim
+[1.456s] -- Install configuration: ""
+[1.456s] -- Installing: /home/dakota/.local/repos/control_framework/install/lockstep_sim/lib/lockstep_sim/lockstep_sim
+[1.458s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/lockstep_sim/lib/lockstep_sim/lockstep_sim" to ""
+[1.458s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models
+[1.458s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models/cart_pole.xml
+[1.458s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/package_run_dependencies/lockstep_sim
+[1.458s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/parent_prefix_path/lockstep_sim
+[1.458s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/ament_prefix_path.sh
+[1.458s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/ament_prefix_path.dsv
+[1.459s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/path.sh
+[1.459s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/path.dsv
+[1.459s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.bash
+[1.459s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.sh
+[1.459s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.zsh
+[1.459s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.dsv
+[1.459s] -- Installing: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/package.dsv
+[1.459s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/packages/lockstep_sim
+[1.459s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/cmake/lockstep_simConfig.cmake
+[1.459s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/cmake/lockstep_simConfig-version.cmake
+[1.459s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/package.xml
+[1.460s] Invoked command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim' returned '0': AMENT_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/lockstep_sim

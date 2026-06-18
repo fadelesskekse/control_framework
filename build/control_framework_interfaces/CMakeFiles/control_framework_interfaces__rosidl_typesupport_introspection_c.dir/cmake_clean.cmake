@@ -1,0 +1,17 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/control_framework_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_framework_interfaces/msg/detail/control_input__type_support.c.o"
+  "CMakeFiles/control_framework_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_framework_interfaces/msg/detail/control_input__type_support.c.o.d"
+  "CMakeFiles/control_framework_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_framework_interfaces/msg/detail/state__type_support.c.o"
+  "CMakeFiles/control_framework_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_framework_interfaces/msg/detail/state__type_support.c.o.d"
+  "libcontrol_framework_interfaces__rosidl_typesupport_introspection_c.pdb"
+  "libcontrol_framework_interfaces__rosidl_typesupport_introspection_c.so"
+  "rosidl_typesupport_introspection_c/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/control_framework_interfaces/msg/detail/control_input__type_support.c"
+  "rosidl_typesupport_introspection_c/control_framework_interfaces/msg/detail/state__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/control_framework_interfaces/msg/detail/state__type_support.c"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang C)
+  include(CMakeFiles/control_framework_interfaces__rosidl_typesupport_introspection_c.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

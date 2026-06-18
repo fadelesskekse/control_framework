@@ -1,0 +1,10 @@
+[35m[1mConsolidate compiler generated dependencies of target lockstep_sim[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/main.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o[0m
+[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:[m[K In constructor ‘[01m[KLockStepSim::LockStepSim()[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:20:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kament_index_cpp[m[K’ has not been declared
+   20 |       std::string package_share = [01;31m[Kament_index_cpp[m[K::get_package_share_directory("lockstep_sim");
+      |                                   [01;31m[K^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/lockstep_sim.dir/build.make:90: CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/lockstep_sim.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

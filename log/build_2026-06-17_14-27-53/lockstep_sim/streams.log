@@ -1,0 +1,57 @@
+[0.005s] Invoking command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim': AMENT_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/lockstep_sim -- -j28 -l28
+[0.031s] [35m[1mConsolidate compiler generated dependencies of target lockstep_sim[0m
+[0.043s] [ 25%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/main.cpp.o[0m
+[0.043s] [ 50%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o[0m
+[0.044s] [ 75%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/render.cpp.o[0m
+[0.172s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:[m[K In function ‘[01m[Kvoid render::keyboard(GLFWwindow*, int, int, int, int)[m[K’:
+[0.172s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:76:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwindow[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.172s]    76 |     void keyboard([01;35m[KGLFWwindow* window[m[K, int key, int scancode, int act, int mods)
+[0.172s]       |                   [01;35m[K~~~~~~~~~~~~^~~~~~[m[K
+[0.172s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:76:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscancode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.172s]    76 |     void keyboard(GLFWwindow* window, int key, [01;35m[Kint scancode[m[K, int act, int mods)
+[0.172s]       |                                                [01;35m[K~~~~^~~~~~~~[m[K
+[0.172s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:76:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.172s]    76 |     void keyboard(GLFWwindow* window, int key, int scancode, int act, [01;35m[Kint mods[m[K)
+[0.172s]       |                                                                       [01;35m[K~~~~^~~~[m[K
+[0.173s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:[m[K In function ‘[01m[Kvoid render::mouse_button(GLFWwindow*, int, int, int)[m[K’:
+[0.173s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:94:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kbutton[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.173s]    94 |     void mouse_button(GLFWwindow* window, [01;35m[Kint button[m[K, int act, int mods) {
+[0.173s]       |                                           [01;35m[K~~~~^~~~~~[m[K
+[0.173s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:94:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kact[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.173s]    94 |     void mouse_button(GLFWwindow* window, int button, [01;35m[Kint act[m[K, int mods) {
+[0.173s]       |                                                       [01;35m[K~~~~^~~[m[K
+[0.173s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:94:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.173s]    94 |     void mouse_button(GLFWwindow* window, int button, int act, [01;35m[Kint mods[m[K) {
+[0.173s]       |                                                                [01;35m[K~~~~^~~~[m[K
+[0.173s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:[m[K In function ‘[01m[Kvoid render::scroll(GLFWwindow*, double, double)[m[K’:
+[0.173s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:142:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwindow[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.173s]   142 |     void scroll([01;35m[KGLFWwindow* window[m[K, double xoffset, double yoffset) {
+[0.173s]       |                 [01;35m[K~~~~~~~~~~~~^~~~~~[m[K
+[0.173s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:142:44:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kxoffset[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.173s]   142 |     void scroll(GLFWwindow* window, [01;35m[Kdouble xoffset[m[K, double yoffset) {
+[0.173s]       |                                     [01;35m[K~~~~~~~^~~~~~~[m[K
+[1.866s] [100%] [32m[1mLinking CXX executable lockstep_sim[0m
+[1.963s] [100%] Built target lockstep_sim
+[1.971s] Invoked command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim' returned '0': AMENT_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/lockstep_sim -- -j28 -l28
+[1.972s] Invoking command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim': AMENT_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/lockstep_sim
+[1.977s] -- Install configuration: ""
+[1.977s] -- Installing: /home/dakota/.local/repos/control_framework/install/lockstep_sim/lib/lockstep_sim/lockstep_sim
+[1.978s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/lockstep_sim/lib/lockstep_sim/lockstep_sim" to ""
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models/cart_pole.xml
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/package_run_dependencies/lockstep_sim
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/parent_prefix_path/lockstep_sim
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/ament_prefix_path.sh
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/ament_prefix_path.dsv
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/path.sh
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/path.dsv
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.bash
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.sh
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.zsh
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.dsv
+[1.978s] -- Installing: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/package.dsv
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/packages/lockstep_sim
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/cmake/lockstep_simConfig.cmake
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/cmake/lockstep_simConfig-version.cmake
+[1.978s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/package.xml
+[1.979s] Invoked command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim' returned '0': AMENT_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/lockstep_sim

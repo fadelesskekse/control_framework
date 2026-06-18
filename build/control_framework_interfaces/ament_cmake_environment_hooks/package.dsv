@@ -1,0 +1,4 @@
+source;share/control_framework_interfaces/local_setup.bash
+source;share/control_framework_interfaces/local_setup.dsv
+source;share/control_framework_interfaces/local_setup.sh
+source;share/control_framework_interfaces/local_setup.zsh

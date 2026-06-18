@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "control_framework_interfaces__py",
+		"source" : "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/control_framework_interfaces__py"
+	}
+}

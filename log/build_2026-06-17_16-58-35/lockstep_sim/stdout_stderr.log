@@ -1,0 +1,21 @@
+[35m[1mConsolidate compiler generated dependencies of target lockstep_sim[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/main.cpp.o[0m
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:11[m[K,
+                 from [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/main.cpp:2[m[K:
+[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/main.cpp:29:13:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kdo[m[K’
+   29 |     rclcpp::[01;31m[KRCLCPP_WARN[m[K(logger, "Failed to configure high priority thread, are you root?");
+      |             [01;31m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/lockstep_sim.dir/build.make:76: CMakeFiles/lockstep_sim.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/lockstep_sim.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

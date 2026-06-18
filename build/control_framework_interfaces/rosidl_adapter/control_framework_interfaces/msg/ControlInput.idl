@@ -1,0 +1,12 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from control_framework_interfaces/msg/ControlInput.msg
+// generated code does not contain a copyright notice
+
+
+module control_framework_interfaces {
+  module msg {
+    struct ControlInput {
+      float control_input;
+    };
+  };
+};

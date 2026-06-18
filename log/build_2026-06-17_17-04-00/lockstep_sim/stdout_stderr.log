@@ -1,0 +1,9 @@
+[35m[1mConsolidate compiler generated dependencies of target lockstep_sim[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/main.cpp.o[0m
+[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/main.cpp:32:52:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""s[m[K’
+   32 |   const std::chrono::seconds EXPERIMENT_DURATION = [01;31m[K10s[m[K;
+      |                                                    [01;31m[K^~~[m[K
+gmake[2]: *** [CMakeFiles/lockstep_sim.dir/build.make:76: CMakeFiles/lockstep_sim.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/lockstep_sim.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,267 @@
+[0.006s] Invoking command in '/home/dakota/.local/repos/control_framework/build/control_framework_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dakota/.local/repos/control_framework/src/control_framework_interfaces -DCMAKE_INSTALL_PREFIX=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces
+[0.039s] -- The C compiler identification is GNU 11.4.0
+[0.067s] -- The CXX compiler identification is GNU 11.4.0
+[0.071s] -- Detecting C compiler ABI info
+[0.109s] -- Detecting C compiler ABI info - done
+[0.113s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.113s] -- Detecting C compile features
+[0.113s] -- Detecting C compile features - done
+[0.114s] -- Detecting CXX compiler ABI info
+[0.162s] -- Detecting CXX compiler ABI info - done
+[0.166s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.167s] -- Detecting CXX compile features
+[0.167s] -- Detecting CXX compile features - done
+[0.168s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.250s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.288s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.290s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.293s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.314s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.458s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.556s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.668s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.679s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[0.680s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.695s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[0.695s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.695s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.695s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.706s] -- Found PythonExtra: .so  
+[0.753s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.759s] -- Added test 'lint_cmake' to check CMake code style
+[0.760s] -- Added test 'xmllint' to check XML markup files
+[0.761s] -- Configuring done
+[0.773s] -- Generating done
+[0.778s] -- Build files have been written to: /home/dakota/.local/repos/control_framework/build/control_framework_interfaces
+[0.783s] Invoked command in '/home/dakota/.local/repos/control_framework/build/control_framework_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/dakota/.local/repos/control_framework/src/control_framework_interfaces -DCMAKE_INSTALL_PREFIX=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces
+[0.784s] Invoking command in '/home/dakota/.local/repos/control_framework/build/control_framework_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/control_framework_interfaces -- -j28 -l28
+[0.809s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.815s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.815s] [  7%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[0.818s] [  7%] Built target ament_cmake_python_copy_control_framework_interfaces
+[0.921s] running egg_info
+[0.921s] creating control_framework_interfaces.egg-info
+[0.921s] writing control_framework_interfaces.egg-info/PKG-INFO
+[0.922s] writing dependency_links to control_framework_interfaces.egg-info/dependency_links.txt
+[0.922s] writing top-level names to control_framework_interfaces.egg-info/top_level.txt
+[0.922s] writing manifest file 'control_framework_interfaces.egg-info/SOURCES.txt'
+[0.922s] reading manifest file 'control_framework_interfaces.egg-info/SOURCES.txt'
+[0.923s] writing manifest file 'control_framework_interfaces.egg-info/SOURCES.txt'
+[0.929s] [  7%] Built target control_framework_interfaces__rs
+[0.937s] [  7%] Built target ament_cmake_python_build_control_framework_interfaces_egg
+[0.939s] [ 10%] [32mBuilding C object CMakeFiles/control_framework_interfaces__rosidl_generator_c.dir/rosidl_generator_c/control_framework_interfaces/msg/detail/state__functions.c.o[0m
+[0.940s] [ 12%] [32mBuilding C object CMakeFiles/control_framework_interfaces__rosidl_generator_c.dir/rosidl_generator_c/control_framework_interfaces/msg/detail/control_input__functions.c.o[0m
+[0.946s] [ 12%] Built target control_framework_interfaces__cpp
+[0.953s] [ 20%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[0.953s] [ 20%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[0.953s] [ 20%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[0.962s] [ 22%] [32m[1mLinking C shared library libcontrol_framework_interfaces__rosidl_generator_c.so[0m
+[0.983s] [ 22%] Built target control_framework_interfaces__rosidl_generator_c
+[0.989s] [ 25%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[0.990s] [ 30%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[0.990s] [ 30%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.062s] [ 32%] [32mBuilding CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_framework_interfaces/msg/control_input__type_support.cpp.o[0m
+[1.062s] [ 35%] [32mBuilding CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_framework_interfaces/msg/state__type_support.cpp.o[0m
+[1.066s] [ 37%] [32mBuilding CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_framework_interfaces/msg/detail/state__type_support.cpp.o[0m
+[1.068s] [ 40%] [32mBuilding CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/control_framework_interfaces/msg/detail/control_input__type_support.cpp.o[0m
+[1.078s] [ 45%] [32mBuilding CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/msg/detail/dds_fastrtps/state__type_support.cpp.o[0m
+[1.078s] [ 45%] [32mBuilding CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/msg/detail/dds_fastrtps/control_input__type_support.cpp.o[0m
+[1.098s] [ 47%] [32mBuilding CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.o[0m
+[1.100s] [ 50%] [32mBuilding CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp.o[0m
+[1.105s] [ 55%] [32mBuilding C object CMakeFiles/control_framework_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_framework_interfaces/msg/detail/state__type_support.c.o[0m
+[1.105s] [ 55%] [32mBuilding C object CMakeFiles/control_framework_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_framework_interfaces/msg/detail/control_input__type_support.c.o[0m
+[1.108s] [ 57%] [32mBuilding CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__type_support_c.cpp.o[0m
+[1.110s] [ 60%] [32mBuilding CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/state__type_support_c.cpp.o[0m
+[1.121s] [ 62%] [32m[1mLinking CXX shared library libcontrol_framework_interfaces__rosidl_typesupport_c.so[0m
+[1.123s] [ 65%] [32m[1mLinking C shared library libcontrol_framework_interfaces__rosidl_typesupport_introspection_c.so[0m
+[1.142s] [ 65%] Built target control_framework_interfaces__rosidl_typesupport_introspection_c
+[1.147s] [ 65%] Built target control_framework_interfaces__rosidl_typesupport_c
+[1.223s] [ 70%] [32m[1mLinking CXX shared library libcontrol_framework_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[1.223s] [ 70%] [32m[1mLinking CXX shared library libcontrol_framework_interfaces__rosidl_typesupport_cpp.so[0m
+[1.247s] [ 70%] Built target control_framework_interfaces__rosidl_typesupport_introspection_cpp
+[1.251s] [ 70%] Built target control_framework_interfaces__rosidl_typesupport_cpp
+[1.267s] [ 72%] [32m[1mLinking CXX shared library libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[1.288s] [ 75%] [32m[1mLinking CXX shared library libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[1.313s] [ 75%] Built target control_framework_interfaces__rosidl_typesupport_fastrtps_cpp
+[1.327s] [ 75%] Built target control_framework_interfaces__rosidl_typesupport_fastrtps_c
+[1.339s] [ 75%] Built target control_framework_interfaces
+[1.351s] [ 77%] [34m[1mGenerating Python code for ROS interfaces[0m
+[1.499s] [ 77%] Built target control_framework_interfaces__py
+[1.511s] [ 80%] [32mBuilding C object CMakeFiles/control_framework_interfaces__rosidl_generator_py.dir/rosidl_generator_py/control_framework_interfaces/msg/_control_input_s.c.o[0m
+[1.511s] [ 82%] [32mBuilding C object CMakeFiles/control_framework_interfaces__rosidl_generator_py.dir/rosidl_generator_py/control_framework_interfaces/msg/_state_s.c.o[0m
+[1.559s] [ 85%] [32m[1mLinking C shared library rosidl_generator_py/control_framework_interfaces/libcontrol_framework_interfaces__rosidl_generator_py.so[0m
+[1.580s] [ 85%] Built target control_framework_interfaces__rosidl_generator_py
+[1.593s] [ 90%] [32mBuilding C object CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/control_framework_interfaces/_control_framework_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[1.593s] [ 92%] [32mBuilding C object CMakeFiles/control_framework_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/control_framework_interfaces/_control_framework_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[1.593s] [ 92%] [32mBuilding C object CMakeFiles/control_framework_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/control_framework_interfaces/_control_framework_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[1.635s] [ 95%] [32m[1mLinking C shared library rosidl_generator_py/control_framework_interfaces/control_framework_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[1.636s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/control_framework_interfaces/control_framework_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[1.637s] [100%] [32m[1mLinking C shared library rosidl_generator_py/control_framework_interfaces/control_framework_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[1.657s] [100%] Built target control_framework_interfaces__rosidl_typesupport_introspection_c__pyext
+[1.657s] [100%] Built target control_framework_interfaces__rosidl_typesupport_c__pyext
+[1.658s] [100%] Built target control_framework_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.664s] Invoked command in '/home/dakota/.local/repos/control_framework/build/control_framework_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/control_framework_interfaces -- -j28 -l28
+[1.670s] Invoking command in '/home/dakota/.local/repos/control_framework/build/control_framework_interfaces': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/control_framework_interfaces
+[1.675s] -- Install configuration: ""
+[1.675s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/ament_index/resource_index/rosidl_interfaces/control_framework_interfaces
+[1.675s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces
+[1.675s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg
+[1.675s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/control_input.h
+[1.676s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/state.h
+[1.676s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail
+[1.676s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__functions.c
+[1.676s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__struct.h
+[1.676s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__functions.h
+[1.676s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__struct.h
+[1.676s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__type_support.h
+[1.676s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__type_support.h
+[1.676s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__functions.h
+[1.677s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__functions.c
+[1.677s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.677s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/environment/library_path.sh
+[1.677s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/environment/library_path.dsv
+[1.677s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_generator_c.so
+[1.677s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_generator_c.so" to ""
+[1.677s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces
+[1.677s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg
+[1.677s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail
+[1.677s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__rosidl_typesupport_fastrtps_c.h
+[1.677s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_fastrtps_c.h
+[1.677s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.677s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so
+[1.677s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so" to ""
+[1.677s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces
+[1.677s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg
+[1.678s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail
+[1.678s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__type_support.c
+[1.678s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_introspection_c.h
+[1.678s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__rosidl_typesupport_introspection_c.h
+[1.678s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__type_support.c
+[1.678s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.678s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_typesupport_introspection_c.so
+[1.678s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_typesupport_introspection_c.so" to ""
+[1.678s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_typesupport_c.so
+[1.678s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_typesupport_c.so" to ""
+[1.678s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces
+[1.678s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/state.hpp
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.679s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__builder.hpp
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__struct.hpp
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__type_support.hpp
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__struct.hpp
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__type_support.hpp
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__traits.hpp
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__traits.hpp
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__builder.hpp
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/control_input.hpp
+[1.679s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces
+[1.679s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg
+[1.679s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/dds_fastrtps
+[1.679s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_fastrtps_cpp.hpp
+[1.680s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__rosidl_typesupport_fastrtps_cpp.hpp
+[1.680s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.680s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.680s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""
+[1.680s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces
+[1.680s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg
+[1.680s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail
+[1.680s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_introspection_cpp.hpp
+[1.680s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__type_support.cpp
+[1.680s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__rosidl_typesupport_introspection_cpp.hpp
+[1.680s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__type_support.cpp
+[1.680s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_typesupport_introspection_cpp.so
+[1.681s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_typesupport_introspection_cpp.so" to ""
+[1.681s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_typesupport_cpp.so
+[1.681s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_typesupport_cpp.so" to ""
+[1.681s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/environment/pythonpath.sh
+[1.681s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/environment/pythonpath.dsv
+[1.681s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces-0.0.0-py3.10.egg-info
+[1.681s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[1.681s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[1.681s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.681s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.682s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces
+[1.682s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/_control_framework_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[1.682s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/control_framework_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.682s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/libcontrol_framework_interfaces__rosidl_generator_py.so
+[1.682s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/control_framework_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.682s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/msg
+[1.682s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/msg/_state.py
+[1.682s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/msg/_control_input.py
+[1.682s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/msg/__init__.py
+[1.682s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/msg/_control_input_s.c
+[1.682s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/msg/_state_s.c
+[1.682s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/control_framework_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.683s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/__init__.py
+[1.683s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/_control_framework_interfaces_s.ep.rosidl_typesupport_c.c
+[1.683s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/_control_framework_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.700s] Listing '/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces'...
+[1.700s] Compiling '/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/__init__.py'...
+[1.700s] Listing '/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/msg'...
+[1.700s] Compiling '/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/msg/__init__.py'...
+[1.700s] Compiling '/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/msg/_control_input.py'...
+[1.700s] Compiling '/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/msg/_state.py'...
+[1.702s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/control_framework_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.702s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/control_framework_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/control_framework_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.703s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/control_framework_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/control_framework_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.703s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/local/lib/python3.10/dist-packages/control_framework_interfaces/control_framework_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_generator_py.so
+[1.703s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib/libcontrol_framework_interfaces__rosidl_generator_py.so" to ""
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/ament_index/resource_index/rust_packages/control_framework_interfaces
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/rust
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/rust/src
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/rust/src/lib.rs
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/rust/src/msg
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/rust/src/msg/rmw.rs
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/rust/src/msg.rs
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/rust/build.rs
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/rust/Cargo.toml
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/msg/ControlInput.idl
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/msg/State.idl
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/msg/ControlInput.msg
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/msg/State.msg
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/ament_index/resource_index/package_run_dependencies/control_framework_interfaces
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/ament_index/resource_index/parent_prefix_path/control_framework_interfaces
+[1.703s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/environment/ament_prefix_path.sh
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/environment/ament_prefix_path.dsv
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/environment/path.sh
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/environment/path.dsv
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/local_setup.bash
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/local_setup.sh
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/local_setup.zsh
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/local_setup.dsv
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/package.dsv
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/ament_index/resource_index/packages/control_framework_interfaces
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/export_control_framework_interfaces__rosidl_generator_cExport.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/export_control_framework_interfaces__rosidl_generator_cExport-noconfig.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/export_control_framework_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/export_control_framework_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/control_framework_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/control_framework_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/control_framework_interfaces__rosidl_typesupport_cExport.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/control_framework_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/export_control_framework_interfaces__rosidl_generator_cppExport.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/export_control_framework_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/export_control_framework_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/control_framework_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/control_framework_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/control_framework_interfaces__rosidl_typesupport_cppExport.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/control_framework_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[1.704s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/export_control_framework_interfaces__rosidl_generator_pyExport.cmake
+[1.705s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/export_control_framework_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[1.705s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/rosidl_cmake-extras.cmake
+[1.705s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.705s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.705s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.705s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.705s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.705s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.705s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/control_framework_interfacesConfig.cmake
+[1.705s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake/control_framework_interfacesConfig-version.cmake
+[1.705s] -- Installing: /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/package.xml
+[1.706s] Invoked command in '/home/dakota/.local/repos/control_framework/build/control_framework_interfaces' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/control_framework_interfaces
