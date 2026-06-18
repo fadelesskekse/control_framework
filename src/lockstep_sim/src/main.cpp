@@ -1,22 +1,23 @@
 
-#include <chrono>
+//#include <chrono>
 
 #include "../include/lockstep_sim/lockstep_sim.hpp"
 #include "rclcpp/executor.hpp"
 #include "../include/lockstep_sim/utilities.hpp"
 
 
-using std::chrono::seconds;
-using utilities::ThreadPriority;
-using utilities::configure_thread;
-using namespace std::chrono_literals;
+//using std::chrono::seconds;
+//using utilities::ThreadPriority;
+//using utilities::configure_thread;
+//using namespace std::chrono_literals;
 
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
- // rclcpp::spin(std::make_shared<LockStepSim>());
-  //rclcpp::shutdown();
+  rclcpp::spin(std::make_shared<LockStepSim>());
+  rclcpp::shutdown();
   
+  /*
   rclcpp::executors::SingleThreadedExecutor sim_executor;
   auto sim_node = std::make_shared<LockStepSim>();
   sim_executor.add_node(sim_node);
@@ -41,7 +42,7 @@ int main(int argc, char * argv[])
   //std::this_thread::sleep_for(EXPERIMENT_DURATION);
   sim_thread.join();
   rclcpp::shutdown();
-  
+  */
   
   return 0;
 }

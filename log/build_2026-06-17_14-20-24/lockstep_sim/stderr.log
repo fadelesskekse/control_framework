@@ -1,7 +1,0 @@
-[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:[m[K In member function ‘[01m[Kvoid LockStepSim::sim_callback()[m[K’:
-[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:43:16:[m[K [01;31m[Kerror: [m[K‘[01m[Krender_frame_rate[m[K’ was not declared in this scope
-   43 |   if (count_ % [01;31m[Krender_frame_rate[m[K == 0)
-      |                [01;31m[K^~~~~~~~~~~~~~~~~[m[K
-gmake[2]: *** [CMakeFiles/lockstep_sim.dir/build.make:90: CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/lockstep_sim.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

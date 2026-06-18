@@ -1,4 +1,4 @@
 msg/ControlInput.idl
 msg/ControlInput.msg
-msg/State.idl
-msg/State.msg
+msg/JointState.idl
+msg/JointState.msg

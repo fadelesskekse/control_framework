@@ -368,7 +368,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/msg" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/msg/State.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/msg" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/msg/JointState.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -376,7 +376,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/msg" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces/msg/State.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/msg" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces/msg/JointState.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

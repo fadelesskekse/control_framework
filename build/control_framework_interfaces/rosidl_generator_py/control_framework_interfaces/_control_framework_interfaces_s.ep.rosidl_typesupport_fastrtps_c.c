@@ -163,39 +163,39 @@ _register_msg_type__msg__control_input(PyObject * pymodule)
 // #include "rosidl_runtime_c/service_type_support_struct.h"
 // already included above
 // #include "rosidl_runtime_c/action_type_support_struct.h"
-#include "control_framework_interfaces/msg/detail/state__type_support.h"
-#include "control_framework_interfaces/msg/detail/state__struct.h"
-#include "control_framework_interfaces/msg/detail/state__functions.h"
+#include "control_framework_interfaces/msg/detail/joint_state__type_support.h"
+#include "control_framework_interfaces/msg/detail/joint_state__struct.h"
+#include "control_framework_interfaces/msg/detail/joint_state__functions.h"
 
-static void * control_framework_interfaces__msg__state__create_ros_message(void)
+static void * control_framework_interfaces__msg__joint_state__create_ros_message(void)
 {
-  return control_framework_interfaces__msg__State__create();
+  return control_framework_interfaces__msg__JointState__create();
 }
 
-static void control_framework_interfaces__msg__state__destroy_ros_message(void * raw_ros_message)
+static void control_framework_interfaces__msg__joint_state__destroy_ros_message(void * raw_ros_message)
 {
-  control_framework_interfaces__msg__State * ros_message = (control_framework_interfaces__msg__State *)raw_ros_message;
-  control_framework_interfaces__msg__State__destroy(ros_message);
+  control_framework_interfaces__msg__JointState * ros_message = (control_framework_interfaces__msg__JointState *)raw_ros_message;
+  control_framework_interfaces__msg__JointState__destroy(ros_message);
 }
 
 ROSIDL_GENERATOR_C_IMPORT
-bool control_framework_interfaces__msg__state__convert_from_py(PyObject * _pymsg, void * ros_message);
+bool control_framework_interfaces__msg__joint_state__convert_from_py(PyObject * _pymsg, void * ros_message);
 ROSIDL_GENERATOR_C_IMPORT
-PyObject * control_framework_interfaces__msg__state__convert_to_py(void * raw_ros_message);
+PyObject * control_framework_interfaces__msg__joint_state__convert_to_py(void * raw_ros_message);
 
 
 ROSIDL_GENERATOR_C_IMPORT
 const rosidl_message_type_support_t *
-ROSIDL_GET_MSG_TYPE_SUPPORT(control_framework_interfaces, msg, State);
+ROSIDL_GET_MSG_TYPE_SUPPORT(control_framework_interfaces, msg, JointState);
 
 int8_t
-_register_msg_type__msg__state(PyObject * pymodule)
+_register_msg_type__msg__joint_state(PyObject * pymodule)
 {
   int8_t err;
 
   PyObject * pyobject_create_ros_message = NULL;
   pyobject_create_ros_message = PyCapsule_New(
-    (void *)&control_framework_interfaces__msg__state__create_ros_message,
+    (void *)&control_framework_interfaces__msg__joint_state__create_ros_message,
     NULL, NULL);
   if (!pyobject_create_ros_message) {
     // previously added objects will be removed when the module is destroyed
@@ -203,7 +203,7 @@ _register_msg_type__msg__state(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "create_ros_message_msg__msg__state",
+    "create_ros_message_msg__msg__joint_state",
     pyobject_create_ros_message);
   if (err) {
     // the created capsule needs to be decremented
@@ -214,7 +214,7 @@ _register_msg_type__msg__state(PyObject * pymodule)
 
   PyObject * pyobject_destroy_ros_message = NULL;
   pyobject_destroy_ros_message = PyCapsule_New(
-    (void *)&control_framework_interfaces__msg__state__destroy_ros_message,
+    (void *)&control_framework_interfaces__msg__joint_state__destroy_ros_message,
     NULL, NULL);
   if (!pyobject_destroy_ros_message) {
     // previously added objects will be removed when the module is destroyed
@@ -222,7 +222,7 @@ _register_msg_type__msg__state(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "destroy_ros_message_msg__msg__state",
+    "destroy_ros_message_msg__msg__joint_state",
     pyobject_destroy_ros_message);
   if (err) {
     // the created capsule needs to be decremented
@@ -233,7 +233,7 @@ _register_msg_type__msg__state(PyObject * pymodule)
 
   PyObject * pyobject_convert_from_py = NULL;
   pyobject_convert_from_py = PyCapsule_New(
-    (void *)&control_framework_interfaces__msg__state__convert_from_py,
+    (void *)&control_framework_interfaces__msg__joint_state__convert_from_py,
     NULL, NULL);
   if (!pyobject_convert_from_py) {
     // previously added objects will be removed when the module is destroyed
@@ -241,7 +241,7 @@ _register_msg_type__msg__state(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "convert_from_py_msg__msg__state",
+    "convert_from_py_msg__msg__joint_state",
     pyobject_convert_from_py);
   if (err) {
     // the created capsule needs to be decremented
@@ -252,7 +252,7 @@ _register_msg_type__msg__state(PyObject * pymodule)
 
   PyObject * pyobject_convert_to_py = NULL;
   pyobject_convert_to_py = PyCapsule_New(
-    (void *)&control_framework_interfaces__msg__state__convert_to_py,
+    (void *)&control_framework_interfaces__msg__joint_state__convert_to_py,
     NULL, NULL);
   if (!pyobject_convert_to_py) {
     // previously added objects will be removed when the module is destroyed
@@ -260,7 +260,7 @@ _register_msg_type__msg__state(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "convert_to_py_msg__msg__state",
+    "convert_to_py_msg__msg__joint_state",
     pyobject_convert_to_py);
   if (err) {
     // the created capsule needs to be decremented
@@ -271,7 +271,7 @@ _register_msg_type__msg__state(PyObject * pymodule)
 
   PyObject * pyobject_type_support = NULL;
   pyobject_type_support = PyCapsule_New(
-    (void *)ROSIDL_GET_MSG_TYPE_SUPPORT(control_framework_interfaces, msg, State),
+    (void *)ROSIDL_GET_MSG_TYPE_SUPPORT(control_framework_interfaces, msg, JointState),
     NULL, NULL);
   if (!pyobject_type_support) {
     // previously added objects will be removed when the module is destroyed
@@ -279,7 +279,7 @@ _register_msg_type__msg__state(PyObject * pymodule)
   }
   err = PyModule_AddObject(
     pymodule,
-    "type_support_msg__msg__state",
+    "type_support_msg__msg__joint_state",
     pyobject_type_support);
   if (err) {
     // the created capsule needs to be decremented
@@ -306,7 +306,7 @@ PyInit_control_framework_interfaces_s__rosidl_typesupport_fastrtps_c(void)
     return NULL;
   }
 
-  err = _register_msg_type__msg__state(pymodule);
+  err = _register_msg_type__msg__joint_state(pymodule);
   if (err) {
     Py_XDECREF(pymodule);
     return NULL;

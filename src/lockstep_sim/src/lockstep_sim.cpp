@@ -12,12 +12,12 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       sim_timer_ = this->create_wall_timer(
       1ms, std::bind(&LockStepSim::sim_callback, this));
 
-      state_publisher_ = this->create_publisher<control_framework_interfaces::msg::State>("state", 10); //Need custom msg
+      state_publisher_ = this->create_publisher<control_framework_interfaces::msg::JointState>("joint_states", 10); //Need custom msg
       control_input_publisher = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg
       
       //Load Model
       std::string package_share = ament_index_cpp::get_package_share_directory("lockstep_sim");
-      std::string model_path = package_share + "/models/cart_pole.xml";
+      std::string model_path = package_share + "/models/cart_pole_mjcf.xml";
       char error[1000];
 
       m = mj_loadXML(model_path.c_str(), NULL, error, 1000);
@@ -34,13 +34,9 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       count_ = 0;
       render_frame_rate = 16; //1/60 fps ~ 16ms per frame
 
-      //_robotCommand.motor_command[i].q = cmd->motorCmd[i].q;
-      //std::cout << state_.pos_state << std::endl;
-      //if(m->nq ==)
-      //std::cout << state_.size() << std::endl;
-      //for(int i = 0; i < )
+
       
-      
+  
 
 }
 
@@ -48,7 +44,7 @@ void LockStepSim::sim_callback()
 {
   mj_step(m, d);
 
-  auto state = control_framework_interfaces::msg::State();
+  auto state = control_framework_interfaces::msg::JointState();
  // auto control_input = control_framework_interfaces::msg::ControlInput();
 
   for(int i = 0; i < m->nq;i++){

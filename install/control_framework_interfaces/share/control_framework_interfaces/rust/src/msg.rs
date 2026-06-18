@@ -48,14 +48,14 @@ impl rosidl_runtime_rs::Message for ControlInput {
 }
 
 
-// Corresponds to control_framework_interfaces__msg__State
+// Corresponds to control_framework_interfaces__msg__JointState
 
 // This struct is not documented.
 #[allow(missing_docs)]
 
 #[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
 #[derive(Clone, Debug, PartialEq, PartialOrd)]
-pub struct State {
+pub struct JointState {
 
     // This member is not documented.
     #[allow(missing_docs)]
@@ -70,14 +70,14 @@ pub struct State {
 
 
 
-impl Default for State {
+impl Default for JointState {
   fn default() -> Self {
-    <Self as rosidl_runtime_rs::Message>::from_rmw_message(super::msg::rmw::State::default())
+    <Self as rosidl_runtime_rs::Message>::from_rmw_message(super::msg::rmw::JointState::default())
   }
 }
 
-impl rosidl_runtime_rs::Message for State {
-  type RmwMsg = super::msg::rmw::State;
+impl rosidl_runtime_rs::Message for JointState {
+  type RmwMsg = super::msg::rmw::JointState;
 
   fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
     match msg_cow {

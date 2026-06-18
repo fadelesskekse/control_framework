@@ -67,7 +67,7 @@ include CMakeFiles/control_framework_interfaces.dir/compiler_depend.make
 include CMakeFiles/control_framework_interfaces.dir/progress.make
 
 CMakeFiles/control_framework_interfaces: /home/dakota/.local/repos/control_framework/src/control_framework_interfaces/msg/ControlInput.msg
-CMakeFiles/control_framework_interfaces: /home/dakota/.local/repos/control_framework/src/control_framework_interfaces/msg/State.msg
+CMakeFiles/control_framework_interfaces: /home/dakota/.local/repos/control_framework/src/control_framework_interfaces/msg/JointState.msg
 
 control_framework_interfaces: CMakeFiles/control_framework_interfaces
 control_framework_interfaces: CMakeFiles/control_framework_interfaces.dir/build.make

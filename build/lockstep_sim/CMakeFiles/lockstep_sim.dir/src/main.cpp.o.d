@@ -1,7 +1,9 @@
 CMakeFiles/lockstep_sim.dir/src/main.cpp.o: \
  /home/dakota/.local/repos/control_framework/src/lockstep_sim/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/11/chrono \
- /usr/include/c++/11/ratio /usr/include/c++/11/type_traits \
+ /usr/include/stdc-predef.h \
+ /home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp \
+ /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
+ /usr/include/c++/11/type_traits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -40,9 +42,8 @@ CMakeFiles/lockstep_sim.dir/src/main.cpp.o: \
  /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/ext/numeric_traits.h \
  /usr/include/c++/11/bits/cpp_type_traits.h \
- /usr/include/c++/11/ext/type_traits.h \
- /home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp \
- /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
+ /usr/include/c++/11/ext/type_traits.h /usr/include/c++/11/memory \
+ /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/c++/11/bits/functexcept.h \
  /usr/include/c++/11/bits/exception_defines.h \
  /usr/include/c++/11/bits/stl_pair.h /usr/include/c++/11/bits/move.h \
@@ -625,11 +626,11 @@ CMakeFiles/lockstep_sim.dir/src/main.cpp.o: \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/thread_safe_synchronization.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/detail/write_preferring_read_write_lock.hpp \
  /opt/ros/humble/include/rclcpp/rclcpp/wait_set_template.hpp \
- /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/state.hpp \
- /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__struct.hpp \
- /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__builder.hpp \
- /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__traits.hpp \
- /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/state__type_support.hpp \
+ /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/joint_state.hpp \
+ /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/joint_state__struct.hpp \
+ /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/joint_state__builder.hpp \
+ /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/joint_state__traits.hpp \
+ /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/joint_state__type_support.hpp \
  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/control_input.hpp \
  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__struct.hpp \

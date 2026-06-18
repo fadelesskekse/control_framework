@@ -1,0 +1,38 @@
+
+<mujoco model="cart_pole">
+    <default>
+    <geom rgba=".8 .6 .4 1"/>
+    </default>
+
+    <asset>
+    <texture type="skybox" builtin="gradient" rgb1="1 1 1" rgb2=".6 .8 1" width="256" height="256"/>
+    </asset>
+
+    <worldbody>
+
+        <light pos="0 1 1" dir="0 -1 -1" diffuse="1 1 1"/>
+
+        <geom type="plane" size="1 1 0.1" rgba=".9 0 0 1"/>
+
+        <body pos="0 0 0.0508">
+     
+            <joint type="slide" axis="1 0 0"/>
+            <geom type="box" size=".1016 .0762 .0508" mass="1" friction="0 0 0"/>
+            
+            
+            <body pos="0 0 .0254">
+                <joint type="hinge" axis="0 -1 0"/>
+                <geom type="capsule" size="0.01" fromto="0 0 0 0 0 .3" friction="0 0 0"/>
+
+                    <body pos="0 0 .3">
+                        <geom type="sphere" mass=".2" size=".025" />
+
+                    </body>
+            </body>
+
+        </body>
+
+    </worldbody>
+/
+
+</mujoco>

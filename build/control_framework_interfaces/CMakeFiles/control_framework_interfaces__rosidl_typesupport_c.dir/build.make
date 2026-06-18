@@ -76,12 +76,12 @@ rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_suppor
 rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_c/resource/msg__type_support.cpp.em
 rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em
 rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp: rosidl_adapter/control_framework_interfaces/msg/ControlInput.idl
-rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp: rosidl_adapter/control_framework_interfaces/msg/State.idl
+rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp: rosidl_adapter/control_framework_interfaces/msg/JointState.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support dispatch for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
 
-rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp: rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp
-	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp
+rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp: rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp
 
 CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp.o: CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp.o: rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp
@@ -97,30 +97,30 @@ CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesup
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp -o CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp.s
 
-CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.o: CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/flags.make
-CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.o: rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp
-CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.o: CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.o -MF CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.o.d -o CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.o -c /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.o: CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.o: rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.o: CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.o -MF CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.o.d -o CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.o -c /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp
 
-CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp > CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.i
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp > CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.i
 
-CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp -o CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.s
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp -o CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.s
 
 # Object files for target control_framework_interfaces__rosidl_typesupport_c
 control_framework_interfaces__rosidl_typesupport_c_OBJECTS = \
 "CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp.o" \
-"CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.o"
+"CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.o"
 
 # External object files for target control_framework_interfaces__rosidl_typesupport_c
 control_framework_interfaces__rosidl_typesupport_c_EXTERNAL_OBJECTS =
 
 libcontrol_framework_interfaces__rosidl_typesupport_c.so: CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp.o
-libcontrol_framework_interfaces__rosidl_typesupport_c.so: CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp.o
+libcontrol_framework_interfaces__rosidl_typesupport_c.so: CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp.o
 libcontrol_framework_interfaces__rosidl_typesupport_c.so: CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/build.make
 libcontrol_framework_interfaces__rosidl_typesupport_c.so: libcontrol_framework_interfaces__rosidl_generator_c.so
 libcontrol_framework_interfaces__rosidl_typesupport_c.so: /opt/ros/humble/lib/librosidl_typesupport_c.so
@@ -139,7 +139,7 @@ CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/clean:
 .PHONY : CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/clean
 
 CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/control_framework_interfaces/msg/control_input__type_support.cpp
-CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/control_framework_interfaces/msg/state__type_support.cpp
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/control_framework_interfaces/msg/joint_state__type_support.cpp
 	cd /home/dakota/.local/repos/control_framework/build/control_framework_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dakota/.local/repos/control_framework/src/control_framework_interfaces /home/dakota/.local/repos/control_framework/src/control_framework_interfaces /home/dakota/.local/repos/control_framework/build/control_framework_interfaces /home/dakota/.local/repos/control_framework/build/control_framework_interfaces /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/control_framework_interfaces__rosidl_typesupport_c.dir/depend
 

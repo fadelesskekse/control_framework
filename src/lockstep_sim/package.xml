@@ -7,6 +7,7 @@
   <maintainer email="dakotamercerwork@gmail.com">dakota</maintainer>
   <license>Apache-2.0</license>
 
+  <exec_depend>ros2launch</exec_depend>
   <buildtool_depend>ament_cmake</buildtool_depend>
   <depend>rclcpp</depend>
   <depend>control_framework_interfaces</depend>

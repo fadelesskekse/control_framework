@@ -5,8 +5,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/control_framework_interfaces/msg/__init__.py"
   "../rosidl_generator_py/control_framework_interfaces/msg/_control_input.py"
   "../rosidl_generator_py/control_framework_interfaces/msg/_control_input_s.c"
-  "../rosidl_generator_py/control_framework_interfaces/msg/_state.py"
-  "../rosidl_generator_py/control_framework_interfaces/msg/_state_s.c"
+  "../rosidl_generator_py/control_framework_interfaces/msg/_joint_state.py"
+  "../rosidl_generator_py/control_framework_interfaces/msg/_joint_state_s.c"
   "CMakeFiles/control_framework_interfaces__py"
 )
 
