@@ -1,0 +1,10 @@
+[0.005s] Invoking command in '/home/dakota/.local/repos/control_framework/build/services': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/services -- -j28 -l28
+[0.033s] [ 50%] [32mBuilding CXX object CMakeFiles/services.dir/src/services.cpp.o[0m
+[0.135s] [01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kstd_srvs/std_srvs.hpp: No such file or directory
+[0.135s]     2 | #include [01;31m[K"std_srvs/std_srvs.hpp"[m[K
+[0.135s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.135s] compilation terminated.
+[0.136s] gmake[2]: *** [CMakeFiles/services.dir/build.make:76: CMakeFiles/services.dir/src/services.cpp.o] Error 1
+[0.136s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/services.dir/all] Error 2
+[0.136s] gmake: *** [Makefile:146: all] Error 2
+[0.138s] Invoked command in '/home/dakota/.local/repos/control_framework/build/services' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/services -- -j28 -l28

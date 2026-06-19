@@ -1,0 +1,20 @@
+[35m[1mConsolidate compiler generated dependencies of target services[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/services.dir/src/services.cpp.o[0m
+[100%] [32m[1mLinking CXX executable services[0m
+[100%] Built target services
+-- Install configuration: ""
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/services/share/ament_index/resource_index/package_run_dependencies/services
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/services/share/ament_index/resource_index/parent_prefix_path/services
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/services/share/services/environment/ament_prefix_path.sh
+-- Installing: /home/dakota/.local/repos/control_framework/install/services/share/services/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/services/share/services/environment/path.sh
+-- Installing: /home/dakota/.local/repos/control_framework/install/services/share/services/environment/path.dsv
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/services/share/services/local_setup.bash
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/services/share/services/local_setup.sh
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/services/share/services/local_setup.zsh
+-- Installing: /home/dakota/.local/repos/control_framework/install/services/share/services/local_setup.dsv
+-- Installing: /home/dakota/.local/repos/control_framework/install/services/share/services/package.dsv
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/services/share/ament_index/resource_index/packages/services
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/services/share/services/cmake/servicesConfig.cmake
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/services/share/services/cmake/servicesConfig-version.cmake
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/services/share/services/package.xml

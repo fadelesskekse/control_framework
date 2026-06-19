@@ -1,0 +1,24 @@
+[0.005s] Invoking command in '/home/dakota/.local/repos/control_framework/build/services': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/services -- -j28 -l28
+[0.037s] [ 50%] [32mBuilding CXX object CMakeFiles/services.dir/src/services.cpp.o[0m
+[1.067s] [01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:[m[K In function ‘[01m[Kvoid reset_to_initial_position(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)[m[K’:
+[1.067s] [01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:6:87:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.067s]     6 | osition([01;35m[Kconst std::shared_ptr<std_srvs::srv::Trigger::Request> request[m[K,
+[1.067s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[1.067s] 
+[1.067s] [01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.067s] [01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:51:34:[m[K [01;31m[Kerror: [m[K‘[01m[KAddTwoInts[m[K’ is not a member of ‘[01m[Kstd_srvs::srv[m[K’
+[1.068s]    51 |   rclcpp::Service<std_srvs::srv::[01;31m[KAddTwoInts[m[K>::SharedPtr service =
+[1.068s]       |                                  [01;31m[K^~~~~~~~~~[m[K
+[1.068s] [01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:51:44:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.068s]    51 |   rclcpp::Service<std_srvs::srv::AddTwoInts[01;31m[K>[m[K::SharedPtr service =
+[1.068s]       |                                            [01;31m[K^[m[K
+[1.068s] [01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:51:57:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kservice[m[K’
+[1.068s]    51 |   rclcpp::Service<std_srvs::srv::AddTwoInts>::SharedPtr [01;31m[Kservice[m[K =
+[1.068s]       |                                                         [01;31m[K^~~~~~~[m[K
+[1.069s] [01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:56:16:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+[1.069s]    56 |   rclcpp::spin([01;31m[Knode[m[K);
+[1.069s]       |                [01;31m[K^~~~[m[K
+[1.263s] gmake[2]: *** [CMakeFiles/services.dir/build.make:76: CMakeFiles/services.dir/src/services.cpp.o] Error 1
+[1.264s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/services.dir/all] Error 2
+[1.264s] gmake: *** [Makefile:146: all] Error 2
+[1.265s] Invoked command in '/home/dakota/.local/repos/control_framework/build/services' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/services -- -j28 -l28

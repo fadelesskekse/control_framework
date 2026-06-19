@@ -1,0 +1,20 @@
+[35m[1mConsolidate compiler generated dependencies of target services[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/services.dir/src/services.cpp.o[0m
+[01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:[m[K In function ‘[01m[Kvoid reset_to_initial_position(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:6:87:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+    6 | osition([01;35m[Kconst std::shared_ptr<std_srvs::srv::Trigger::Request> request[m[K,
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+
+[01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:52:5:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope
+   52 |     [01;31m[Knode[m[K->create_service<std_srvs::srv::Trigger>("reset_to_initial_position", &reset_to_initial_position);
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:52:48:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+   52 |     node->create_service<std_srvs::srv::Trigger[01;31m[K>[m[K("reset_to_initial_position", &reset_to_initial_position);
+      |                                                [01;31m[K^[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/services/src/services.cpp:52:50:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+   52 |     node->create_service<std_srvs::srv::Trigger>([01;35m[K"reset_to_initial_position"[m[K, &reset_to_initial_position);
+      |                                                  [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/services.dir/build.make:76: CMakeFiles/services.dir/src/services.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/services.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
