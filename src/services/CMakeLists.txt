@@ -10,9 +10,9 @@ find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_srvs REQUIRED)
 
-add_executable(services src/services.cpp)
+add_executable(service_server src/services.cpp)
 
-ament_target_dependencies(services 
+ament_target_dependencies(service_server 
 rclcpp 
 std_srvs
 )
@@ -28,5 +28,11 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
+
+install(TARGETS
+service_server
+DESTINATION lib/${PROJECT_NAME}
+
+)
 
 ament_package()

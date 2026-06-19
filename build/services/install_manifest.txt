@@ -1,3 +1,4 @@
+/home/dakota/.local/repos/control_framework/install/services/lib/services/service_server
 /home/dakota/.local/repos/control_framework/install/services/share/ament_index/resource_index/package_run_dependencies/services
 /home/dakota/.local/repos/control_framework/install/services/share/ament_index/resource_index/parent_prefix_path/services
 /home/dakota/.local/repos/control_framework/install/services/share/services/environment/ament_prefix_path.sh

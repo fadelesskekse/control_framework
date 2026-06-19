@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/dakota/.local/repos/control_framework/build/services
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/services.dir/all
+all: CMakeFiles/service_server.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,7 +73,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/services_uninstall.dir/clean
-clean: CMakeFiles/services.dir/clean
+clean: CMakeFiles/service_server.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -129,30 +129,30 @@ CMakeFiles/services_uninstall.dir/clean:
 .PHONY : CMakeFiles/services_uninstall.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/services.dir
+# Target rules for target CMakeFiles/service_server.dir
 
 # All Build rule for target.
-CMakeFiles/services.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/services.dir/build.make CMakeFiles/services.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/services.dir/build.make CMakeFiles/services.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dakota/.local/repos/control_framework/build/services/CMakeFiles --progress-num=1,2 "Built target services"
-.PHONY : CMakeFiles/services.dir/all
+CMakeFiles/service_server.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/service_server.dir/build.make CMakeFiles/service_server.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/service_server.dir/build.make CMakeFiles/service_server.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dakota/.local/repos/control_framework/build/services/CMakeFiles --progress-num=1,2 "Built target service_server"
+.PHONY : CMakeFiles/service_server.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/services.dir/rule: cmake_check_build_system
+CMakeFiles/service_server.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dakota/.local/repos/control_framework/build/services/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/services.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/service_server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/dakota/.local/repos/control_framework/build/services/CMakeFiles 0
-.PHONY : CMakeFiles/services.dir/rule
+.PHONY : CMakeFiles/service_server.dir/rule
 
 # Convenience name for target.
-services: CMakeFiles/services.dir/rule
-.PHONY : services
+service_server: CMakeFiles/service_server.dir/rule
+.PHONY : service_server
 
 # clean rule for target.
-CMakeFiles/services.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/services.dir/build.make CMakeFiles/services.dir/clean
-.PHONY : CMakeFiles/services.dir/clean
+CMakeFiles/service_server.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/service_server.dir/build.make CMakeFiles/service_server.dir/clean
+.PHONY : CMakeFiles/service_server.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

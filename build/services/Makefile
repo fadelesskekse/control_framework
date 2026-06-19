@@ -198,24 +198,24 @@ services_uninstall/fast:
 .PHONY : services_uninstall/fast
 
 #=============================================================================
-# Target rules for targets named services
+# Target rules for targets named service_server
 
 # Build rule for target.
-services: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 services
-.PHONY : services
+service_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 service_server
+.PHONY : service_server
 
 # fast build rule for target.
-services/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/services.dir/build.make CMakeFiles/services.dir/build
-.PHONY : services/fast
+service_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/service_server.dir/build.make CMakeFiles/service_server.dir/build
+.PHONY : service_server/fast
 
 src/services.o: src/services.cpp.o
 .PHONY : src/services.o
 
 # target to build an object file
 src/services.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/services.dir/build.make CMakeFiles/services.dir/src/services.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/service_server.dir/build.make CMakeFiles/service_server.dir/src/services.cpp.o
 .PHONY : src/services.cpp.o
 
 src/services.i: src/services.cpp.i
@@ -223,7 +223,7 @@ src/services.i: src/services.cpp.i
 
 # target to preprocess a source file
 src/services.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/services.dir/build.make CMakeFiles/services.dir/src/services.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/service_server.dir/build.make CMakeFiles/service_server.dir/src/services.cpp.i
 .PHONY : src/services.cpp.i
 
 src/services.s: src/services.cpp.s
@@ -231,7 +231,7 @@ src/services.s: src/services.cpp.s
 
 # target to generate assembly for a file
 src/services.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/services.dir/build.make CMakeFiles/services.dir/src/services.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/service_server.dir/build.make CMakeFiles/service_server.dir/src/services.cpp.s
 .PHONY : src/services.cpp.s
 
 # Help Target
@@ -249,7 +249,7 @@ help:
 	@echo "... test"
 	@echo "... services_uninstall"
 	@echo "... uninstall"
-	@echo "... services"
+	@echo "... service_server"
 	@echo "... src/services.o"
 	@echo "... src/services.i"
 	@echo "... src/services.s"
