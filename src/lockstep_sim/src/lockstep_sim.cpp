@@ -12,8 +12,9 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       sim_timer_ = this->create_wall_timer(
       1ms, std::bind(&LockStepSim::sim_callback, this));
 
-      state_publisher_ = this->create_publisher<control_framework_interfaces::msg::JointState>("joint_states", 10); //Need custom msg
-      control_input_publisher = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg
+      state_publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("joint_states", 10); //Need custom msg
+      
+     // control_input_publisher = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg
       
       //Load Model
       std::string package_share = ament_index_cpp::get_package_share_directory("lockstep_sim");
@@ -44,26 +45,28 @@ void LockStepSim::sim_callback()
 {
   mj_step(m, d);
 
-  auto state = control_framework_interfaces::msg::JointState();
- // auto control_input = control_framework_interfaces::msg::ControlInput();
+  sensor_msgs::msg::JointState joint_state;
 
-  for(int i = 0; i < m->nq;i++){
-    state.pos_state[i] = d->qpos[i];
-  }
+  // Specify joints' name which are defined in the r2d2.urdf.xml and their content
+  joint_state.name={"world_to_ground","cart_slide_joint","pole_hinge_joint","pole_to_tip_joint"};
 
-  for(int i = 0; i < m->nv;i++){
-    state.vel_state[i] = d->qvel[i];
-  }
 
-  state_publisher_->publish(state);
+  joint_state.position={0,d->qpos[0],d->qpos[1],d->qpos[1]};
+  joint_state.velocity={0,d->qvel[0],d->qvel[1],d->qvel[1]};
 
-  if (count_ % render_frame_rate == 0)
-  {
-    render::render_frame();
+  
+
+
+  state_publisher_->publish(joint_state);
+
+  //if (count_ % render_frame_rate == 0)
+ // {
+  //  render::render_frame();
     
-  }
+ // }
+
+
 
   count_++;
 
 }
-

@@ -8,9 +8,15 @@
 #include <vector>
 
 #include "mujoco/mujoco.h"
+
 #include "rclcpp/rclcpp.hpp"
-#include "control_framework_interfaces/msg/joint_state.hpp"
-#include "control_framework_interfaces/msg/control_input.hpp"
+#include "sensor_msgs/msg/joint_state.hpp"
+
+//#include "tf2_ros/transform_broadcaster.h"
+//#include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
+
+//#include "control_framework_interfaces/msg/joint_state.hpp"
+//#include "control_framework_interfaces/msg/control_input.hpp"
 
 #include "render.hpp"
 
@@ -33,11 +39,12 @@ class LockStepSim : public rclcpp::Node
         size_t count_;
         size_t render_frame_rate;
         rclcpp::TimerBase::SharedPtr sim_timer_;
-        rclcpp::Publisher<control_framework_interfaces::msg::JointState>::SharedPtr state_publisher_;
-        rclcpp::Publisher<control_framework_interfaces::msg::ControlInput>::SharedPtr control_input_publisher;
-        
-        //control_framework_interfaces::msg::State state_;
-        //control_framework_interfaces::msg::ControlInput control_input_;
+        rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr state_publisher_;
+  
+       // rclcpp::Publisher<control_framework_interfaces::msg::ControlInput>::SharedPtr control_input_publisher;
+
+
+
 };
   
 

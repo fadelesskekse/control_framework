@@ -1,1 +1,1 @@
-control_framework_interfaces:rclcpp:ros2launch
+control_framework_interfaces:rclcpp:ros2launch:sensor_msgs

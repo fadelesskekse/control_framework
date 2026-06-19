@@ -8,8 +8,11 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
 find_package(control_framework_interfaces REQUIRED)
 find_package(glfw3 REQUIRED)
+
+
 
 find_library(MUJOCO_LIBRARY mujoco REQUIRED)
 
@@ -23,6 +26,7 @@ src/render.cpp)
 ament_target_dependencies(lockstep_sim 
 rclcpp 
 control_framework_interfaces
+sensor_msgs
 )
 
 #target_include_directories(lockstep_sim
