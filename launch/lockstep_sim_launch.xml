@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
-  <node pkg="lockstep_sim" exec="lockstep_sim" name="sim" args="--ros-args --log-level info" />
-  
 
+  <arg name="glfw_render" default="0"/>
+
+  <node 
+    pkg="lockstep_sim" 
+    exec="lockstep_sim" 
+    name="sim" 
+    ros_args="--log-level info"
+    output="screen">
+
+    <param name="glfw_render" value="$(var glfw_render)"/>
+
+  </node>
 
   <include file="$(find-pkg-share foxglove_bridge)/launch/foxglove_bridge_launch.xml" />
 

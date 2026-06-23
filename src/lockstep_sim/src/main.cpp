@@ -2,8 +2,8 @@
 //#include <chrono>
 
 #include "../include/lockstep_sim/lockstep_sim.hpp"
-#include "rclcpp/executor.hpp"
-#include "../include/lockstep_sim/utilities.hpp"
+//#include "rclcpp/executor.hpp"
+//#include "../include/lockstep_sim/utilities.hpp"
 
 
 //using std::chrono::seconds;
@@ -14,8 +14,7 @@
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  auto sim_node = std::make_shared<LockStepSim>();
-  rclcpp::spin(sim_node);
+  rclcpp::spin(std::make_shared<LockStepSim>());
   rclcpp::shutdown();
   
   /*
@@ -37,13 +36,16 @@ int main(int argc, char * argv[])
     RCLCPP_WARN(logger, "Failed to configure high priority thread, are you root?");
   }
 
+
+
   //const std::chrono::seconds EXPERIMENT_DURATION = 10s;
   //RCLCPP_INFO_STREAM(
    // logger, "Running experiment from now on for " << EXPERIMENT_DURATION.count() << " seconds ...");
   //std::this_thread::sleep_for(EXPERIMENT_DURATION);
   sim_thread.join();
   rclcpp::shutdown();
-  */
+  
   
   return 0;
+  */
 }

@@ -648,5 +648,4 @@ CMakeFiles/lockstep_sim.dir/src/main.cpp.o: \
  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
  /home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/render.hpp \
  /usr/local/include/GLFW/glfw3.h /usr/include/GL/gl.h \
- /usr/include/GL/glext.h /usr/include/KHR/khrplatform.h \
- /home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/utilities.hpp
+ /usr/include/GL/glext.h /usr/include/KHR/khrplatform.h

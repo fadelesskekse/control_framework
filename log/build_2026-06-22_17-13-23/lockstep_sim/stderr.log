@@ -1,0 +1,17 @@
+[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:[m[K In constructor ‘[01m[KLockStepSim::LockStepSim()[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:53:44:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Krclcpp::Parameter[m[K’ to ‘[01m[Kint[m[K’ in initialization
+   53 |       int glfw_render = [01;31m[Kthis->get_parameter("glfw_render")[m[K;
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+      |                                            [01;31m[K|[m[K
+      |                                            [01;31m[Krclcpp::Parameter[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:[m[K In member function ‘[01m[Kvoid LockStepSim::reset_to_default_initial_position(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:99:108:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   99 | void LockStepSim::reset_to_default_initial_position([01;35m[Kconst std::shared_ptr<std_srvs::srv::Trigger::Request> request[m[K,
+      |                                                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:[m[K In member function ‘[01m[Kvoid LockStepSim::reset_to_custom_initial_position(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:117:107:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  117 | void LockStepSim::reset_to_custom_initial_position([01;35m[Kconst std::shared_ptr<std_srvs::srv::Trigger::Request> request[m[K,
+      |                                                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/lockstep_sim.dir/build.make:90: CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/lockstep_sim.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -48,13 +48,17 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       mj_resetDataKeyframe(m,d,default_init_pos_keyframe);
       mj_forward(m,d);
 
-      // Set a ros parameter based on this initial keyframe that we can update via service call. 
+      // Set a ros parameter to choose whether to render using glfw or not. 
+      this->declare_parameter("glfw_render", 0);
+      int glfw_render = this->get_parameter("glfw_render").as_int();
+
+      if (glfw_render == 1){
+        render::init(m,d);
+        count_ = 0;
+        render_frame_rate = 16; //1/60 fps ~ 16ms per frame
+      }
       
 
-      render::init(m,d);
-
-      count_ = 0;
-      render_frame_rate = 16; //1/60 fps ~ 16ms per frame
 
 
       
@@ -80,15 +84,23 @@ void LockStepSim::sim_callback()
 
   state_publisher_->publish(joint_state);
 
-  //if (count_ % render_frame_rate == 0)
- // {
-  //  render::render_frame();
-    
- // }
+
+  if (this->get_parameter("glfw_render").as_int() == 1)
+  {
+
+    if (count_ % render_frame_rate == 0)
+      {
+        render::render_frame(); 
+          
+      }
+
+    count_++;
+
+  }
 
 
 
-  count_++;
+
 
 }
 

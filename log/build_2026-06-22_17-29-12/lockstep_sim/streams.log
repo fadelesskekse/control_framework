@@ -1,0 +1,36 @@
+[0.005s] Invoking command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/services:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/lockstep_sim -- -j28 -l28
+[0.029s] [35m[1mConsolidate compiler generated dependencies of target lockstep_sim[0m
+[0.040s] [ 25%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/main.cpp.o[0m
+[1.091s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[1.091s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/main.cpp:14:14:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.091s]    14 | int main([01;35m[Kint argc[m[K, char * argv[])
+[1.091s]       |          [01;35m[K~~~~^~~~[m[K
+[1.091s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/main.cpp:14:27:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kargv[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.091s]    14 | int main(int argc, [01;35m[Kchar * argv[][m[K)
+[1.091s]       |                    [01;35m[K~~~~~~~^~~~~~[m[K
+[1.345s] [ 50%] [32m[1mLinking CXX executable lockstep_sim[0m
+[1.488s] [100%] Built target lockstep_sim
+[1.494s] Invoked command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim' returned '0': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/services:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/lockstep_sim -- -j28 -l28
+[1.495s] Invoking command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/services:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/opt/ros/humble /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/lockstep_sim
+[1.500s] -- Install configuration: ""
+[1.500s] -- Installing: /home/dakota/.local/repos/control_framework/install/lockstep_sim/lib/lockstep_sim/lockstep_sim
+[1.502s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/lockstep_sim/lib/lockstep_sim/lockstep_sim" to ""
+[1.502s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models
+[1.502s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models/cart_pole_urdf.xml
+[1.502s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models/cart_pole_mjcf.xml
+[1.502s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/package_run_dependencies/lockstep_sim
+[1.502s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/parent_prefix_path/lockstep_sim
+[1.503s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/ament_prefix_path.sh
+[1.503s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/ament_prefix_path.dsv
+[1.503s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/path.sh
+[1.503s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/path.dsv
+[1.503s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.bash
+[1.503s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.sh
+[1.503s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.zsh
+[1.503s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.dsv
+[1.503s] -- Installing: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/package.dsv
+[1.503s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/packages/lockstep_sim
+[1.503s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/cmake/lockstep_simConfig.cmake
+[1.503s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/cmake/lockstep_simConfig-version.cmake
+[1.503s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/package.xml
+[1.504s] Invoked command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim' returned '0': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/services:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/opt/ros/humble /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/lockstep_sim
