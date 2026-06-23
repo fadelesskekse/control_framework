@@ -14,7 +14,8 @@
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
-  rclcpp::spin(std::make_shared<LockStepSim>());
+  auto sim_node = std::make_shared<LockStepSim>();
+  rclcpp::spin(sim_node);
   rclcpp::shutdown();
   
   /*

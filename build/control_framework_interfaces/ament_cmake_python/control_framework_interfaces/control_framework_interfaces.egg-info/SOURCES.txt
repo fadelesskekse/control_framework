@@ -7,3 +7,5 @@ control_framework_interfaces.egg-info/top_level.txt
 control_framework_interfaces/msg/__init__.py
 control_framework_interfaces/msg/_control_input.py
 control_framework_interfaces/msg/_joint_state.py
+control_framework_interfaces/srv/__init__.py
+control_framework_interfaces/srv/_init_state.py

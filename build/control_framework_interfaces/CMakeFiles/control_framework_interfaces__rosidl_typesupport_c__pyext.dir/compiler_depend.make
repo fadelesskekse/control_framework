@@ -248,8 +248,17 @@ CMakeFiles/control_framework_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_
   rosidl_generator_c/control_framework_interfaces/msg/detail/control_input__functions.h \
   rosidl_generator_c/control_framework_interfaces/msg/detail/joint_state__type_support.h \
   rosidl_generator_c/control_framework_interfaces/msg/detail/joint_state__struct.h \
-  rosidl_generator_c/control_framework_interfaces/msg/detail/joint_state__functions.h
+  rosidl_generator_c/control_framework_interfaces/msg/detail/joint_state__functions.h \
+  rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__type_support.h \
+  rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
+  rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__functions.h
 
+
+rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__functions.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
 rosidl_generator_c/control_framework_interfaces/msg/detail/joint_state__type_support.h:
 
@@ -310,6 +319,8 @@ rosidl_generator_c/control_framework_interfaces/msg/detail/control_input__type_s
 /usr/include/python3.10/cpython/pylifecycle.h:
 
 /usr/include/python3.10/pystate.h:
+
+rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__struct.h:
 
 /usr/include/python3.10/cpython/initconfig.h:
 
@@ -388,6 +399,8 @@ rosidl_generator_c/control_framework_interfaces/msg/detail/joint_state__function
 /usr/include/python3.10/fileobject.h:
 
 /usr/include/x86_64-linux-gnu/bits/statx-generic.h:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
@@ -544,6 +557,8 @@ rosidl_generator_c/control_framework_interfaces/msg/detail/control_input__functi
 /usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/stat.h:
+
+rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 

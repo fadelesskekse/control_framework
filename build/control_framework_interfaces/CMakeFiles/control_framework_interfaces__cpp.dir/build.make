@@ -76,6 +76,11 @@ CMakeFiles/control_framework_interfaces__cpp: rosidl_generator_cpp/control_frame
 CMakeFiles/control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/msg/detail/joint_state__struct.hpp
 CMakeFiles/control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/msg/detail/joint_state__traits.hpp
 CMakeFiles/control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/msg/detail/joint_state__type_support.hpp
+CMakeFiles/control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/srv/init_state.hpp
+CMakeFiles/control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__builder.hpp
+CMakeFiles/control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__struct.hpp
+CMakeFiles/control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__traits.hpp
+CMakeFiles/control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__type_support.hpp
 CMakeFiles/control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
@@ -95,6 +100,7 @@ rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp: /opt/ro
 rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp: rosidl_adapter/control_framework_interfaces/msg/ControlInput.idl
 rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp: rosidl_adapter/control_framework_interfaces/msg/JointState.idl
+rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp: rosidl_adapter/control_framework_interfaces/srv/InitState.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_cpp__arguments.json
 
@@ -125,6 +131,21 @@ rosidl_generator_cpp/control_framework_interfaces/msg/detail/joint_state__traits
 rosidl_generator_cpp/control_framework_interfaces/msg/detail/joint_state__type_support.hpp: rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/control_framework_interfaces/msg/detail/joint_state__type_support.hpp
 
+rosidl_generator_cpp/control_framework_interfaces/srv/init_state.hpp: rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/control_framework_interfaces/srv/init_state.hpp
+
+rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__builder.hpp: rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__builder.hpp
+
+rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__struct.hpp: rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__struct.hpp
+
+rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__traits.hpp: rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__traits.hpp
+
+rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__type_support.hpp: rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__type_support.hpp
+
 control_framework_interfaces__cpp: CMakeFiles/control_framework_interfaces__cpp
 control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/msg/control_input.hpp
 control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/msg/detail/control_input__builder.hpp
@@ -136,6 +157,11 @@ control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interf
 control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/msg/detail/joint_state__traits.hpp
 control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/msg/detail/joint_state__type_support.hpp
 control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/msg/joint_state.hpp
+control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__builder.hpp
+control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__struct.hpp
+control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__traits.hpp
+control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__type_support.hpp
+control_framework_interfaces__cpp: rosidl_generator_cpp/control_framework_interfaces/srv/init_state.hpp
 control_framework_interfaces__cpp: CMakeFiles/control_framework_interfaces__cpp.dir/build.make
 .PHONY : control_framework_interfaces__cpp
 

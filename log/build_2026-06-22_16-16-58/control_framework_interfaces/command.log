@@ -1,0 +1,2 @@
+Invoking command in '/home/dakota/.local/repos/control_framework/build/control_framework_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/control_framework_interfaces -- -j28 -l28
+Invoked command in '/home/dakota/.local/repos/control_framework/build/control_framework_interfaces' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/control_framework_interfaces -- -j28 -l28

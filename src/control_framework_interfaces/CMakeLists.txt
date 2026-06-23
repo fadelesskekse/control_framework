@@ -13,6 +13,7 @@ find_package(rosidl_default_generators REQUIRED)
 rosidl_generate_interfaces( ${PROJECT_NAME}
 "msg/ControlInput.msg"
 "msg/JointState.msg"
+"srv/InitState.srv"
 )
 
 if(BUILD_TESTING)

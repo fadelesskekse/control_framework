@@ -372,11 +372,27 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/srv" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/InitState.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/msg" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces/msg/ControlInput.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/msg" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces/msg/JointState.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/srv" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces/srv/InitState.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/srv" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_cmake/srv/InitState_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/srv" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_cmake/srv/InitState_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

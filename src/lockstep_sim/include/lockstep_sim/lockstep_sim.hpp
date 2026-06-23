@@ -11,6 +11,8 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
+#include "std_srvs/srv/trigger.hpp"
+#include "control_framework_interfaces/srv/init_state.hpp"
 
 //#include "tf2_ros/transform_broadcaster.h"
 //#include "tf2_geometry_msgs/tf2_geometry_msgs.hpp"
@@ -31,15 +33,28 @@ class LockStepSim : public rclcpp::Node
 
         void sim_callback();
 
-       
+        void reset_to_default_initial_position(const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+          std::shared_ptr<std_srvs::srv::Trigger::Response> response);
 
+        void reset_to_custom_initial_position(const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+          std::shared_ptr<std_srvs::srv::Trigger::Response> response);
+
+        void change_initial_position(const std::shared_ptr<control_framework_interfaces::srv::InitState::Request> request,
+          std::shared_ptr<control_framework_interfaces::srv::InitState::Response> response);
+  
         mjModel* m = NULL;
         mjData* d= NULL;
        
+        int default_init_pos_keyframe;
+        int custom_init_pos_keyframe;
+
         size_t count_;
         size_t render_frame_rate;
         rclcpp::TimerBase::SharedPtr sim_timer_;
         rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr state_publisher_;
+        rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr default_init_set_service;
+        rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr custom_init_set_service;
+        rclcpp::Service<control_framework_interfaces::srv::InitState>::SharedPtr change_custom_init_service;
   
        // rclcpp::Publisher<control_framework_interfaces::msg::ControlInput>::SharedPtr control_input_publisher;
 

@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs"
   "../rosidl_generator_rs/control_framework_interfaces/rust/src/msg.rs"
   "../rosidl_generator_rs/control_framework_interfaces/rust/src/msg/rmw.rs"
+  "../rosidl_generator_rs/control_framework_interfaces/rust/src/srv.rs"
+  "../rosidl_generator_rs/control_framework_interfaces/rust/src/srv/rmw.rs"
   "CMakeFiles/control_framework_interfaces__rs"
 )
 

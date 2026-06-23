@@ -2,3 +2,7 @@ msg/ControlInput.idl
 msg/ControlInput.msg
 msg/JointState.idl
 msg/JointState.msg
+srv/InitState.idl
+srv/InitState.srv
+srv/InitState_Request.msg
+srv/InitState_Response.msg

@@ -11,7 +11,7 @@ find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(control_framework_interfaces REQUIRED)
 find_package(glfw3 REQUIRED)
-
+find_package(std_srvs REQUIRED)
 
 
 find_library(MUJOCO_LIBRARY mujoco REQUIRED)
@@ -27,6 +27,7 @@ ament_target_dependencies(lockstep_sim
 rclcpp 
 control_framework_interfaces
 sensor_msgs
+std_srvs
 )
 
 #target_include_directories(lockstep_sim

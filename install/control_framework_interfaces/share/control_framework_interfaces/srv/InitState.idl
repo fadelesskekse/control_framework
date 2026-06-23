@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from control_framework_interfaces/srv/InitState.srv
+// generated code does not contain a copyright notice
+
+
+module control_framework_interfaces {
+  module srv {
+    struct InitState_Request {
+      sequence<double> pos_init;
+
+      sequence<double> vel_init;
+    };
+    struct InitState_Response {
+      boolean success;
+
+      string message;
+    };
+  };
+};

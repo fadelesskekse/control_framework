@@ -16,6 +16,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_rs/control_framework_interfaces/rust/build.rs" "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs"
   "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_rs/control_framework_interfaces/rust/src/msg.rs" "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs"
   "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_rs/control_framework_interfaces/rust/src/msg/rmw.rs" "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs"
+  "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_rs/control_framework_interfaces/rust/src/srv.rs" "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs"
+  "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_rs/control_framework_interfaces/rust/src/srv/rmw.rs" "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs"
   )
 
 

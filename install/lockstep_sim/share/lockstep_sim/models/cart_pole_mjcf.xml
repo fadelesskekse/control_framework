@@ -33,6 +33,21 @@
         </body>
 
     </worldbody>
-/
+
+  <keyframe>
+    <key name="default_initial"
+         qpos="0.001  0.001"
+         qvel="0.0  0.0"
+         />
+
+    <key name="custom_initial"
+         qpos="0.0  0.2"
+         qvel="0.0  0.0"
+         />
+
+
+  </keyframe>
+  
+  
 
 </mujoco>

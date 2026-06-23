@@ -68,6 +68,9 @@ include CMakeFiles/control_framework_interfaces.dir/progress.make
 
 CMakeFiles/control_framework_interfaces: /home/dakota/.local/repos/control_framework/src/control_framework_interfaces/msg/ControlInput.msg
 CMakeFiles/control_framework_interfaces: /home/dakota/.local/repos/control_framework/src/control_framework_interfaces/msg/JointState.msg
+CMakeFiles/control_framework_interfaces: /home/dakota/.local/repos/control_framework/src/control_framework_interfaces/srv/InitState.srv
+CMakeFiles/control_framework_interfaces: rosidl_cmake/srv/InitState_Request.msg
+CMakeFiles/control_framework_interfaces: rosidl_cmake/srv/InitState_Response.msg
 
 control_framework_interfaces: CMakeFiles/control_framework_interfaces
 control_framework_interfaces: CMakeFiles/control_framework_interfaces.dir/build.make

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
   <node pkg="lockstep_sim" exec="lockstep_sim" name="sim" args="--ros-args --log-level info" />
-  <node pkg="services" exec="service_server" name="services" args="--ros-args --log-level info" />
+  
 
 
   <include file="$(find-pkg-share foxglove_bridge)/launch/foxglove_bridge_launch.xml" />

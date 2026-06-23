@@ -71,6 +71,8 @@ control_framework_interfaces__rs/CMakeFiles/control_framework_interfaces__rs: ro
 control_framework_interfaces__rs/CMakeFiles/control_framework_interfaces__rs: rosidl_generator_rs/control_framework_interfaces/rust/Cargo.toml
 control_framework_interfaces__rs/CMakeFiles/control_framework_interfaces__rs: rosidl_generator_rs/control_framework_interfaces/rust/src/msg.rs
 control_framework_interfaces__rs/CMakeFiles/control_framework_interfaces__rs: rosidl_generator_rs/control_framework_interfaces/rust/src/msg/rmw.rs
+control_framework_interfaces__rs/CMakeFiles/control_framework_interfaces__rs: rosidl_generator_rs/control_framework_interfaces/rust/src/srv.rs
+control_framework_interfaces__rs/CMakeFiles/control_framework_interfaces__rs: rosidl_generator_rs/control_framework_interfaces/rust/src/srv/rmw.rs
 
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: /opt/ros/humble/lib/rosidl_generator_rs/rosidl_generator_rs
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_rs/__init__.py
@@ -86,8 +88,10 @@ rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: /opt/ros/humbl
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: /opt/ros/humble/share/rosidl_generator_rs/resource/templates/srv_rmw.rs.em
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/msg/ControlInput.idl
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/msg/JointState.idl
+rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/srv/InitState.idl
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/msg/ControlInput.idl
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/msg/JointState.idl
+rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/srv/InitState.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Rust code for ROS interfaces"
 	cd /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/control_framework_interfaces__rs && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_rs/cmake/../../../lib/rosidl_generator_rs/rosidl_generator_rs --generator-arguments-file /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_rs__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -103,12 +107,20 @@ rosidl_generator_rs/control_framework_interfaces/rust/src/msg.rs: rosidl_generat
 rosidl_generator_rs/control_framework_interfaces/rust/src/msg/rmw.rs: rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/control_framework_interfaces/rust/src/msg/rmw.rs
 
+rosidl_generator_rs/control_framework_interfaces/rust/src/srv.rs: rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/control_framework_interfaces/rust/src/srv.rs
+
+rosidl_generator_rs/control_framework_interfaces/rust/src/srv/rmw.rs: rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_rs/control_framework_interfaces/rust/src/srv/rmw.rs
+
 control_framework_interfaces__rs: control_framework_interfaces__rs/CMakeFiles/control_framework_interfaces__rs
 control_framework_interfaces__rs: rosidl_generator_rs/control_framework_interfaces/rust/Cargo.toml
 control_framework_interfaces__rs: rosidl_generator_rs/control_framework_interfaces/rust/build.rs
 control_framework_interfaces__rs: rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs
 control_framework_interfaces__rs: rosidl_generator_rs/control_framework_interfaces/rust/src/msg.rs
 control_framework_interfaces__rs: rosidl_generator_rs/control_framework_interfaces/rust/src/msg/rmw.rs
+control_framework_interfaces__rs: rosidl_generator_rs/control_framework_interfaces/rust/src/srv.rs
+control_framework_interfaces__rs: rosidl_generator_rs/control_framework_interfaces/rust/src/srv/rmw.rs
 control_framework_interfaces__rs: control_framework_interfaces__rs/CMakeFiles/control_framework_interfaces__rs.dir/build.make
 .PHONY : control_framework_interfaces__rs
 
