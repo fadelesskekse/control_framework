@@ -212,4 +212,7 @@ CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c__pyext.di
  /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__struct.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
- /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__functions.h
+ /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__functions.h \
+ /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_c/control_framework_interfaces/srv/detail/reset_record__type_support.h \
+ /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_c/control_framework_interfaces/srv/detail/reset_record__struct.h \
+ /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_c/control_framework_interfaces/srv/detail/reset_record__functions.h

@@ -1,0 +1,63 @@
+[0.005s] Invoking command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/lockstep_sim -- -j28 -l28
+[0.032s] [35m[1mConsolidate compiler generated dependencies of target lockstep_sim[0m
+[0.043s] [ 25%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/main.cpp.o[0m
+[0.044s] [ 50%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o[0m
+[1.111s] In file included from [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:3[m[K:
+[1.111s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:58:60:[m[K [01;31m[Kerror: [m[K‘[01m[KRecordState[m[K’ is not a member of ‘[01m[Kcontrol_framework_interfaces::srv[m[K’
+[1.111s]    58 |         rclcpp::Service<control_framework_interfaces::srv::[01;31m[KRecordState[m[K>::SharedPtr reset_record_service;
+[1.111s]       |                                                            [01;31m[K^~~~~~~~~~~[m[K
+[1.111s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:58:71:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.111s]    58 |         rclcpp::Service<control_framework_interfaces::srv::RecordState[01;31m[K>[m[K::SharedPtr reset_record_service;
+[1.111s]       |                                                                       [01;31m[K^[m[K
+[1.111s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:58:74:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.111s]    58 |         rclcpp::Service<control_framework_interfaces::srv::RecordState>::[01;31m[KSharedPtr[m[K reset_record_service;
+[1.111s]       |                                                                          [01;31m[K^~~~~~~~~[m[K
+[1.111s]       |                                                                                   [32m[K;[m[K
+[1.122s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:58:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kreset_record_service[m[K’ does not name a type
+[1.122s]    58 |         rclcpp::Service<control_framework_interfaces::srv::RecordState>::SharedPtr [01;31m[Kreset_record_service[m[K;
+[1.122s]       |                                                                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[1.125s] In file included from [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/main.cpp:4[m[K:
+[1.126s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:58:60:[m[K [01;31m[Kerror: [m[K‘[01m[KRecordState[m[K’ is not a member of ‘[01m[Kcontrol_framework_interfaces::srv[m[K’
+[1.126s]    58 |         rclcpp::Service<control_framework_interfaces::srv::[01;31m[KRecordState[m[K>::SharedPtr reset_record_service;
+[1.126s]       |                                                            [01;31m[K^~~~~~~~~~~[m[K
+[1.126s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:58:71:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[1.126s]    58 | lcpp::Service<control_framework_interfaces::srv::RecordState[01;31m[K>[m[K::SharedPtr reset_record_service;
+[1.126s]       |                                                             [01;31m[K^[m[K
+[1.126s] 
+[1.126s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:58:74:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[1.126s]    58 | p::Service<control_framework_interfaces::srv::RecordState>::[01;31m[KSharedPtr[m[K reset_record_service;
+[1.126s]       |                                                             [01;31m[K^~~~~~~~~[m[K
+[1.126s]       |                                                                      [32m[K;[m[K
+[1.137s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:58:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kreset_record_service[m[K’ does not name a type
+[1.137s]    58 | <control_framework_interfaces::srv::RecordState>::SharedPtr [01;31m[Kreset_record_service[m[K;
+[1.137s]       |                                                             [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[1.137s] 
+[1.147s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:[m[K In constructor ‘[01m[KLockStepSim::LockStepSim()[m[K’:
+[1.147s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:22:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kreset_record_service[m[K’ was not declared in this scope
+[1.147s]    22 |       [01;31m[Kreset_record_service[m[K = this->create_service<control_framework_interfaces::srv::ResetRecord>("reset_record", std::bind(&LockStepSim::reset_record, this, _1, _2));
+[1.147s]       |       [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[1.157s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:[m[K At global scope:
+[1.157s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:131:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid LockStepSim::reset_record(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)[m[K’
+[1.157s]   131 | void [01;31m[KLockStepSim[m[K::reset_record(const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+[1.157s]       |      [01;31m[K^~~~~~~~~~~[m[K
+[1.157s] In file included from [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:3[m[K:
+[1.157s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:42:14:[m[K [01;36m[Knote: [m[Kcandidate is: ‘[01m[Kvoid LockStepSim::reset_record(std::shared_ptr<control_framework_interfaces::srv::ResetRecord_Request_<std::allocator<void> > >, std::shared_ptr<control_framework_interfaces::srv::ResetRecord_Response_<std::allocator<void> > >)[m[K’
+[1.157s]    42 |         void [01;36m[Kreset_record[m[K(const std::shared_ptr<control_framework_interfaces::srv::ResetRecord::Request> request,
+[1.157s]       |              [01;36m[K^~~~~~~~~~~~[m[K
+[1.157s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:23:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass LockStepSim[m[K’ defined here
+[1.157s]    23 | class [01;36m[KLockStepSim[m[K : public rclcpp::Node
+[1.157s]       |       [01;36m[K^~~~~~~~~~~[m[K
+[1.159s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:[m[K In member function ‘[01m[Kvoid LockStepSim::reset_to_default_initial_position(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)[m[K’:
+[1.159s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:138:108:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.159s]   138 | void LockStepSim::reset_to_default_initial_position([01;35m[Kconst std::shared_ptr<std_srvs::srv::Trigger::Request> request[m[K,
+[1.159s]       |                                                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[1.161s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:[m[K In member function ‘[01m[Kvoid LockStepSim::reset_to_custom_initial_position(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)[m[K’:
+[1.161s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:156:107:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krequest[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.161s]   156 | void LockStepSim::reset_to_custom_initial_position([01;35m[Kconst std::shared_ptr<std_srvs::srv::Trigger::Request> request[m[K,
+[1.161s]       |                                                    [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[1.341s] gmake[2]: *** [CMakeFiles/lockstep_sim.dir/build.make:76: CMakeFiles/lockstep_sim.dir/src/main.cpp.o] Error 1
+[1.341s] gmake[2]: *** Waiting for unfinished jobs....
+[1.774s] gmake[2]: *** [CMakeFiles/lockstep_sim.dir/build.make:90: CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o] Error 1
+[1.775s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/lockstep_sim.dir/all] Error 2
+[1.775s] gmake: *** [Makefile:146: all] Error 2
+[1.777s] Invoked command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim' returned '2': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/lockstep_sim -- -j28 -l28

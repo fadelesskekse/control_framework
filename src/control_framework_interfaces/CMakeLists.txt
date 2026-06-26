@@ -14,6 +14,7 @@ rosidl_generate_interfaces( ${PROJECT_NAME}
 "msg/ControlInput.msg"
 "msg/JointState.msg"
 "srv/InitState.srv"
+"srv/ResetRecord.srv"
 )
 
 if(BUILD_TESTING)

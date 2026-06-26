@@ -710,6 +710,12 @@ CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o: /home/dakota/.local/repos/co
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/float64.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/humble/include/std_srvs/std_srvs/srv/trigger.hpp \
   /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__struct.hpp \
   /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__builder.hpp \
@@ -722,6 +728,11 @@ CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o: /home/dakota/.local/repos/co
   /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/init_state__traits.hpp \
   /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/init_state__type_support.hpp \
   /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/reset_record.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__struct.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__builder.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__traits.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__type_support.hpp \
   /home/dakota/.local/repos/control_framework/src/lockstep_sim/include/lockstep_sim/render.hpp \
   /usr/local/include/GLFW/glfw3.h \
   /usr/include/GL/gl.h \
@@ -1440,6 +1451,12 @@ CMakeFiles/lockstep_sim.dir/src/main.cpp.o: /home/dakota/.local/repos/control_fr
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/float64.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/humble/include/std_srvs/std_srvs/srv/trigger.hpp \
   /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__struct.hpp \
   /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__builder.hpp \
@@ -1452,12 +1469,16 @@ CMakeFiles/lockstep_sim.dir/src/main.cpp.o: /home/dakota/.local/repos/control_fr
   /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/init_state__traits.hpp \
   /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/init_state__type_support.hpp \
   /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/reset_record.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__struct.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__builder.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__traits.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__type_support.hpp \
   /home/dakota/.local/repos/control_framework/src/lockstep_sim/include/lockstep_sim/render.hpp \
   /usr/local/include/GLFW/glfw3.h \
   /usr/include/GL/gl.h \
   /usr/include/GL/glext.h \
-  /usr/include/KHR/khrplatform.h \
-  /home/dakota/.local/repos/control_framework/src/lockstep_sim/include/lockstep_sim/utilities.hpp
+  /usr/include/KHR/khrplatform.h
 
 CMakeFiles/lockstep_sim.dir/src/render.cpp.o: /home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp \
   /usr/include/stdc-predef.h \
@@ -1677,6 +1698,12 @@ CMakeFiles/lockstep_sim.dir/src/render.cpp.o: /home/dakota/.local/repos/control_
 
 /usr/local/include/GLFW/glfw3.h:
 
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__type_support.hpp:
+
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__traits.hpp:
+
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__builder.hpp:
+
 /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
 
 /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/init_state__type_support.hpp:
@@ -1694,6 +1721,12 @@ CMakeFiles/lockstep_sim.dir/src/render.cpp.o: /home/dakota/.local/repos/control_
 /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__traits.hpp:
 
 /opt/ros/humble/include/std_srvs/std_srvs/srv/detail/trigger__struct.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp:
 
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp:
 
@@ -1714,6 +1747,8 @@ CMakeFiles/lockstep_sim.dir/src/render.cpp.o: /home/dakota/.local/repos/control_
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/dynamic_storage.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_service.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/float64.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_event_handler.hpp:
 
@@ -1860,8 +1895,6 @@ CMakeFiles/lockstep_sim.dir/src/render.cpp.o: /home/dakota/.local/repos/control_
 /opt/ros/humble/include/rclcpp/rclcpp/get_message_type_support_handle.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:
-
-/home/dakota/.local/repos/control_framework/src/lockstep_sim/include/lockstep_sim/utilities.hpp:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/metric_details_interface.hpp:
 
@@ -2096,6 +2129,8 @@ CMakeFiles/lockstep_sim.dir/src/render.cpp.o: /home/dakota/.local/repos/control_
 /usr/include/x86_64-linux-gnu/bits/signum-arch.h:
 
 /opt/ros/humble/include/rmw/rmw/security_options.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__builder.hpp:
 
 /usr/include/c++/11/cerrno:
 
@@ -2559,6 +2594,8 @@ CMakeFiles/lockstep_sim.dir/src/render.cpp.o: /home/dakota/.local/repos/control_
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__struct.hpp:
+
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp:
 
 /usr/include/c++/11/bits/std_function.h:
@@ -2708,6 +2745,8 @@ CMakeFiles/lockstep_sim.dir/src/render.cpp.o: /home/dakota/.local/repos/control_
 /usr/include/c++/11/unordered_map:
 
 /usr/include/c++/11/bits/hashtable.h:
+
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/reset_record.hpp:
 
 /usr/include/c++/11/bits/unordered_map.h:
 
@@ -2932,6 +2971,8 @@ CMakeFiles/lockstep_sim.dir/src/render.cpp.o: /home/dakota/.local/repos/control_
 /opt/ros/humble/include/rcl/rcl/event_callback.h:
 
 /opt/ros/humble/include/tracetools/tracetools/tracetools.h:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__type_support.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__builder.hpp:
 

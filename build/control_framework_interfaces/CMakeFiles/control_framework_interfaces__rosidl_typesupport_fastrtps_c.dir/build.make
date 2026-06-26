@@ -80,6 +80,7 @@ rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_in
 rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/control_framework_interfaces/msg/ControlInput.idl
 rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/control_framework_interfaces/msg/JointState.idl
 rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/control_framework_interfaces/srv/InitState.idl
+rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/control_framework_interfaces/srv/ResetRecord.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support for eProsima Fast-RTPS"
 	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_fastrtps_c/rosidl_typesupport_fastrtps_c --generator-arguments-file /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_fastrtps_c__arguments.json
 
@@ -97,6 +98,12 @@ rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/init_state
 
 rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/init_state__type_support_c.cpp: rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/init_state__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp: rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp
 
 CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__type_support_c.cpp.o: CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__type_support_c.cpp
@@ -140,11 +147,26 @@ CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosid
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/init_state__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/init_state__type_support_c.cpp -o CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/init_state__type_support_c.cpp.s
 
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.o: CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.o: CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.o -MF CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.o.d -o CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.o -c /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp
+
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp > CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.i
+
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp -o CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.s
+
 # Object files for target control_framework_interfaces__rosidl_typesupport_fastrtps_c
 control_framework_interfaces__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__type_support_c.cpp.o" \
 "CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/joint_state__type_support_c.cpp.o" \
-"CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/init_state__type_support_c.cpp.o"
+"CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/init_state__type_support_c.cpp.o" \
+"CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.o"
 
 # External object files for target control_framework_interfaces__rosidl_typesupport_fastrtps_c
 control_framework_interfaces__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
@@ -152,6 +174,7 @@ control_framework_interfaces__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
 libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/control_input__type_support_c.cpp.o
 libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/joint_state__type_support_c.cpp.o
 libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/init_state__type_support_c.cpp.o
+libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp.o
 libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/build.make
 libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
 libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
@@ -161,7 +184,7 @@ libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/humb
 libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so: /opt/ros/humble/lib/librcutils.so
 libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so: CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -178,6 +201,8 @@ CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/depen
 CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/control_framework_interfaces/msg/detail/joint_state__type_support_c.cpp
 CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/init_state__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/init_state__type_support_c.cpp
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/control_framework_interfaces/srv/detail/reset_record__type_support_c.cpp
 	cd /home/dakota/.local/repos/control_framework/build/control_framework_interfaces && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/dakota/.local/repos/control_framework/src/control_framework_interfaces /home/dakota/.local/repos/control_framework/src/control_framework_interfaces /home/dakota/.local/repos/control_framework/build/control_framework_interfaces /home/dakota/.local/repos/control_framework/build/control_framework_interfaces /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c.dir/depend
 

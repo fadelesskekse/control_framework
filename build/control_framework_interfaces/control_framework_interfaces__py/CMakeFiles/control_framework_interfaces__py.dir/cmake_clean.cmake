@@ -10,6 +10,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/control_framework_interfaces/srv/__init__.py"
   "../rosidl_generator_py/control_framework_interfaces/srv/_init_state.py"
   "../rosidl_generator_py/control_framework_interfaces/srv/_init_state_s.c"
+  "../rosidl_generator_py/control_framework_interfaces/srv/_reset_record.py"
+  "../rosidl_generator_py/control_framework_interfaces/srv/_reset_record_s.c"
   "CMakeFiles/control_framework_interfaces__py"
 )
 

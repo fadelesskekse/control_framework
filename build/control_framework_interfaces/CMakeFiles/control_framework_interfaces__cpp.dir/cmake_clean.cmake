@@ -14,7 +14,12 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__struct.hpp"
   "rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__traits.hpp"
   "rosidl_generator_cpp/control_framework_interfaces/srv/detail/init_state__type_support.hpp"
+  "rosidl_generator_cpp/control_framework_interfaces/srv/detail/reset_record__builder.hpp"
+  "rosidl_generator_cpp/control_framework_interfaces/srv/detail/reset_record__struct.hpp"
+  "rosidl_generator_cpp/control_framework_interfaces/srv/detail/reset_record__traits.hpp"
+  "rosidl_generator_cpp/control_framework_interfaces/srv/detail/reset_record__type_support.hpp"
   "rosidl_generator_cpp/control_framework_interfaces/srv/init_state.hpp"
+  "rosidl_generator_cpp/control_framework_interfaces/srv/reset_record.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

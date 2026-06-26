@@ -6,3 +6,7 @@ srv/InitState.idl
 srv/InitState.srv
 srv/InitState_Request.msg
 srv/InitState_Response.msg
+srv/ResetRecord.idl
+srv/ResetRecord.srv
+srv/ResetRecord_Request.msg
+srv/ResetRecord_Response.msg

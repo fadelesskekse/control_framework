@@ -1,0 +1,25 @@
+[35m[1mConsolidate compiler generated dependencies of target lockstep_sim[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o[0m
+[ 50%] [32m[1mLinking CXX executable lockstep_sim[0m
+[100%] Built target lockstep_sim
+-- Install configuration: ""
+-- Installing: /home/dakota/.local/repos/control_framework/install/lockstep_sim/lib/lockstep_sim/lockstep_sim
+-- Set runtime path of "/home/dakota/.local/repos/control_framework/install/lockstep_sim/lib/lockstep_sim/lockstep_sim" to ""
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models/cart_pole_urdf.xml
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models/cart_pole_mjcf.xml
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/package_run_dependencies/lockstep_sim
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/parent_prefix_path/lockstep_sim
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/ament_prefix_path.sh
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/path.sh
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/path.dsv
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.bash
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.sh
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.zsh
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/local_setup.dsv
+-- Installing: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/package.dsv
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/packages/lockstep_sim
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/cmake/lockstep_simConfig.cmake
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/cmake/lockstep_simConfig-version.cmake
+-- Up-to-date: /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/package.xml

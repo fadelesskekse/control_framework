@@ -253,8 +253,15 @@ CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_c__pyext.di
   rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
-  rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__functions.h
+  rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__functions.h \
+  rosidl_generator_c/control_framework_interfaces/srv/detail/reset_record__type_support.h \
+  rosidl_generator_c/control_framework_interfaces/srv/detail/reset_record__struct.h \
+  rosidl_generator_c/control_framework_interfaces/srv/detail/reset_record__functions.h
 
+
+rosidl_generator_c/control_framework_interfaces/srv/detail/reset_record__functions.h:
+
+rosidl_generator_c/control_framework_interfaces/srv/detail/reset_record__struct.h:
 
 rosidl_generator_c/control_framework_interfaces/srv/detail/init_state__functions.h:
 
@@ -431,6 +438,8 @@ rosidl_generator_c/control_framework_interfaces/msg/detail/joint_state__function
 /usr/include/python3.10/bltinmodule.h:
 
 /usr/include/stdio.h:
+
+rosidl_generator_c/control_framework_interfaces/srv/detail/reset_record__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
 

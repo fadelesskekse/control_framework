@@ -89,9 +89,11 @@ rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: /opt/ros/humbl
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/msg/ControlInput.idl
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/msg/JointState.idl
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/srv/InitState.idl
+rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/srv/ResetRecord.idl
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/msg/ControlInput.idl
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/msg/JointState.idl
 rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/srv/InitState.idl
+rosidl_generator_rs/control_framework_interfaces/rust/src/lib.rs: rosidl_adapter/control_framework_interfaces/srv/ResetRecord.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Rust code for ROS interfaces"
 	cd /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/control_framework_interfaces__rs && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_rs/cmake/../../../lib/rosidl_generator_rs/rosidl_generator_rs --generator-arguments-file /home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_generator_rs__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 

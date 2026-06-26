@@ -15,12 +15,20 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       1ms, std::bind(&LockStepSim::sim_callback, this));
 
       state_publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("joint_states", 10); //Need custom msg
+      sim_time_publisher_ = this->create_publisher<std_msgs::msg::Float64>("sim_time", 10); //Need custom msg
 
       default_init_set_service = this->create_service<std_srvs::srv::Trigger>("reset_to_default_initial_position", std::bind(&LockStepSim::reset_to_default_initial_position, this, _1, _2));
       custom_init_set_service = this->create_service<std_srvs::srv::Trigger>("reset_to_custom_initial_position", std::bind(&LockStepSim::reset_to_custom_initial_position, this, _1, _2));
       change_custom_init_service = this->create_service<control_framework_interfaces::srv::InitState>("change_initial_position", std::bind(&LockStepSim::change_initial_position, this, _1, _2));
-     // control_input_publisher = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg
+      reset_record_service = this->create_service<control_framework_interfaces::srv::ResetRecord>("reset_record", std::bind(&LockStepSim::reset_record, this, _1, _2));
+      //control_input_publisher = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg
       
+      this->declare_parameter("reset_and_record", false);
+      this->declare_parameter("prev_reset_and_record", false);
+      this->declare_parameter("use_default_init_for_reset_record", true);
+      this->declare_parameter("record_time", 0.0);
+      
+
       //Load Model and Data
       std::string package_share = ament_index_cpp::get_package_share_directory("lockstep_sim");
       std::string model_path = package_share + "/models/cart_pole_mjcf.xml";
@@ -68,10 +76,57 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
 
 void LockStepSim::sim_callback()
 {
-  mj_step(m, d);
+
+  bool reset_and_record = this->get_parameter("reset_and_record").as_bool();
+  bool prev_reset_and_record = this->get_parameter("prev_reset_and_record").as_bool();
+
+  double start_sim_time;
+
+  if(reset_and_record == true){
+  
+      if (prev_reset_and_record == false) //we just swapped to reset_and_record mode, so do the reset
+      {
+        mj_resetDataKeyframe(m,d,this->get_parameter("use_default_init_for_reset_record").as_bool());
+        mj_forward(m,d);
+
+        start_sim_time = d->time;
+
+        
+        this->set_parameter(rclcpp::Parameter("prev_reset_and_record",true));//this parameter stops this if statement from executing more than once
+      }
+
+      if( (d->time - start_sim_time) <= this->get_parameter("record_time").as_double() ){//If the tared current sim time is less than the record_duration, we execute in here
+        mj_step(m, d);
+      }
+      else{
+        RCLCPP_WARN(
+          this->get_logger(),
+          "End of Recording, Pausing sim_step callback to extract csv data: %s"
+          
+        );
+        
+        this->set_parameter(rclcpp::Parameter("reset_and_record", false)); //exit the reset_and_record loop
+        this->set_parameter(rclcpp::Parameter("prev_reset_and_record", false)); //exit the reset_and_record loop
+        rclcpp::sleep_for(std::chrono::seconds(20));//temporarily pause the sim_stepping to allow the extraction of a csv file in foxglove-studio
+
+          RCLCPP_WARN(
+          this->get_logger(),
+          "End of Sim Pause for Recording, resuming sim_stepping: %s"
+          
+        );
+      }
+  }
+
+  else{
+    mj_step(m, d);
+  }
+
+
 
   sensor_msgs::msg::JointState joint_state;
+  std_msgs::msg::Float64 sim_time;
 
+  //double sim_time = d->time;
   // Specify joints' name which are defined in the r2d2.urdf.xml and their content
   joint_state.name={"world_to_ground","cart_slide_joint","pole_hinge_joint","pole_to_tip_joint"};
 
@@ -79,13 +134,19 @@ void LockStepSim::sim_callback()
   joint_state.position={0,d->qpos[0],d->qpos[1],d->qpos[1]};
   joint_state.velocity={0,d->qvel[0],d->qvel[1],d->qvel[1]};
 
-  
+  //int32_t sec = static_cast<int32_t>(std::floor(sim_time));
+  //uint32_t nanosec = static_cast<uint32_t>((sim_time - sec) * 1e9);
+  //joint_state.header.stamp.sec = sec;
+  //joint_state.header.stamp.nanosec = nanosec;
+  //joint_state.header.frame_id = "";
 
+  sim_time.data = d->time;
 
   state_publisher_->publish(joint_state);
+  sim_time_publisher_->publish(sim_time);
 
 
-  if (this->get_parameter("glfw_render").as_int() == 1)
+  if (this->get_parameter("glfw_render").as_int() == 1) //render in the simulation loop. 
   {
 
     if (count_ % render_frame_rate == 0)
@@ -100,9 +161,36 @@ void LockStepSim::sim_callback()
 
 
 
+}
 
+void LockStepSim::reset_record(const std::shared_ptr<control_framework_interfaces::srv::ResetRecord::Request> request,
+          std::shared_ptr<control_framework_interfaces::srv::ResetRecord::Response> response)
+{
+
+
+  auto result = this->set_parameters_atomically({
+    rclcpp::Parameter("use_default_init_for_reset_record", request->use_default_init),
+    rclcpp::Parameter("record_time", request->record_time),
+    rclcpp::Parameter("reset_and_record", true)
+  });
+
+  if (!result.successful) {
+    response->success = false;
+    response->message = "Failed to set reset-record parameters: " + result.reason;
+
+    RCLCPP_WARN(
+      this->get_logger(),
+      "Failed to set reset-record parameters: %s",
+      result.reason.c_str()
+    );
+  }
+  else{
+  response->success = true;
+  response->message = "Successfully set which IC to reset to during recording, the duration of recording, and to start recording.";
+  }
 
 }
+
 
 void LockStepSim::reset_to_default_initial_position(const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
           std::shared_ptr<std_srvs::srv::Trigger::Response> response)

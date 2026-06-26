@@ -3,6 +3,7 @@
   "non_idl_tuples": [
     "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces:msg/ControlInput.msg",
     "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces:msg/JointState.msg",
-    "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces:srv/InitState.srv"
+    "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces:srv/InitState.srv",
+    "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces:srv/ResetRecord.srv"
   ]
 }

@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp.o.d"
   "CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/srv/detail/dds_fastrtps/init_state__type_support.cpp.o"
   "CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/srv/detail/dds_fastrtps/init_state__type_support.cpp.o.d"
+  "CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/srv/detail/dds_fastrtps/reset_record__type_support.cpp.o"
+  "CMakeFiles/control_framework_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/srv/detail/dds_fastrtps/reset_record__type_support.cpp.o.d"
   "libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_cpp.pdb"
   "libcontrol_framework_interfaces__rosidl_typesupport_fastrtps_cpp.so"
   "rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/msg/detail/control_input__rosidl_typesupport_fastrtps_cpp.hpp"
@@ -12,7 +14,9 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/msg/detail/dds_fastrtps/joint_state__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/msg/detail/joint_state__rosidl_typesupport_fastrtps_cpp.hpp"
   "rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/srv/detail/dds_fastrtps/init_state__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/srv/detail/dds_fastrtps/reset_record__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/srv/detail/init_state__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/control_framework_interfaces/srv/detail/reset_record__rosidl_typesupport_fastrtps_cpp.hpp"
 )
 
 # Per-language clean rules from dependency scanning.

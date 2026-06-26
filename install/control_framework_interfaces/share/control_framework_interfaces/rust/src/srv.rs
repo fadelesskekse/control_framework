@@ -116,6 +116,112 @@ impl rosidl_runtime_rs::Message for InitState_Response {
 }
 
 
+// Corresponds to control_framework_interfaces__srv__ResetRecord_Request
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[allow(non_camel_case_types)]
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct ResetRecord_Request {
+    /// Allows us to pick which init_condition to reset to for the recording. 1 for default, 0 for custom
+    pub use_default_init: bool,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub record_time: f64,
+
+}
+
+
+
+impl Default for ResetRecord_Request {
+  fn default() -> Self {
+    <Self as rosidl_runtime_rs::Message>::from_rmw_message(super::srv::rmw::ResetRecord_Request::default())
+  }
+}
+
+impl rosidl_runtime_rs::Message for ResetRecord_Request {
+  type RmwMsg = super::srv::rmw::ResetRecord_Request;
+
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
+    match msg_cow {
+      std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+        use_default_init: msg.use_default_init,
+        record_time: msg.record_time,
+      }),
+      std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+      use_default_init: msg.use_default_init,
+      record_time: msg.record_time,
+      })
+    }
+  }
+
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self {
+    Self {
+      use_default_init: msg.use_default_init,
+      record_time: msg.record_time,
+    }
+  }
+}
+
+
+// Corresponds to control_framework_interfaces__srv__ResetRecord_Response
+
+// This struct is not documented.
+#[allow(missing_docs)]
+
+#[allow(non_camel_case_types)]
+#[cfg_attr(feature = "serde", derive(Deserialize, Serialize))]
+#[derive(Clone, Debug, PartialEq, PartialOrd)]
+pub struct ResetRecord_Response {
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub success: bool,
+
+
+    // This member is not documented.
+    #[allow(missing_docs)]
+    pub message: std::string::String,
+
+}
+
+
+
+impl Default for ResetRecord_Response {
+  fn default() -> Self {
+    <Self as rosidl_runtime_rs::Message>::from_rmw_message(super::srv::rmw::ResetRecord_Response::default())
+  }
+}
+
+impl rosidl_runtime_rs::Message for ResetRecord_Response {
+  type RmwMsg = super::srv::rmw::ResetRecord_Response;
+
+  fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
+    match msg_cow {
+      std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+        success: msg.success,
+        message: msg.message.as_str().into(),
+      }),
+      std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
+      success: msg.success,
+        message: msg.message.as_str().into(),
+      })
+    }
+  }
+
+  fn from_rmw_message(msg: Self::RmwMsg) -> Self {
+    Self {
+      success: msg.success,
+      message: msg.message.to_string(),
+    }
+  }
+}
+
+
 
 
 
@@ -136,6 +242,28 @@ impl rosidl_runtime_rs::Service for InitState {
     fn get_type_support() -> *const std::ffi::c_void {
         // SAFETY: No preconditions for this function.
         unsafe { rosidl_typesupport_c__get_service_type_support_handle__control_framework_interfaces__srv__InitState() }
+    }
+}
+
+
+
+
+#[link(name = "control_framework_interfaces__rosidl_typesupport_c")]
+extern "C" {
+    fn rosidl_typesupport_c__get_service_type_support_handle__control_framework_interfaces__srv__ResetRecord() -> *const std::ffi::c_void;
+}
+
+// Corresponds to control_framework_interfaces__srv__ResetRecord
+#[allow(missing_docs, non_camel_case_types)]
+pub struct ResetRecord;
+
+impl rosidl_runtime_rs::Service for ResetRecord {
+    type Request = ResetRecord_Request;
+    type Response = ResetRecord_Response;
+
+    fn get_type_support() -> *const std::ffi::c_void {
+        // SAFETY: No preconditions for this function.
+        unsafe { rosidl_typesupport_c__get_service_type_support_handle__control_framework_interfaces__srv__ResetRecord() }
     }
 }
 
