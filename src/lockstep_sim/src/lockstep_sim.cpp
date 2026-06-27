@@ -7,6 +7,7 @@
 using namespace std::chrono_literals;
 using std::placeholders::_1;
 using std::placeholders::_2;
+using namespace std;
 
 LockStepSim::LockStepSim() : Node("lockstep_sim")
 {
@@ -27,11 +28,18 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       this->declare_parameter("prev_reset_and_record", false);
       this->declare_parameter("use_default_init_for_reset_record", true);
       this->declare_parameter("record_time", 0.0);
-      
+
+      this->declare_parameter("model_name", "");
+      this->declare_parameter("controller_list", "");
+
+      string model_name = this->get_parameter("model_name").as_string();
+
 
       //Load Model and Data
       std::string package_share = ament_index_cpp::get_package_share_directory("lockstep_sim");
-      std::string model_path = package_share + "/models/cart_pole_mjcf.xml";
+      //std::string model_path = package_share + "/models/cart_pole_mjcf.xml";
+      std::string model_path = package_share + "/models/" + model_name + ".xml";
+      
       char error[1000];
 
   

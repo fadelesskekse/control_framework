@@ -2,6 +2,8 @@
 <launch>
 
   <arg name="glfw_render" default="0"/>
+  <arg name="controller_list" default=""/>
+  <arg name="model" default=""/>
 
   <node 
     pkg="lockstep_sim" 
@@ -11,6 +13,9 @@
     output="screen">
 
     <param name="glfw_render" value="$(var glfw_render)"/>
+    <param name="controller_list" value="$(var controller_list)"/>
+    <param name="model_name" value="$(var model)"/>
+
 
   </node>
 

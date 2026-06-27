@@ -7,14 +7,18 @@
 class LqrController : public BaseController
 {
     public:
-        LqrController(size_t gain_count_);
+        LqrController(size_t lqr_gain_row_num, size_t lqr_gain_col_num);
 
-        vector<double> control_passthrough(const vector<double>& state_input) override;
+        vector<double> control_passthrough(const vector<double>& state) override;
 
     private:
         
+        size_t lqr_gain_row_num;
+        size_t lqr_gain_col_num;
         size_t lqr_gain_length;
+
         double* K_;
+
       
        //std::vector<double> Q(q_gains, q_gains + q_length);
 

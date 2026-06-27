@@ -1,6 +1,6 @@
 /home/dakota/.local/repos/control_framework/install/lockstep_sim/lib/lockstep_sim/lockstep_sim
 /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models/cart_pole_urdf.xml
-/home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models/cart_pole_mjcf.xml
+/home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/models/cart_pole.xml
 /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/package_run_dependencies/lockstep_sim
 /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/ament_index/resource_index/parent_prefix_path/lockstep_sim
 /home/dakota/.local/repos/control_framework/install/lockstep_sim/share/lockstep_sim/environment/ament_prefix_path.sh
