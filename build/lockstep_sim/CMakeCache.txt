@@ -370,6 +370,9 @@ builtin_interfaces_DIR:PATH=/opt/ros/humble/share/builtin_interfaces/cmake
 //The directory containing a CMake configuration file for control_framework_interfaces.
 control_framework_interfaces_DIR:PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake
 
+//The directory containing a CMake configuration file for controller.
+controller_DIR:PATH=/home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake
+
 //The directory containing a CMake configuration file for fastcdr.
 fastcdr_DIR:PATH=/opt/ros/humble/lib/cmake/fastcdr
 

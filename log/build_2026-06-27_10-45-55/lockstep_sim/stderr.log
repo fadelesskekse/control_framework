@@ -1,0 +1,78 @@
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp: In function ‘void render::keyboard(GLFWwindow*, int, int, int, int)’:
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:76:31: warning: unused parameter ‘window’ [-Wunused-parameter]
+   76 |     void keyboard(GLFWwindow* window, int key, int scancode, int act, int mods)
+      |                   ~~~~~~~~~~~~^~~~~~
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:76:52: warning: unused parameter ‘scancode’ [-Wunused-parameter]
+   76 |     void keyboard(GLFWwindow* window, int key, int scancode, int act, int mods)
+      |                                                ~~~~^~~~~~~~
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:76:75: warning: unused parameter ‘mods’ [-Wunused-parameter]
+   76 |     void keyboard(GLFWwindow* window, int key, int scancode, int act, int mods)
+      |                                                                       ~~~~^~~~
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp: In function ‘void render::mouse_button(GLFWwindow*, int, int, int)’:
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:94:47: warning: unused parameter ‘button’ [-Wunused-parameter]
+   94 |     void mouse_button(GLFWwindow* window, int button, int act, int mods) {
+      |                                           ~~~~^~~~~~
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:94:59: warning: unused parameter ‘act’ [-Wunused-parameter]
+   94 |     void mouse_button(GLFWwindow* window, int button, int act, int mods) {
+      |                                                       ~~~~^~~
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:94:68: warning: unused parameter ‘mods’ [-Wunused-parameter]
+   94 |     void mouse_button(GLFWwindow* window, int button, int act, int mods) {
+      |                                                                ~~~~^~~~
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp: In function ‘void render::scroll(GLFWwindow*, double, double)’:
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:142:29: warning: unused parameter ‘window’ [-Wunused-parameter]
+  142 |     void scroll(GLFWwindow* window, double xoffset, double yoffset) {
+      |                 ~~~~~~~~~~~~^~~~~~
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:142:44: warning: unused parameter ‘xoffset’ [-Wunused-parameter]
+  142 |     void scroll(GLFWwindow* window, double xoffset, double yoffset) {
+      |                                     ~~~~~~~^~~~~~~
+In file included from /opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+                 from /home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:12,
+                 from /home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:3:
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp: In member function ‘void LockStepSim::sim_callback()’:
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:104:11: warning: format ‘%s’ expects a matching ‘char*’ argument [-Wformat=]
+  104 |           "End of Recording, Pausing sim_step callback to extract csv data: %s"
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:104:78: note: format string is defined here
+  104 |           "End of Recording, Pausing sim_step callback to extract csv data: %s"
+      |                                                                             ~^
+      |                                                                              |
+      |                                                                              char*
+In file included from /opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21,
+                 from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+                 from /home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:12,
+                 from /home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:3:
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:114:11: warning: format ‘%s’ expects a matching ‘char*’ argument [-Wformat=]
+  114 |           "End of Sim Pause for Recording, resuming sim_stepping: %s"
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:114:68: note: format string is defined here
+  114 |           "End of Sim Pause for Recording, resuming sim_stepping: %s"
+      |                                                                   ~^
+      |                                                                    |
+      |                                                                    char*
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp: In member function ‘void LockStepSim::reset_to_default_initial_position(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)’:
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:195:108: warning: unused parameter ‘request’ [-Wunused-parameter]
+  195 | void LockStepSim::reset_to_default_initial_position(const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+      |                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp: In member function ‘void LockStepSim::reset_to_custom_initial_position(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)’:
+/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:213:107: warning: unused parameter ‘request’ [-Wunused-parameter]
+  213 | void LockStepSim::reset_to_custom_initial_position(const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
+      |                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~

@@ -1,0 +1,24 @@
+[0.004s] Invoking command in '/home/dakota/.local/repos/control_framework/build/control_framework_interfaces': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/control_framework_interfaces -- -j28 -l28
+[0.038s] [  1%] Built target control_framework_interfaces__rs
+[0.038s] [  5%] Built target control_framework_interfaces__cpp
+[0.038s] [ 14%] Built target control_framework_interfaces__rosidl_generator_c
+[0.043s] [ 14%] Built target ament_cmake_python_copy_control_framework_interfaces
+[0.050s] [ 25%] Built target control_framework_interfaces__rosidl_typesupport_introspection_cpp
+[0.053s] [ 35%] Built target control_framework_interfaces__rosidl_typesupport_cpp
+[0.053s] [ 46%] Built target control_framework_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.056s] [ 57%] Built target control_framework_interfaces__rosidl_typesupport_c
+[0.058s] [ 67%] Built target control_framework_interfaces__rosidl_typesupport_introspection_c
+[0.059s] [ 78%] Built target control_framework_interfaces__rosidl_typesupport_fastrtps_c
+[0.073s] [ 78%] Built target control_framework_interfaces
+[0.087s] [ 80%] Built target control_framework_interfaces__py
+[0.102s] [ 89%] Built target control_framework_interfaces__rosidl_generator_py
+[0.116s] [ 92%] Built target control_framework_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.116s] [ 96%] Built target control_framework_interfaces__rosidl_typesupport_introspection_c__pyext
+[0.117s] [100%] Built target control_framework_interfaces__rosidl_typesupport_c__pyext
+[0.149s] running egg_info
+[0.149s] writing control_framework_interfaces.egg-info/PKG-INFO
+[0.149s] writing dependency_links to control_framework_interfaces.egg-info/dependency_links.txt
+[0.149s] writing top-level names to control_framework_interfaces.egg-info/top_level.txt
+[0.150s] reading manifest file 'control_framework_interfaces.egg-info/SOURCES.txt'
+[0.151s] writing manifest file 'control_framework_interfaces.egg-info/SOURCES.txt'
+[0.164s] [100%] Built target ament_cmake_python_build_control_framework_interfaces_egg

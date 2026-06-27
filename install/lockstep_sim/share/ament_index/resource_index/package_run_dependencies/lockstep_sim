@@ -1,1 +1,1 @@
-rclcpp;control_framework_interfaces;sensor_msgs;std_srvs;ros2launch;ament_lint_auto;ament_lint_common
+rclcpp;control_framework_interfaces;sensor_msgs;std_srvs;controller;ros2launch;ament_lint_auto;ament_lint_common

@@ -1,0 +1,19 @@
+[0.006s] Invoking command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim': AMENT_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/controller:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/controller:/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/lockstep_sim -- -j28 -l28
+[0.038s] [ 25%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/main.cpp.o[0m
+[0.040s] [ 50%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o[0m
+[0.139s] In file included from [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:3[m[K:
+[0.139s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:14:10:[m[K [01;31m[Kfatal error: [m[Kcontroller/controller.hpp: No such file or directory
+[0.139s]    14 | #include [01;31m[K"controller/controller.hpp"[m[K
+[0.139s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.139s] compilation terminated.
+[0.139s] In file included from [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/main.cpp:4[m[K:
+[0.139s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:14:10:[m[K [01;31m[Kfatal error: [m[Kcontroller/controller.hpp: No such file or directory
+[0.139s]    14 | #include [01;31m[K"controller/controller.hpp"[m[K
+[0.139s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.139s] compilation terminated.
+[0.140s] gmake[2]: *** [CMakeFiles/lockstep_sim.dir/build.make:90: CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o] Error 1
+[0.140s] gmake[2]: *** Waiting for unfinished jobs....
+[0.140s] gmake[2]: *** [CMakeFiles/lockstep_sim.dir/build.make:76: CMakeFiles/lockstep_sim.dir/src/main.cpp.o] Error 1
+[0.141s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/lockstep_sim.dir/all] Error 2
+[0.141s] gmake: *** [Makefile:146: all] Error 2
+[0.142s] Invoked command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim' returned '2': AMENT_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/controller:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/controller:/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/lockstep_sim -- -j28 -l28

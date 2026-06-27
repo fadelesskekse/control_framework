@@ -11,6 +11,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
+#include "controller/controller.hpp"
 
 #include "std_msgs/msg/float64.hpp"
 #include "std_srvs/srv/trigger.hpp"
