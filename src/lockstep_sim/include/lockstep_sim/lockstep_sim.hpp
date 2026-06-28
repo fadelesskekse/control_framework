@@ -11,7 +11,7 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
-#include "controller/controller.hpp"
+#include "controller/controllers.hpp"
 
 #include "std_msgs/msg/float64.hpp"
 #include "std_srvs/srv/trigger.hpp"
@@ -44,6 +44,9 @@ class LockStepSim : public rclcpp::Node
 
         void reset_record(const std::shared_ptr<control_framework_interfaces::srv::ResetRecord::Request> request,
           std::shared_ptr<control_framework_interfaces::srv::ResetRecord::Response> response);
+
+        void set_controllers(string controller_name);
+	      std::vector<std::unique_ptr<BaseController>> controllers;
 
           
 

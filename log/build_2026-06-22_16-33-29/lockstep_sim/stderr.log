@@ -1,8 +1,0 @@
-/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp: In member function ‘void LockStepSim::reset_to_default_initial_position(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)’:
-/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:95:108: warning: unused parameter ‘request’ [-Wunused-parameter]
-   95 | void LockStepSim::reset_to_default_initial_position(const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
-      |                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
-/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp: In member function ‘void LockStepSim::reset_to_custom_initial_position(std::shared_ptr<std_srvs::srv::Trigger_Request_<std::allocator<void> > >, std::shared_ptr<std_srvs::srv::Trigger_Response_<std::allocator<void> > >)’:
-/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:113:107: warning: unused parameter ‘request’ [-Wunused-parameter]
-  113 | void LockStepSim::reset_to_custom_initial_position(const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
-      |                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~

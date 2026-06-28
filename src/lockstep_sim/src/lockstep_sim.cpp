@@ -28,9 +28,35 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       this->declare_parameter("prev_reset_and_record", false);
       this->declare_parameter("use_default_init_for_reset_record", true);
       this->declare_parameter("record_time", 0.0);
+	    this->declare_parameter("model_name", "");
+	    this->declare_parameter<vector<string>>("controller_list", vector<string> {});
 
-      this->declare_parameter("model_name", "");
-      this->declare_parameter("controller_list", "");
+	    vector<string> controller_list = this->get_parameter("controller_list").as_string_array();
+
+	    std::string controller_names;
+
+      for (const auto& controller_name : controller_list) {
+
+
+        if (!controller_names.empty()) {
+            controller_names += ", ";
+        }
+        controller_names += controller_name;
+
+        set_controllers(controller_name);
+
+        
+
+        }
+
+
+      RCLCPP_WARN(
+          this->get_logger(),
+          "Controller list: [%s]",
+          controller_names.c_str()
+      );
+
+
 
       string model_name = this->get_parameter("model_name").as_string();
 
@@ -74,12 +100,6 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
         render_frame_rate = 16; //1/60 fps ~ 16ms per frame
       }
       
-
-
-
-      
-  
-
 }
 
 void LockStepSim::sim_callback()
@@ -311,5 +331,63 @@ void LockStepSim::change_initial_position(const std::shared_ptr<control_framewor
 }
 
 
+void LockStepSim::set_controllers(string controller_name){
+
+    if (controller_name == "lqr") {
+
+      this->declare_parameter<int64_t>("lqr_gain_row_num", 0);
+      this->declare_parameter<int64_t>("lqr_gain_col_num", 0);
+      this->declare_parameter<std::vector<double>>("lqr_K", std::vector<double>{});
+
+      int lqr_gain_row_num =
+          this->get_parameter("lqr_gain_row_num").as_int();
+
+      int lqr_gain_col_num =
+          this->get_parameter("lqr_gain_col_num").as_int();
+
+      std::vector<double> lqr_K =
+          this->get_parameter("lqr_K").as_double_array();
+
+      controllers.push_back(std::make_unique<Lqr>(
+           static_cast<std::size_t>(lqr_gain_row_num),
+           static_cast<std::size_t>(lqr_gain_col_num),
+          lqr_K
+      ));
+
+      RCLCPP_WARN(
+          this->get_logger(),
+          "Instantiated LQR controller"
+      );
+
+      RCLCPP_WARN(
+          this->get_logger(),
+          "LQR params: rows=%ld, cols=%ld",
+          lqr_gain_row_num,
+          lqr_gain_col_num
+      );
+
+      std::string lqr_K_string;
+
+      for (const auto& gain : lqr_K) {
+          if (!lqr_K_string.empty()) {
+              lqr_K_string += ", ";
+          }
+          lqr_K_string += std::to_string(gain);
+      }
+
+            RCLCPP_WARN(
+          this->get_logger(),
+          "LQR K: [%s]",
+          lqr_K_string.c_str()
+      );
 
 
+  } else {
+      RCLCPP_ERROR(
+          this->get_logger(),
+          "Unknown controller requested: %s",
+          controller_name.c_str()
+      );
+  }
+
+}

@@ -3,7 +3,6 @@
 
 
     #include <vector>
-    #include "rclcpp/rclcpp.hpp"
     #include <numeric>
 
     using namespace std;
@@ -12,10 +11,11 @@
 
         public:
             virtual vector<double> control_passthrough(const vector<double>& state_input) = 0;
+            virtual ~BaseController() = default;
          
         protected:
             BaseController(size_t gain_count);
-            virtual ~BaseController() = default;
+            
             vector<double> gains;
             
     };

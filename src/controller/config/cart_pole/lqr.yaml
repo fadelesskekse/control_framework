@@ -1,0 +1,5 @@
+sim:
+  ros__parameters:
+    lqr_gain_row_num: 1
+    lqr_gain_col_num: 4
+    lqr_K: [12.3,4.5,-8.1,2.0]

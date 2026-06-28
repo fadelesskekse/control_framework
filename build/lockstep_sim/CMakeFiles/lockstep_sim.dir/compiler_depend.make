@@ -710,7 +710,8 @@ CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o: /home/dakota/.local/repos/co
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
-  /home/dakota/.local/repos/control_framework/install/controller/include/controller/controller.hpp \
+  /home/dakota/.local/repos/control_framework/install/controller/include/controller/controllers.hpp \
+  /home/dakota/.local/repos/control_framework/install/controller/include/controller/base_controller.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/float64.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__builder.hpp \
@@ -1452,7 +1453,8 @@ CMakeFiles/lockstep_sim.dir/src/main.cpp.o: /home/dakota/.local/repos/control_fr
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
-  /home/dakota/.local/repos/control_framework/install/controller/include/controller/controller.hpp \
+  /home/dakota/.local/repos/control_framework/install/controller/include/controller/controllers.hpp \
+  /home/dakota/.local/repos/control_framework/install/controller/include/controller/base_controller.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/float64.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__builder.hpp \
@@ -1729,8 +1731,6 @@ CMakeFiles/lockstep_sim.dir/src/render.cpp.o: /home/dakota/.local/repos/control_
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__traits.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float64__struct.hpp:
-
-/home/dakota/.local/repos/control_framework/install/controller/include/controller/controller.hpp:
 
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp:
 
@@ -2017,6 +2017,8 @@ CMakeFiles/lockstep_sim.dir/src/render.cpp.o: /home/dakota/.local/repos/control_
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:
 
 /usr/include/c++/11/bits/stl_raw_storage_iter.h:
+
+/home/dakota/.local/repos/control_framework/install/controller/include/controller/base_controller.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
@@ -2573,6 +2575,8 @@ CMakeFiles/lockstep_sim.dir/src/render.cpp.o: /home/dakota/.local/repos/control_
 /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h:
 
 /opt/ros/humble/include/rmw/rmw/message_sequence.h:
+
+/home/dakota/.local/repos/control_framework/install/controller/include/controller/controllers.hpp:
 
 /usr/include/c++/11/ext/concurrence.h:
 

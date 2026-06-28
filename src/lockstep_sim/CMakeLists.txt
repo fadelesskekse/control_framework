@@ -12,8 +12,8 @@ find_package(sensor_msgs REQUIRED)
 find_package(control_framework_interfaces REQUIRED)
 find_package(glfw3 REQUIRED)
 find_package(std_srvs REQUIRED)
-find_package(controller REQUIRED)
-
+find_package(controller REQUIRED) #Gives the location of the controller library file and the library header files
+ 
 find_library(MUJOCO_LIBRARY mujoco REQUIRED)
 
 
@@ -28,21 +28,22 @@ rclcpp
 control_framework_interfaces
 sensor_msgs
 std_srvs
-controller
 )
 
-#target_include_directories(lockstep_sim
-   # PRIVATE
-  #  "/usr/local/include/mujoco"
-    #"${CMAKE_CURRENT_SOURCE_DIR}/../../../mujoco-3.9.0/include/"
-    #"../glfw/include/"
+
+#target_include_directories(lockstep_sim PRIVATE   #THIS IS WHAT FIND_PACKAGE() DOES FOR US
+ # $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../install/controller/include/> #THIS IS WHAT FIND_PACKAGE() DOES FOR US
+ # $<INSTALL_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../install/controller/include/> #THIS IS WHAT FIND_PACKAGE() DOES FOR US
 #)
+
 
 
 target_link_libraries(lockstep_sim
 
     ${MUJOCO_LIBRARY}
     glfw
+    #${CMAKE_CURRENT_SOURCE_DIR}/../../install/controller/lib/libcontroller.a #THIS IS WHAT FIND_PACKAGE() DOES FOR US
+    controller::controller
    
     #"${CMAKE_CURRENT_SOURCE_DIR}/../glfw/build/src/libglfw3.a"
 )

@@ -1,0 +1,73 @@
+[0.006s] Invoking command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/controller:/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/controller/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/lockstep_sim -- -j28 -l28
+[0.021s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.081s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.093s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.094s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.097s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.101s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.107s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.121s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.122s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.170s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.193s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.206s] -- Found control_framework_interfaces: 0.0.0 (/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/share/control_framework_interfaces/cmake)
+[0.211s] -- Found std_srvs: 4.9.1 (/opt/ros/humble/share/std_srvs/cmake)
+[0.215s] -- Found controller: 0.0.0 (/home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake)
+[0.216s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.256s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.256s] -- Configured cppcheck include dirs: 
+[0.256s] -- Configured cppcheck exclude dirs and/or files: 
+[0.256s] -- Added test 'lint_cmake' to check CMake code style
+[0.257s] -- Added test 'uncrustify' to check C / C++ code style
+[0.257s] -- Configured uncrustify additional arguments: 
+[0.257s] -- Added test 'xmllint' to check XML markup files
+[0.258s] -- Configuring done
+[0.263s] -- Generating done
+[0.265s] -- Build files have been written to: /home/dakota/.local/repos/control_framework/build/lockstep_sim
+[0.283s] [35m[1mConsolidate compiler generated dependencies of target lockstep_sim[0m
+[0.298s] [ 25%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/main.cpp.o[0m
+[0.298s] [ 75%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o[0m
+[0.298s] [ 75%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/render.cpp.o[0m
+[0.394s] In file included from [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/lockstep_sim.cpp:3[m[K:
+[0.394s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:14:10:[m[K [01;31m[Kfatal error: [m[Kcontroller/controllers.hpp: No such file or directory
+[0.394s]    14 | #include [01;31m[K"controller/controllers.hpp"[m[K
+[0.394s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.394s] compilation terminated.
+[0.396s] gmake[2]: *** [CMakeFiles/lockstep_sim.dir/build.make:90: CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o] Error 1
+[0.396s] gmake[2]: *** Waiting for unfinished jobs....
+[0.397s] In file included from [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/main.cpp:4[m[K:
+[0.397s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/../include/lockstep_sim/lockstep_sim.hpp:14:10:[m[K [01;31m[Kfatal error: [m[Kcontroller/controllers.hpp: No such file or directory
+[0.397s]    14 | #include [01;31m[K"controller/controllers.hpp"[m[K
+[0.397s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[0.397s] compilation terminated.
+[0.399s] gmake[2]: *** [CMakeFiles/lockstep_sim.dir/build.make:76: CMakeFiles/lockstep_sim.dir/src/main.cpp.o] Error 1
+[0.426s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:[m[K In function ‘[01m[Kvoid render::keyboard(GLFWwindow*, int, int, int, int)[m[K’:
+[0.426s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:76:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwindow[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.426s]    76 |     void keyboard([01;35m[KGLFWwindow* window[m[K, int key, int scancode, int act, int mods)
+[0.426s]       |                   [01;35m[K~~~~~~~~~~~~^~~~~~[m[K
+[0.426s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:76:52:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscancode[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.426s]    76 |     void keyboard(GLFWwindow* window, int key, [01;35m[Kint scancode[m[K, int act, int mods)
+[0.426s]       |                                                [01;35m[K~~~~^~~~~~~~[m[K
+[0.426s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:76:75:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.426s]    76 |     void keyboard(GLFWwindow* window, int key, int scancode, int act, [01;35m[Kint mods[m[K)
+[0.426s]       |                                                                       [01;35m[K~~~~^~~~[m[K
+[0.426s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:[m[K In function ‘[01m[Kvoid render::mouse_button(GLFWwindow*, int, int, int)[m[K’:
+[0.427s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:94:47:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kbutton[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.427s]    94 |     void mouse_button(GLFWwindow* window, [01;35m[Kint button[m[K, int act, int mods) {
+[0.427s]       |                                           [01;35m[K~~~~^~~~~~[m[K
+[0.427s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:94:59:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kact[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.427s]    94 |     void mouse_button(GLFWwindow* window, int button, [01;35m[Kint act[m[K, int mods) {
+[0.427s]       |                                                       [01;35m[K~~~~^~~[m[K
+[0.427s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:94:68:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmods[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.427s]    94 |     void mouse_button(GLFWwindow* window, int button, int act, [01;35m[Kint mods[m[K) {
+[0.427s]       |                                                                [01;35m[K~~~~^~~~[m[K
+[0.427s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:[m[K In function ‘[01m[Kvoid render::scroll(GLFWwindow*, double, double)[m[K’:
+[0.427s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:142:29:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kwindow[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.427s]   142 |     void scroll([01;35m[KGLFWwindow* window[m[K, double xoffset, double yoffset) {
+[0.427s]       |                 [01;35m[K~~~~~~~~~~~~^~~~~~[m[K
+[0.427s] [01m[K/home/dakota/.local/repos/control_framework/src/lockstep_sim/src/render.cpp:142:44:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kxoffset[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[0.427s]   142 |     void scroll(GLFWwindow* window, [01;35m[Kdouble xoffset[m[K, double yoffset) {
+[0.427s]       |                                     [01;35m[K~~~~~~~^~~~~~~[m[K
+[0.460s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/lockstep_sim.dir/all] Error 2
+[0.460s] gmake: *** [Makefile:146: all] Error 2
+[0.462s] Invoked command in '/home/dakota/.local/repos/control_framework/build/lockstep_sim' returned '2': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/controller:/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/controller/lib:${LD_LIBRARY_PATH} /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/lockstep_sim -- -j28 -l28

@@ -1,2 +1,0 @@
-Invoking command in '/home/dakota/.local/repos/control_framework/build/controller': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/controller -- -j28 -l28
-Invoked command in '/home/dakota/.local/repos/control_framework/build/controller' returned '2': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/controller -- -j28 -l28

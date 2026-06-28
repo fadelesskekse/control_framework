@@ -5,16 +5,37 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(rclcpp REQUIRED)
 
-install(DIRECTORY include/
+
+add_library(controller 
+src/base_controller.cpp
+src/controllers.cpp
+)
+
+target_include_directories(controller PUBLIC
+  $<INSTALL_INTERFACE:include> #Tells consumers of this library to look in install/controller/include for its header files
+  #Used in find_package(controller) in lockstep_sim
+  )
+
+
+install(DIRECTORY include/ #Copies this libraries header files into the install/controller/include. 
   DESTINATION include
 )
 
-ament_export_include_directories(include)
-ament_export_dependencies(rclcpp)
+install(DIRECTORY config
+  DESTINATION share/${PROJECT_NAME}
+)
+
+install(
+  TARGETS controller
+  EXPORT controllerTargets
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib)
+
+ament_export_targets(controllerTargets HAS_LIBRARY_TARGET)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

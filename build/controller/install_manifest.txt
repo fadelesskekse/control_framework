@@ -1,6 +1,10 @@
 /home/dakota/.local/repos/control_framework/install/controller/include/controller/controllers.hpp
-/home/dakota/.local/repos/control_framework/install/controller/include/controller/implemented_controllers.hpp
 /home/dakota/.local/repos/control_framework/install/controller/include/controller/base_controller.hpp
+/home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/pid.yaml
+/home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/lqr.yaml
+/home/dakota/.local/repos/control_framework/install/controller/lib/libcontroller.a
+/home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/library_path.sh
+/home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/library_path.dsv
 /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/package_run_dependencies/controller
 /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/parent_prefix_path/controller
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/ament_prefix_path.sh
@@ -13,8 +17,9 @@
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.dsv
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/package.dsv
 /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/packages/controller
-/home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/ament_cmake_export_include_directories-extras.cmake
-/home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/ament_cmake_export_dependencies-extras.cmake
+/home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerTargetsExport.cmake
+/home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerTargetsExport-noconfig.cmake
+/home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/ament_cmake_export_targets-extras.cmake
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerConfig.cmake
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerConfig-version.cmake
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/package.xml

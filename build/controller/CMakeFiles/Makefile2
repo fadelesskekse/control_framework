@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/dakota/.local/repos/control_framework/build/controller
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/controller.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,6 +73,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/uninstall.dir/clean
 clean: CMakeFiles/controller_uninstall.dir/clean
+clean: CMakeFiles/controller.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -126,6 +127,32 @@ controller_uninstall: CMakeFiles/controller_uninstall.dir/rule
 CMakeFiles/controller_uninstall.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller_uninstall.dir/build.make CMakeFiles/controller_uninstall.dir/clean
 .PHONY : CMakeFiles/controller_uninstall.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/controller.dir
+
+# All Build rule for target.
+CMakeFiles/controller.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/dakota/.local/repos/control_framework/build/controller/CMakeFiles --progress-num=1,2,3 "Built target controller"
+.PHONY : CMakeFiles/controller.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/controller.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dakota/.local/repos/control_framework/build/controller/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/controller.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/dakota/.local/repos/control_framework/build/controller/CMakeFiles 0
+.PHONY : CMakeFiles/controller.dir/rule
+
+# Convenience name for target.
+controller: CMakeFiles/controller.dir/rule
+.PHONY : controller
+
+# clean rule for target.
+CMakeFiles/controller.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/clean
+.PHONY : CMakeFiles/controller.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

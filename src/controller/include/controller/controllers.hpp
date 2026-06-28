@@ -4,10 +4,10 @@
 #include "base_controller.hpp"
 
 
-class LqrController : public BaseController
+class Lqr : public BaseController
 {
     public:
-        LqrController(size_t lqr_gain_row_num, size_t lqr_gain_col_num);
+        Lqr(size_t lqr_gain_row_num, size_t lqr_gain_col_num, vector<double> K);
 
         vector<double> control_passthrough(const vector<double>& state) override;
 

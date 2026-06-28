@@ -197,6 +197,67 @@ controller_uninstall/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller_uninstall.dir/build.make CMakeFiles/controller_uninstall.dir/build
 .PHONY : controller_uninstall/fast
 
+#=============================================================================
+# Target rules for targets named controller
+
+# Build rule for target.
+controller: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 controller
+.PHONY : controller
+
+# fast build rule for target.
+controller/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/build
+.PHONY : controller/fast
+
+src/base_controller.o: src/base_controller.cpp.o
+.PHONY : src/base_controller.o
+
+# target to build an object file
+src/base_controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/src/base_controller.cpp.o
+.PHONY : src/base_controller.cpp.o
+
+src/base_controller.i: src/base_controller.cpp.i
+.PHONY : src/base_controller.i
+
+# target to preprocess a source file
+src/base_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/src/base_controller.cpp.i
+.PHONY : src/base_controller.cpp.i
+
+src/base_controller.s: src/base_controller.cpp.s
+.PHONY : src/base_controller.s
+
+# target to generate assembly for a file
+src/base_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/src/base_controller.cpp.s
+.PHONY : src/base_controller.cpp.s
+
+src/controllers.o: src/controllers.cpp.o
+.PHONY : src/controllers.o
+
+# target to build an object file
+src/controllers.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/src/controllers.cpp.o
+.PHONY : src/controllers.cpp.o
+
+src/controllers.i: src/controllers.cpp.i
+.PHONY : src/controllers.i
+
+# target to preprocess a source file
+src/controllers.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/src/controllers.cpp.i
+.PHONY : src/controllers.cpp.i
+
+src/controllers.s: src/controllers.cpp.s
+.PHONY : src/controllers.s
+
+# target to generate assembly for a file
+src/controllers.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/src/controllers.cpp.s
+.PHONY : src/controllers.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +273,13 @@ help:
 	@echo "... test"
 	@echo "... controller_uninstall"
 	@echo "... uninstall"
+	@echo "... controller"
+	@echo "... src/base_controller.o"
+	@echo "... src/base_controller.i"
+	@echo "... src/base_controller.s"
+	@echo "... src/controllers.o"
+	@echo "... src/controllers.i"
+	@echo "... src/controllers.s"
 .PHONY : help
 
 
