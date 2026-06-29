@@ -74,6 +74,9 @@ CMakeFiles/control_framework_interfaces: rosidl_cmake/srv/InitState_Response.msg
 CMakeFiles/control_framework_interfaces: /home/dakota/.local/repos/control_framework/src/control_framework_interfaces/srv/ResetRecord.srv
 CMakeFiles/control_framework_interfaces: rosidl_cmake/srv/ResetRecord_Request.msg
 CMakeFiles/control_framework_interfaces: rosidl_cmake/srv/ResetRecord_Response.msg
+CMakeFiles/control_framework_interfaces: /home/dakota/.local/repos/control_framework/src/control_framework_interfaces/srv/ControllerSelect.srv
+CMakeFiles/control_framework_interfaces: rosidl_cmake/srv/ControllerSelect_Request.msg
+CMakeFiles/control_framework_interfaces: rosidl_cmake/srv/ControllerSelect_Response.msg
 
 control_framework_interfaces: CMakeFiles/control_framework_interfaces
 control_framework_interfaces: CMakeFiles/control_framework_interfaces.dir/build.make

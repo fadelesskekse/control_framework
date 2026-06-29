@@ -6,7 +6,8 @@
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces:msg/ControlInput.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces:msg/JointState.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces:srv/InitState.idl",
-    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces:srv/ResetRecord.idl"
+    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces:srv/ResetRecord.idl",
+    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces:srv/ControllerSelect.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c",
@@ -25,6 +26,7 @@
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/msg/ControlInput.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/msg/JointState.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/InitState.idl",
-    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/ResetRecord.idl"
+    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/ResetRecord.idl",
+    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/ControllerSelect.idl"
   ]
 }

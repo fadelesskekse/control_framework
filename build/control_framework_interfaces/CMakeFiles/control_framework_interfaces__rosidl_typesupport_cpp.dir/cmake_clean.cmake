@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/control_framework_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_framework_interfaces/msg/control_input__type_support.cpp.o.d"
   "CMakeFiles/control_framework_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_framework_interfaces/msg/joint_state__type_support.cpp.o"
   "CMakeFiles/control_framework_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_framework_interfaces/msg/joint_state__type_support.cpp.o.d"
+  "CMakeFiles/control_framework_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_framework_interfaces/srv/controller_select__type_support.cpp.o"
+  "CMakeFiles/control_framework_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_framework_interfaces/srv/controller_select__type_support.cpp.o.d"
   "CMakeFiles/control_framework_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_framework_interfaces/srv/init_state__type_support.cpp.o"
   "CMakeFiles/control_framework_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_framework_interfaces/srv/init_state__type_support.cpp.o.d"
   "CMakeFiles/control_framework_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/control_framework_interfaces/srv/reset_record__type_support.cpp.o"
@@ -11,6 +13,7 @@ file(REMOVE_RECURSE
   "libcontrol_framework_interfaces__rosidl_typesupport_cpp.so"
   "rosidl_typesupport_cpp/control_framework_interfaces/msg/control_input__type_support.cpp"
   "rosidl_typesupport_cpp/control_framework_interfaces/msg/joint_state__type_support.cpp"
+  "rosidl_typesupport_cpp/control_framework_interfaces/srv/controller_select__type_support.cpp"
   "rosidl_typesupport_cpp/control_framework_interfaces/srv/init_state__type_support.cpp"
   "rosidl_typesupport_cpp/control_framework_interfaces/srv/reset_record__type_support.cpp"
 )

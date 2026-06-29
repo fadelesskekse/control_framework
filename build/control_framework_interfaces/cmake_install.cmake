@@ -380,6 +380,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/srv" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/ControllerSelect.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/msg" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces/msg/ControlInput.msg")
 endif()
 
@@ -409,6 +413,18 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/srv" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_cmake/srv/ResetRecord_Response.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/srv" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces/srv/ControllerSelect.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/srv" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_cmake/srv/ControllerSelect_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/srv" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_cmake/srv/ControllerSelect_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

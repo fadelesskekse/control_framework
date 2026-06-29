@@ -45,6 +45,7 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       custom_init_set_service = this->create_service<std_srvs::srv::Trigger>("reset_to_custom_initial_position", std::bind(&LockStepSim::reset_to_custom_initial_position, this, _1, _2));
       change_custom_init_service = this->create_service<control_framework_interfaces::srv::InitState>("change_initial_position", std::bind(&LockStepSim::change_initial_position, this, _1, _2));
       reset_record_service = this->create_service<control_framework_interfaces::srv::ResetRecord>("reset_record", std::bind(&LockStepSim::reset_record, this, _1, _2));
+      swap_controllers_service = this->create_service<control_framework_interfaces::srv::ControllerSelect>("controller_select", std::bind(&LockStepSim::controller_select, this, _1, _2));
       //control_input_publisher = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg
       
       this->declare_parameter("reset_and_record", false);
@@ -174,8 +175,6 @@ void LockStepSim::sim_callback()
     mj_step(m, d);
   }
 
-
-
   sensor_msgs::msg::JointState joint_state;
   std_msgs::msg::Float64 sim_time;
 
@@ -216,6 +215,36 @@ void LockStepSim::glfw_render(){
     count_++;
 
   }
+
+}
+
+
+void LockStepSim::controller_select(const std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Request> request,
+          std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Response> response)
+{
+  string active_controller_name_request = request->controller_name;
+
+  vector<string> controller_list = this->get_parameter("controller_list").as_string_array();
+
+
+  for (size_t i = 0; i < controller_list.size(); i++) {
+
+        if(active_controller_name_request == controller_list[i]){
+          active_controller = controllers[i].get();
+
+          response->success = true;
+          response->message = "Controller changed to: " + active_controller_name_request;
+
+          return;
+        }
+
+    }
+    response->success = false;
+    response->message = "Invalid Controller Requested, Controller Is not Changed";
+    RCLCPP_WARN(
+          this->get_logger(),
+          "Not a valid Controller Requested, Controller Is not Changed"
+        );
 
 }
 
@@ -410,7 +439,57 @@ void LockStepSim::set_controllers(string controller_name){
       );
 
 
-  } else {
+  }
+  
+  else if(controller_name == "test"){
+          this->declare_parameter<int64_t>("test_gain_row_num", 0);
+      this->declare_parameter<int64_t>("test_gain_col_num", 0);
+      this->declare_parameter<std::vector<double>>("test_K", std::vector<double>{});
+
+      int test_gain_row_num =
+          this->get_parameter("test_gain_row_num").as_int();
+
+      int test_gain_col_num =
+          this->get_parameter("test_gain_col_num").as_int();
+
+      std::vector<double> test_K =
+          this->get_parameter("test_K").as_double_array();
+
+      controllers.push_back(std::make_unique<Test>(
+           static_cast<std::size_t>(test_gain_row_num),
+           static_cast<std::size_t>(test_gain_col_num),
+          test_K
+      ));
+
+      RCLCPP_WARN(
+          this->get_logger(),
+          "Instantiated test controller"
+      );
+
+      RCLCPP_WARN(
+          this->get_logger(),
+          "test params: rows=%ld, cols=%ld",
+          test_gain_row_num,
+          test_gain_col_num
+      );
+
+      std::string test_K_string;
+
+      for (const auto& gain : test_K) {
+          if (!test_K_string.empty()) {
+              test_K_string += ", ";
+          }
+          test_K_string += std::to_string(gain);
+      }
+
+            RCLCPP_WARN(
+          this->get_logger(),
+          "test K: [%s]",
+          test_K_string.c_str()
+      );
+  }
+  
+  else {
       RCLCPP_ERROR(
           this->get_logger(),
           "Unknown controller requested: %s",

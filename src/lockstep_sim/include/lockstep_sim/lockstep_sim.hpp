@@ -17,7 +17,7 @@
 #include "std_srvs/srv/trigger.hpp"
 #include "control_framework_interfaces/srv/init_state.hpp"
 #include "control_framework_interfaces/srv/reset_record.hpp"
-
+#include "control_framework_interfaces/srv/controller_select.hpp"
 //#include "control_framework_interfaces/msg/control_input.hpp"
 
 #include "render.hpp"
@@ -45,6 +45,9 @@ class LockStepSim : public rclcpp::Node
         void reset_record(const std::shared_ptr<control_framework_interfaces::srv::ResetRecord::Request> request,
           std::shared_ptr<control_framework_interfaces::srv::ResetRecord::Response> response);
 
+        void controller_select(const std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Request> request,
+          std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Response> response);
+
         void set_controllers(string controller_name);
 	      std::vector<std::unique_ptr<BaseController>> controllers;
 
@@ -65,7 +68,8 @@ class LockStepSim : public rclcpp::Node
         rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr custom_init_set_service;
         rclcpp::Service<control_framework_interfaces::srv::InitState>::SharedPtr change_custom_init_service;
         rclcpp::Service<control_framework_interfaces::srv::ResetRecord>::SharedPtr reset_record_service;
-  
+        rclcpp::Service<control_framework_interfaces::srv::ControllerSelect>::SharedPtr swap_controllers_service;
+
        // rclcpp::Publisher<control_framework_interfaces::msg::ControlInput>::SharedPtr control_input_publisher;
   
 

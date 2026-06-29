@@ -1,0 +1,258 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-baea2f3d2de79b68987f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						17,
+						18
+					]
+				},
+				{
+					"build" : "control_framework_interfaces__py",
+					"jsonFile" : "directory-control_framework_interfaces__py-d2a5748675d0e2fc4d3d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/control_framework_interfaces__py",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "control_framework_interfaces__rs",
+					"jsonFile" : "directory-control_framework_interfaces__rs-d8c877588a7b3b3a7242.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/control_framework_interfaces__rs",
+					"targetIndexes" : 
+					[
+						16
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "control_framework_interfaces",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_control_framework_interfaces_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_control_framework_interfaces_egg-8584c30f26de7dbe3e4e.json",
+					"name" : "ament_cmake_python_build_control_framework_interfaces_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_control_framework_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_control_framework_interfaces-3d7e1fe6cd3af386ad3b.json",
+					"name" : "ament_cmake_python_copy_control_framework_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces-f420d7af385191ddbcd9.json",
+					"name" : "control_framework_interfaces",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces__cpp-2dd9d4d784c74e758929.json",
+					"name" : "control_framework_interfaces__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "control_framework_interfaces__py::@dced6460bc8c58255a96",
+					"jsonFile" : "target-control_framework_interfaces__py-aeefd4f4a4839a0cb826.json",
+					"name" : "control_framework_interfaces__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces__rosidl_generator_c-a6c6d28288d4d5c6926e.json",
+					"name" : "control_framework_interfaces__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces__rosidl_generator_py-5d379ad219e4252f7a2e.json",
+					"name" : "control_framework_interfaces__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces__rosidl_typesupport_c-573b3dfe102640608ea5.json",
+					"name" : "control_framework_interfaces__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces__rosidl_typesupport_c__pyext-e7f31de12f10e494bb69.json",
+					"name" : "control_framework_interfaces__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces__rosidl_typesupport_cpp-58193407f6d4d42578ee.json",
+					"name" : "control_framework_interfaces__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces__rosidl_typesupport_fastrtps_c-845a110dc9a08c56a3c6.json",
+					"name" : "control_framework_interfaces__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces__rosidl_typesupport_fastrtps_c__pyext-5c12e3ce7cc65d5b5fae.json",
+					"name" : "control_framework_interfaces__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces__rosidl_typesupport_fastrtps_cpp-50b68a7f3481cf920778.json",
+					"name" : "control_framework_interfaces__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces__rosidl_typesupport_introspection_c-c507ca344ab4383f8da8.json",
+					"name" : "control_framework_interfaces__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces__rosidl_typesupport_introspection_c__pyext-e1eb3462ae21933e8e81.json",
+					"name" : "control_framework_interfaces__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces__rosidl_typesupport_introspection_cpp-547c86d246406b43a619.json",
+					"name" : "control_framework_interfaces__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "control_framework_interfaces__rs::@b3cc9b9244b6bb6eaded",
+					"jsonFile" : "target-control_framework_interfaces__rs-7b66bd00e7aa02850d2e.json",
+					"name" : "control_framework_interfaces__rs",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "control_framework_interfaces_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-control_framework_interfaces_uninstall-e7426e10ea9adaf09655.json",
+					"name" : "control_framework_interfaces_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-1124ecf85ddd3da48426.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces",
+		"source" : "/home/dakota/.local/repos/control_framework/src/control_framework_interfaces"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

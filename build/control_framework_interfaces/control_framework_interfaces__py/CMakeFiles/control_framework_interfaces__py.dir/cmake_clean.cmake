@@ -8,6 +8,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/control_framework_interfaces/msg/_joint_state.py"
   "../rosidl_generator_py/control_framework_interfaces/msg/_joint_state_s.c"
   "../rosidl_generator_py/control_framework_interfaces/srv/__init__.py"
+  "../rosidl_generator_py/control_framework_interfaces/srv/_controller_select.py"
+  "../rosidl_generator_py/control_framework_interfaces/srv/_controller_select_s.c"
   "../rosidl_generator_py/control_framework_interfaces/srv/_init_state.py"
   "../rosidl_generator_py/control_framework_interfaces/srv/_init_state_s.c"
   "../rosidl_generator_py/control_framework_interfaces/srv/_reset_record.py"

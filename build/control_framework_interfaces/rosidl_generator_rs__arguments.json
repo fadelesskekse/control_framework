@@ -6,13 +6,15 @@
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces:msg/ControlInput.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces:msg/JointState.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces:srv/InitState.idl",
-    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces:srv/ResetRecord.idl"
+    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces:srv/ResetRecord.idl",
+    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces:srv/ControllerSelect.idl"
   ],
   "ros_interface_files": [
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/msg/ControlInput.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/msg/JointState.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/InitState.idl",
-    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/ResetRecord.idl"
+    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/ResetRecord.idl",
+    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/ControllerSelect.idl"
   ],
   "target_dependencies": [
     "/opt/ros/humble/share/rosidl_generator_rs/cmake/../../../lib/rosidl_generator_rs/rosidl_generator_rs",
@@ -31,10 +33,12 @@
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/msg/JointState.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/InitState.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/ResetRecord.idl",
+    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/ControllerSelect.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/msg/ControlInput.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/msg/JointState.idl",
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/InitState.idl",
-    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/ResetRecord.idl"
+    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/ResetRecord.idl",
+    "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_adapter/control_framework_interfaces/srv/ControllerSelect.idl"
   ],
   "package_version": "0.0.0"
 }

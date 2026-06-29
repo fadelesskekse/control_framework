@@ -2,6 +2,10 @@ msg/ControlInput.idl
 msg/ControlInput.msg
 msg/JointState.idl
 msg/JointState.msg
+srv/ControllerSelect.idl
+srv/ControllerSelect.srv
+srv/ControllerSelect_Request.msg
+srv/ControllerSelect_Response.msg
 srv/InitState.idl
 srv/InitState.srv
 srv/InitState_Request.msg
