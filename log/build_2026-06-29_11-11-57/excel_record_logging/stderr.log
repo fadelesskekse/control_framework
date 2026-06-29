@@ -1,0 +1,28 @@
+In file included from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/main.cpp:1[m[K:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:19:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+   19 | }
+      |  [01;31m[K^[m[K
+      |  [32m[K;[m[K
+In file included from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:1[m[K:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:19:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+   19 | }
+      |  [01;31m[K^[m[K
+      |  [32m[K;[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:[m[K In constructor ‘[01m[KExcelRecordLogging::ExcelRecordLogging()[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:8:124:[m[K [01;31m[Kerror: [m[K‘[01m[KLockStepSim[m[K’ has not been declared
+    8 |     reset_record_service = this->create_service<control_framework_interfaces::srv::ResetRecord>("reset_record", std::bind(&[01;31m[KLockStepSim[m[K::reset_record, this, _1, _2));
+      |                                                                                                                            [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:[m[K At global scope:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:11:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid ExcelRecordLogging::reset_record(std::shared_ptr<control_framework_interfaces::srv::ResetRecord_Request_<std::allocator<void> > >, std::shared_ptr<control_framework_interfaces::srv::ResetRecord_Response_<std::allocator<void> > >)[m[K’
+   11 | void [01;31m[KExcelRecordLogging[m[K::reset_record(const std::shared_ptr<control_framework_interfaces::srv::ResetRecord::Request> request,
+      |      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:11:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid ExcelRecordLogging::reset_record(std::shared_ptr<control_framework_interfaces::srv::ResetRecord_Request_<std::allocator<void> > >, std::shared_ptr<control_framework_interfaces::srv::ResetRecord_Response_<std::allocator<void> > >)[m[K’
+In file included from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:1[m[K:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:8:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass ExcelRecordLogging[m[K’ defined here
+    8 | class [01;36m[KExcelRecordLogging[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/excel_record_logging.dir/build.make:76: CMakeFiles/excel_record_logging.dir/src/main.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/excel_record_logging.dir/build.make:90: CMakeFiles/excel_record_logging.dir/src/excel_record_logging.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/excel_record_logging.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

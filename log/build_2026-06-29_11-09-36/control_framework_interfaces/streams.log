@@ -1,0 +1,24 @@
+[0.008s] Invoking command in '/home/dakota/.local/repos/control_framework/build/control_framework_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/control_framework_interfaces -- -j28 -l28
+[0.040s] [ 10%] Built target control_framework_interfaces__rosidl_generator_c
+[0.040s] [ 12%] Built target control_framework_interfaces__rs
+[0.040s] [ 14%] Built target control_framework_interfaces__cpp
+[0.045s] [ 14%] Built target ament_cmake_python_copy_control_framework_interfaces
+[0.051s] [ 34%] Built target control_framework_interfaces__rosidl_typesupport_introspection_cpp
+[0.051s] [ 35%] Built target control_framework_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.051s] [ 46%] Built target control_framework_interfaces__rosidl_typesupport_introspection_c
+[0.051s] [ 57%] Built target control_framework_interfaces__rosidl_typesupport_c
+[0.052s] [ 68%] Built target control_framework_interfaces__rosidl_typesupport_fastrtps_c
+[0.052s] [ 79%] Built target control_framework_interfaces__rosidl_typesupport_cpp
+[0.065s] [ 79%] Built target control_framework_interfaces
+[0.077s] [ 81%] Built target control_framework_interfaces__py
+[0.090s] [ 90%] Built target control_framework_interfaces__rosidl_generator_py
+[0.103s] [ 93%] Built target control_framework_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.103s] [ 96%] Built target control_framework_interfaces__rosidl_typesupport_c__pyext
+[0.104s] [100%] Built target control_framework_interfaces__rosidl_typesupport_introspection_c__pyext
+[0.149s] running egg_info
+[0.150s] writing control_framework_interfaces.egg-info/PKG-INFO
+[0.150s] writing dependency_links to control_framework_interfaces.egg-info/dependency_links.txt
+[0.150s] writing top-level names to control_framework_interfaces.egg-info/top_level.txt
+[0.151s] reading manifest file 'control_framework_interfaces.egg-info/SOURCES.txt'
+[0.151s] writing manifest file 'control_framework_interfaces.egg-info/SOURCES.txt'
+[0.166s] [100%] Built target ament_cmake_python_build_control_framework_interfaces_egg

@@ -140,7 +140,7 @@ void LockStepSim::sim_callback()
   
       if (prev_reset_and_record == false) //we just swapped to reset_and_record mode, so do the reset
       {
-        mj_resetDataKeyframe(m,d,this->get_parameter("use_default_init_for_reset_record").as_bool());
+        mj_resetDataKeyframe(m,d,!this->get_parameter("use_default_init_for_reset_record").as_bool());
         mj_forward(m,d);
 
         start_sim_time = d->time;
@@ -149,7 +149,9 @@ void LockStepSim::sim_callback()
         this->set_parameter(rclcpp::Parameter("prev_reset_and_record",true));//this parameter stops this if statement from executing more than once
       }
 
-      if( (d->time - start_sim_time) <= this->get_parameter("record_time").as_double() ){//If the tared current sim time is less than the record_duration, we execute in here
+      
+
+      else if( (d->time - start_sim_time) <= this->get_parameter("record_time").as_double() ){//If the tared current sim time is less than the record_duration, we execute in here
         mj_step(m, d);
       }
       else{
@@ -161,7 +163,7 @@ void LockStepSim::sim_callback()
         
         this->set_parameter(rclcpp::Parameter("reset_and_record", false)); //exit the reset_and_record loop
         this->set_parameter(rclcpp::Parameter("prev_reset_and_record", false)); //exit the reset_and_record loop
-        rclcpp::sleep_for(std::chrono::seconds(20));//temporarily pause the sim_stepping to allow the extraction of a csv file in foxglove-studio
+        rclcpp::sleep_for(std::chrono::seconds(5));//temporarily pause the sim_stepping to allow the extraction of a csv file in foxglove-studio
 
           RCLCPP_WARN(
           this->get_logger(),

@@ -1,0 +1,36 @@
+[0.005s] Invoking command in '/home/dakota/.local/repos/control_framework/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/controller -- -j28 -l28
+[0.035s] [100%] Built target controller
+[0.042s] Invoked command in '/home/dakota/.local/repos/control_framework/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/controller -- -j28 -l28
+[0.048s] Invoking command in '/home/dakota/.local/repos/control_framework/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/controller
+[0.053s] -- Install configuration: ""
+[0.053s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/include
+[0.053s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/include/controller
+[0.053s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/include/controller/controllers.hpp
+[0.053s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/include/controller/base_controller.hpp
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/pid.yaml
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/test.yaml
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/lqr.yaml
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/lib/libcontroller.a
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/library_path.sh
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/library_path.dsv
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/package_run_dependencies/controller
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/parent_prefix_path/controller
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/ament_prefix_path.sh
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/ament_prefix_path.dsv
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/path.sh
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/path.dsv
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.bash
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.sh
+[0.054s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.zsh
+[0.055s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.dsv
+[0.055s] -- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/package.dsv
+[0.055s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/packages/controller
+[0.055s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerTargetsExport.cmake
+[0.055s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerTargetsExport-noconfig.cmake
+[0.055s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/ament_cmake_export_targets-extras.cmake
+[0.055s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerConfig.cmake
+[0.056s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerConfig-version.cmake
+[0.056s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/package.xml
+[0.056s] Invoked command in '/home/dakota/.local/repos/control_framework/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/controller
