@@ -8,12 +8,17 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+#find_package(rclcpp REQUIRED)
 
 
 add_library(controller 
 src/base_controller.cpp
 src/controllers.cpp
 )
+
+#ament_target_dependencies(controller
+#rclcpp)
+
 
 target_include_directories(controller PUBLIC
   $<INSTALL_INTERFACE:include> #Tells consumers of this library to look in install/controller/include for its header files

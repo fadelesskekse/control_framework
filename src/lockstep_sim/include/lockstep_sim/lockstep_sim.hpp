@@ -6,7 +6,7 @@
 #include <string>
 #include <utility>
 #include <vector>
-
+#include <iostream>
 #include "mujoco/mujoco.h"
 
 #include "rclcpp/rclcpp.hpp"
@@ -48,7 +48,7 @@ class LockStepSim : public rclcpp::Node
         void set_controllers(string controller_name);
 	      std::vector<std::unique_ptr<BaseController>> controllers;
 
-          
+        void glfw_render();
 
         mjModel* m = NULL;
         mjData* d= NULL;

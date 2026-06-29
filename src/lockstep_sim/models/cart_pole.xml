@@ -16,12 +16,12 @@
 
         <body pos="0 0 0.0508">
      
-            <joint type="slide" axis="1 0 0"/>
+            <joint name="cart_joint" type="slide" axis="1 0 0"/>
             <geom type="box" size=".1016 .0762 .0508" mass="1" friction="0 0 0"/>
             
             
             <body pos="0 0 .0254">
-                <joint type="hinge" axis="0 -1 0"/>
+                <joint name="pole_joint" type="hinge" axis="0 -1 0"/>
                 <geom type="capsule" size="0.01" fromto="0 0 0 0 0 .3" friction="0 0 0"/>
 
                     <body pos="0 0 .3">
@@ -34,6 +34,11 @@
 
     </worldbody>
 
+
+  <actuator>
+		<general name="cart_joint_actuator" joint="cart_joint"  />
+  </actuator>
+  
   <keyframe>
     <key name="default_initial"
          qpos="0.001  0.001"

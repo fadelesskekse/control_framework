@@ -9,6 +9,29 @@ using std::placeholders::_1;
 using std::placeholders::_2;
 using namespace std;
 
+static BaseController* active_controller = nullptr;
+
+static void control_callback(const mjModel* m, mjData* d)
+{
+  std::vector<double> state;
+
+  for (int i=0; i < m->nq; i++){
+    state.push_back(d->qpos[i]); //Controller derivation always needs the states in this order. 
+    state.push_back(d->qvel[i]);
+  }
+
+  vector<double> control_input = active_controller->control_passthrough(state);
+
+  if (control_input.size() != m->nu){     
+    throw std::invalid_argument("Control Input size as calculated from controller doesn't equal the number of actuators assigned in the mjcf model.");
+  }
+
+  for(int i = 0; i < m->nu; i++){
+    d->ctrl[i] = control_input[i];
+  }
+
+}
+
 LockStepSim::LockStepSim() : Node("lockstep_sim")
 {
       //Create pubs/subs
@@ -45,8 +68,6 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
 
         set_controllers(controller_name);
 
-        
-
         }
 
 
@@ -78,6 +99,10 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       }
 
       d = mj_makeData(m);
+
+      active_controller = controllers[0].get(); //set a default controller
+      mjcb_control = control_callback;
+
 
       //Grab Initial Condition from model, and set model to those values
       default_init_pos_keyframe = mj_name2id(m, mjOBJ_KEY, "default_initial");
@@ -173,8 +198,13 @@ void LockStepSim::sim_callback()
   state_publisher_->publish(joint_state);
   sim_time_publisher_->publish(sim_time);
 
+  glfw_render();
 
-  if (this->get_parameter("glfw_render").as_int() == 1) //render in the simulation loop. 
+}
+
+void LockStepSim::glfw_render(){
+
+    if (this->get_parameter("glfw_render").as_int() == 1) //render in the simulation loop. 
   {
 
     if (count_ % render_frame_rate == 0)
@@ -186,8 +216,6 @@ void LockStepSim::sim_callback()
     count_++;
 
   }
-
-
 
 }
 
@@ -391,3 +419,4 @@ void LockStepSim::set_controllers(string controller_name){
   }
 
 }
+
