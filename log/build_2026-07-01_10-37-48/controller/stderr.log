@@ -1,0 +1,8 @@
+[01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kcontroller_node.hpp: No such file or directory
+    2 | #include [01;31m[K"controller_node.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/controller_node.dir/build.make:90: CMakeFiles/controller_node.dir/src/controller_node.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/controller_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

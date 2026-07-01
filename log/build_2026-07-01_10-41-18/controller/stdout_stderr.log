@@ -1,0 +1,39 @@
+[ 50%] Built target controller
+[35m[1mConsolidate compiler generated dependencies of target controller_node[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/controller_node.cpp.o[0m
+[ 83%] [32m[1mLinking CXX executable controller_node[0m
+[100%] Built target controller_node
+-- Install configuration: ""
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/include
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/include/controller
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/include/controller/controllers.hpp
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/include/controller/controller_node.hpp
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/include/controller/base_controller.hpp
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/pid.yaml
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/test.yaml
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/lqr.yaml
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/lib/libcontroller.a
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/lib/controller/controller_node
+-- Set runtime path of "/home/dakota/.local/repos/control_framework/install/controller/lib/controller/controller_node" to ""
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/library_path.sh
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/library_path.dsv
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/package_run_dependencies/controller
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/parent_prefix_path/controller
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/ament_prefix_path.sh
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/ament_prefix_path.dsv
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/path.sh
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/path.dsv
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.bash
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.sh
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.zsh
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.dsv
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/package.dsv
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/packages/controller
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerTargetsExport.cmake
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerTargetsExport-noconfig.cmake
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerConfig.cmake
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerConfig-version.cmake
+-- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/package.xml

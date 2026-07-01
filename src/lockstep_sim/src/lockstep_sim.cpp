@@ -46,7 +46,27 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       change_custom_init_service = this->create_service<control_framework_interfaces::srv::InitState>("change_initial_position", std::bind(&LockStepSim::change_initial_position, this, _1, _2));
       reset_record_service = this->create_service<control_framework_interfaces::srv::ResetRecord>("reset_record", std::bind(&LockStepSim::reset_record, this, _1, _2));
       swap_controllers_service = this->create_service<control_framework_interfaces::srv::ControllerSelect>("controller_select", std::bind(&LockStepSim::controller_select, this, _1, _2));
-      control_input_publisher_ = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg
+      
+      auto publishers = this->get_publishers_info_by_topic("/control_input");
+
+      if (!publishers.empty()) {
+        RCLCPP_ERROR(
+            this->get_logger(),
+            "Another node is already publishing to /control_input. This node should not run at the same time."
+        );
+
+        throw std::runtime_error("Duplicate /control_input publisher detected");
+      }
+
+      else{
+         control_input_publisher_ = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg;
+      } 
+      
+      
+      
+      
+      
+      
       
       this->declare_parameter("reset_and_record", false);
       this->declare_parameter("prev_reset_and_record", false);

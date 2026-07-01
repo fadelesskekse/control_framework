@@ -210,6 +210,19 @@ controller/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/build
 .PHONY : controller/fast
 
+#=============================================================================
+# Target rules for targets named controller_node
+
+# Build rule for target.
+controller_node: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 controller_node
+.PHONY : controller_node
+
+# fast build rule for target.
+controller_node/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller_node.dir/build.make CMakeFiles/controller_node.dir/build
+.PHONY : controller_node/fast
+
 src/base_controller.o: src/base_controller.cpp.o
 .PHONY : src/base_controller.o
 
@@ -233,6 +246,30 @@ src/base_controller.s: src/base_controller.cpp.s
 src/base_controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/src/base_controller.cpp.s
 .PHONY : src/base_controller.cpp.s
+
+src/controller_node.o: src/controller_node.cpp.o
+.PHONY : src/controller_node.o
+
+# target to build an object file
+src/controller_node.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller_node.dir/build.make CMakeFiles/controller_node.dir/src/controller_node.cpp.o
+.PHONY : src/controller_node.cpp.o
+
+src/controller_node.i: src/controller_node.cpp.i
+.PHONY : src/controller_node.i
+
+# target to preprocess a source file
+src/controller_node.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller_node.dir/build.make CMakeFiles/controller_node.dir/src/controller_node.cpp.i
+.PHONY : src/controller_node.cpp.i
+
+src/controller_node.s: src/controller_node.cpp.s
+.PHONY : src/controller_node.s
+
+# target to generate assembly for a file
+src/controller_node.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller_node.dir/build.make CMakeFiles/controller_node.dir/src/controller_node.cpp.s
+.PHONY : src/controller_node.cpp.s
 
 src/controllers.o: src/controllers.cpp.o
 .PHONY : src/controllers.o
@@ -258,6 +295,30 @@ src/controllers.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller.dir/build.make CMakeFiles/controller.dir/src/controllers.cpp.s
 .PHONY : src/controllers.cpp.s
 
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller_node.dir/build.make CMakeFiles/controller_node.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller_node.dir/build.make CMakeFiles/controller_node.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/controller_node.dir/build.make CMakeFiles/controller_node.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -274,12 +335,19 @@ help:
 	@echo "... controller_uninstall"
 	@echo "... uninstall"
 	@echo "... controller"
+	@echo "... controller_node"
 	@echo "... src/base_controller.o"
 	@echo "... src/base_controller.i"
 	@echo "... src/base_controller.s"
+	@echo "... src/controller_node.o"
+	@echo "... src/controller_node.i"
+	@echo "... src/controller_node.s"
 	@echo "... src/controllers.o"
 	@echo "... src/controllers.i"
 	@echo "... src/controllers.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

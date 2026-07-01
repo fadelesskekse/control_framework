@@ -1,6 +1,7 @@
 /home/dakota/.local/repos/control_framework/build/controller/CMakeFiles/uninstall.dir
 /home/dakota/.local/repos/control_framework/build/controller/CMakeFiles/controller_uninstall.dir
 /home/dakota/.local/repos/control_framework/build/controller/CMakeFiles/controller.dir
+/home/dakota/.local/repos/control_framework/build/controller/CMakeFiles/controller_node.dir
 /home/dakota/.local/repos/control_framework/build/controller/CMakeFiles/test.dir
 /home/dakota/.local/repos/control_framework/build/controller/CMakeFiles/edit_cache.dir
 /home/dakota/.local/repos/control_framework/build/controller/CMakeFiles/rebuild_cache.dir

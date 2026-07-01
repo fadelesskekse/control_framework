@@ -8,21 +8,35 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-#find_package(rclcpp REQUIRED)
-
+find_package(rclcpp REQUIRED)
+find_package(control_framework_interfaces REQUIRED)
+find_package(sensor_msgs REQUIRED)
 
 add_library(controller 
 src/base_controller.cpp
 src/controllers.cpp
 )
 
-#ament_target_dependencies(controller
-#rclcpp)
+add_executable(controller_node
+  src/main.cpp
+  src/controller_node.cpp
+)
+
+target_link_libraries(controller_node
+  controller
+)
+
+ament_target_dependencies(controller
+
+control_framework_interfaces
+sensor_msgs
+rclcpp)
 
 
 target_include_directories(controller PUBLIC
   $<INSTALL_INTERFACE:include> #Tells consumers of this library to look in install/controller/include for its header files
   #Used in find_package(controller) in lockstep_sim
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   )
 
 
@@ -39,6 +53,11 @@ install(
   EXPORT controllerTargets
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib)
+
+install(
+  TARGETS controller_node
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
+)
 
 ament_export_targets(controllerTargets HAS_LIBRARY_TARGET)
 

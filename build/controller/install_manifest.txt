@@ -1,9 +1,11 @@
 /home/dakota/.local/repos/control_framework/install/controller/include/controller/controllers.hpp
+/home/dakota/.local/repos/control_framework/install/controller/include/controller/controller_node.hpp
 /home/dakota/.local/repos/control_framework/install/controller/include/controller/base_controller.hpp
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/pid.yaml
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/test.yaml
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/lqr.yaml
 /home/dakota/.local/repos/control_framework/install/controller/lib/libcontroller.a
+/home/dakota/.local/repos/control_framework/install/controller/lib/controller/controller_node
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/library_path.sh
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/library_path.dsv
 /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/package_run_dependencies/controller
