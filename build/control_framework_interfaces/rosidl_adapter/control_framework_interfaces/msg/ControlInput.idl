@@ -6,7 +6,7 @@
 module control_framework_interfaces {
   module msg {
     struct ControlInput {
-      float control_input;
+      sequence<double> control_input;
     };
   };
 };

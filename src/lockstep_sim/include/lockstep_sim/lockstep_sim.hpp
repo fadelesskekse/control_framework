@@ -18,7 +18,7 @@
 #include "control_framework_interfaces/srv/init_state.hpp"
 #include "control_framework_interfaces/srv/reset_record.hpp"
 #include "control_framework_interfaces/srv/controller_select.hpp"
-//#include "control_framework_interfaces/msg/control_input.hpp"
+#include "control_framework_interfaces/msg/control_input.hpp"
 
 #include "render.hpp"
 
@@ -67,15 +67,15 @@ class LockStepSim : public rclcpp::Node
         rclcpp::TimerBase::SharedPtr sim_timer_;
         rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr state_publisher_;
         rclcpp::Publisher<std_msgs::msg::Float64>::SharedPtr sim_time_publisher_;
+        rclcpp::Publisher<control_framework_interfaces::msg::ControlInput>::SharedPtr control_input_publisher_;
+  
+
         rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr default_init_set_service;
         rclcpp::Service<std_srvs::srv::Trigger>::SharedPtr custom_init_set_service;
         rclcpp::Service<control_framework_interfaces::srv::InitState>::SharedPtr change_custom_init_service;
         rclcpp::Service<control_framework_interfaces::srv::ResetRecord>::SharedPtr reset_record_service;
         rclcpp::Service<control_framework_interfaces::srv::ControllerSelect>::SharedPtr swap_controllers_service;
-
-       // rclcpp::Publisher<control_framework_interfaces::msg::ControlInput>::SharedPtr control_input_publisher;
-  
-
+      
 
 
 };

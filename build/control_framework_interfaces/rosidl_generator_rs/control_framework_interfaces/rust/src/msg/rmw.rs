@@ -28,7 +28,7 @@ pub struct ControlInput {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub control_input: f32,
+    pub control_input: rosidl_runtime_rs::Sequence<f64>,
 
 }
 

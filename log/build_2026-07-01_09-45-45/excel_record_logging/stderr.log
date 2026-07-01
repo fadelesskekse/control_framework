@@ -1,0 +1,13 @@
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:[m[K In member function ‘[01m[Kvoid ExcelRecordLogging::log_callback()[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:112:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing ControlInput = struct control_framework_interfaces::msg::ControlInput_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct control_framework_interfaces::msg::ControlInput_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ksize[m[K’
+  112 |         for (size_t i = 0; i < control_input_.[01;31m[Ksize[m[K(); ++i) {
+      |                                               [01;31m[K^~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:164:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing ControlInput = struct control_framework_interfaces::msg::ControlInput_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct control_framework_interfaces::msg::ControlInput_<std::allocator<void> >[m[K’} has no member named ‘[01m[Ksize[m[K’
+  164 |     for (size_t i = 0; i < control_input_.[01;31m[Ksize[m[K(); ++i) {
+      |                                           [01;31m[K^~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:165:39:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kcontrol_framework_interfaces::msg::ControlInput[m[K’ {aka ‘[01m[Kcontrol_framework_interfaces::msg::ControlInput_<std::allocator<void> >[m[K’} and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’})
+  165 |     log_file_ << "," << control_input_[01;31m[K[[m[Ki];
+      |                                       [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/excel_record_logging.dir/build.make:90: CMakeFiles/excel_record_logging.dir/src/excel_record_logging.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/excel_record_logging.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

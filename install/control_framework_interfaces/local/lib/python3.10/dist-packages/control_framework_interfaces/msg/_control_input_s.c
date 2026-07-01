@@ -16,6 +16,9 @@
 #include "control_framework_interfaces/msg/detail/control_input__struct.h"
 #include "control_framework_interfaces/msg/detail/control_input__functions.h"
 
+#include "rosidl_runtime_c/primitives_sequence.h"
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 
 ROSIDL_GENERATOR_C_EXPORT
 bool control_framework_interfaces__msg__control_input__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -55,8 +58,61 @@ bool control_framework_interfaces__msg__control_input__convert_from_py(PyObject 
     if (!field) {
       return false;
     }
-    assert(PyFloat_Check(field));
-    ros_message->control_input = (float)PyFloat_AS_DOUBLE(field);
+    if (PyObject_CheckBuffer(field)) {
+      // Optimization for converting arrays of primitives
+      Py_buffer view;
+      int rc = PyObject_GetBuffer(field, &view, PyBUF_SIMPLE);
+      if (rc < 0) {
+        Py_DECREF(field);
+        return false;
+      }
+      Py_ssize_t size = view.len / sizeof(double);
+      if (!rosidl_runtime_c__double__Sequence__init(&(ros_message->control_input), size)) {
+        PyErr_SetString(PyExc_RuntimeError, "unable to create double__Sequence ros_message");
+        PyBuffer_Release(&view);
+        Py_DECREF(field);
+        return false;
+      }
+      double * dest = ros_message->control_input.data;
+      rc = PyBuffer_ToContiguous(dest, &view, view.len, 'C');
+      if (rc < 0) {
+        PyBuffer_Release(&view);
+        Py_DECREF(field);
+        return false;
+      }
+      PyBuffer_Release(&view);
+    } else {
+      PyObject * seq_field = PySequence_Fast(field, "expected a sequence in 'control_input'");
+      if (!seq_field) {
+        Py_DECREF(field);
+        return false;
+      }
+      Py_ssize_t size = PySequence_Size(field);
+      if (-1 == size) {
+        Py_DECREF(seq_field);
+        Py_DECREF(field);
+        return false;
+      }
+      if (!rosidl_runtime_c__double__Sequence__init(&(ros_message->control_input), size)) {
+        PyErr_SetString(PyExc_RuntimeError, "unable to create double__Sequence ros_message");
+        Py_DECREF(seq_field);
+        Py_DECREF(field);
+        return false;
+      }
+      double * dest = ros_message->control_input.data;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        PyObject * item = PySequence_Fast_GET_ITEM(seq_field, i);
+        if (!item) {
+          Py_DECREF(seq_field);
+          Py_DECREF(field);
+          return false;
+        }
+        assert(PyFloat_Check(item));
+        double tmp = PyFloat_AS_DOUBLE(item);
+        memcpy(&dest[i], &tmp, sizeof(double));
+      }
+      Py_DECREF(seq_field);
+    }
     Py_DECREF(field);
   }
 
@@ -83,14 +139,60 @@ PyObject * control_framework_interfaces__msg__control_input__convert_to_py(void 
   control_framework_interfaces__msg__ControlInput * ros_message = (control_framework_interfaces__msg__ControlInput *)raw_ros_message;
   {  // control_input
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->control_input);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "control_input", field);
+    field = PyObject_GetAttrString(_pymessage, "control_input");
+    if (!field) {
+      return NULL;
+    }
+    assert(field->ob_type != NULL);
+    assert(field->ob_type->tp_name != NULL);
+    assert(strcmp(field->ob_type->tp_name, "array.array") == 0);
+    // ensure that itemsize matches the sizeof of the ROS message field
+    PyObject * itemsize_attr = PyObject_GetAttrString(field, "itemsize");
+    assert(itemsize_attr != NULL);
+    size_t itemsize = PyLong_AsSize_t(itemsize_attr);
+    Py_DECREF(itemsize_attr);
+    if (itemsize != sizeof(double)) {
+      PyErr_SetString(PyExc_RuntimeError, "itemsize doesn't match expectation");
       Py_DECREF(field);
-      if (rc) {
+      return NULL;
+    }
+    // clear the array, poor approach to remove potential default values
+    Py_ssize_t length = PyObject_Length(field);
+    if (-1 == length) {
+      Py_DECREF(field);
+      return NULL;
+    }
+    if (length > 0) {
+      PyObject * pop = PyObject_GetAttrString(field, "pop");
+      assert(pop != NULL);
+      for (Py_ssize_t i = 0; i < length; ++i) {
+        PyObject * ret = PyObject_CallFunctionObjArgs(pop, NULL);
+        if (!ret) {
+          Py_DECREF(pop);
+          Py_DECREF(field);
+          return NULL;
+        }
+        Py_DECREF(ret);
+      }
+      Py_DECREF(pop);
+    }
+    if (ros_message->control_input.size > 0) {
+      // populating the array.array using the frombytes method
+      PyObject * frombytes = PyObject_GetAttrString(field, "frombytes");
+      assert(frombytes != NULL);
+      double * src = &(ros_message->control_input.data[0]);
+      PyObject * data = PyBytes_FromStringAndSize((const char *)src, ros_message->control_input.size * sizeof(double));
+      assert(data != NULL);
+      PyObject * ret = PyObject_CallFunctionObjArgs(frombytes, data, NULL);
+      Py_DECREF(data);
+      Py_DECREF(frombytes);
+      if (!ret) {
+        Py_DECREF(field);
         return NULL;
       }
+      Py_DECREF(ret);
     }
+    Py_DECREF(field);
   }
 
   // ownership of _pymessage is transferred to the caller

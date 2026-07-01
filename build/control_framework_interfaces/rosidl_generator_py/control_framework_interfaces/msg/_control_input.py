@@ -5,6 +5,9 @@
 
 # Import statements for member types
 
+# Member 'control_input'
+import array  # noqa: E402, I100
+
 import builtins  # noqa: E402, I100
 
 import math  # noqa: E402, I100
@@ -61,18 +64,18 @@ class ControlInput(metaclass=Metaclass_ControlInput):
     ]
 
     _fields_and_field_types = {
-        'control_input': 'float',
+        'control_input': 'sequence<double>',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('double')),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.control_input = kwargs.get('control_input', float())
+        self.control_input = array.array('d', kwargs.get('control_input', []))
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -119,10 +122,23 @@ class ControlInput(metaclass=Metaclass_ControlInput):
 
     @control_input.setter
     def control_input(self, value):
+        if isinstance(value, array.array):
+            assert value.typecode == 'd', \
+                "The 'control_input' array.array() must have the type code of 'd'"
+            self._control_input = value
+            return
         if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
             assert \
-                isinstance(value, float), \
-                "The 'control_input' field must be of type 'float'"
-            assert not (value < -3.402823466e+38 or value > 3.402823466e+38) or math.isinf(value), \
-                "The 'control_input' field must be a float in [-3.402823466e+38, 3.402823466e+38]"
-        self._control_input = value
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 all(isinstance(v, float) for v in value) and
+                 all(not (val < -1.7976931348623157e+308 or val > 1.7976931348623157e+308) or math.isinf(val) for val in value)), \
+                "The 'control_input' field must be a set or sequence and each value of type 'float' and each double in [-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000, 179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000]"
+        self._control_input = array.array('d', value)

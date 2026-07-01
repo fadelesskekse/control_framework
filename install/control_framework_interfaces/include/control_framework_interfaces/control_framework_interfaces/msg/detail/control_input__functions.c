@@ -11,6 +11,10 @@
 #include "rcutils/allocator.h"
 
 
+// Include directives for member types
+// Member `control_input`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 bool
 control_framework_interfaces__msg__ControlInput__init(control_framework_interfaces__msg__ControlInput * msg)
 {
@@ -18,6 +22,10 @@ control_framework_interfaces__msg__ControlInput__init(control_framework_interfac
     return false;
   }
   // control_input
+  if (!rosidl_runtime_c__double__Sequence__init(&msg->control_input, 0)) {
+    control_framework_interfaces__msg__ControlInput__fini(msg);
+    return false;
+  }
   return true;
 }
 
@@ -28,6 +36,7 @@ control_framework_interfaces__msg__ControlInput__fini(control_framework_interfac
     return;
   }
   // control_input
+  rosidl_runtime_c__double__Sequence__fini(&msg->control_input);
 }
 
 bool
@@ -37,7 +46,9 @@ control_framework_interfaces__msg__ControlInput__are_equal(const control_framewo
     return false;
   }
   // control_input
-  if (lhs->control_input != rhs->control_input) {
+  if (!rosidl_runtime_c__double__Sequence__are_equal(
+      &(lhs->control_input), &(rhs->control_input)))
+  {
     return false;
   }
   return true;
@@ -52,7 +63,11 @@ control_framework_interfaces__msg__ControlInput__copy(
     return false;
   }
   // control_input
-  output->control_input = input->control_input;
+  if (!rosidl_runtime_c__double__Sequence__copy(
+      &(input->control_input), &(output->control_input)))
+  {
+    return false;
+  }
   return true;
 }
 

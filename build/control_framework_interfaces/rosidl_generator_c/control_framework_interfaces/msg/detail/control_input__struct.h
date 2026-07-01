@@ -17,10 +17,14 @@ extern "C"
 
 // Constants defined in the message
 
+// Include directives for member types
+// Member 'control_input'
+#include "rosidl_runtime_c/primitives_sequence.h"
+
 /// Struct defined in msg/ControlInput in the package control_framework_interfaces.
 typedef struct control_framework_interfaces__msg__ControlInput
 {
-  float control_input;
+  rosidl_runtime_c__double__Sequence control_input;
 } control_framework_interfaces__msg__ControlInput;
 
 // Struct for a sequence of control_framework_interfaces__msg__ControlInput.

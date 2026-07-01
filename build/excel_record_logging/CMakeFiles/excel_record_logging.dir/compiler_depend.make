@@ -711,7 +711,12 @@ CMakeFiles/excel_record_logging.dir/src/excel_record_logging.cpp.o: /home/dakota
   /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__builder.hpp \
   /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__traits.hpp \
   /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__type_support.hpp \
-  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/control_input.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__struct.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__builder.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__traits.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__type_support.hpp
 
 CMakeFiles/excel_record_logging.dir/src/main.cpp.o: /home/dakota/.local/repos/control_framework/src/excel_record_logging/src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -1423,10 +1428,19 @@ CMakeFiles/excel_record_logging.dir/src/main.cpp.o: /home/dakota/.local/repos/co
   /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__builder.hpp \
   /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__traits.hpp \
   /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/reset_record__type_support.hpp \
-  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/control_input.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__struct.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__builder.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__traits.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__type_support.hpp
 
 
 /home/dakota/.local/repos/control_framework/src/excel_record_logging/src/main.cpp:
+
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__type_support.hpp:
+
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__traits.hpp:
 
 /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
 
@@ -1570,6 +1584,8 @@ CMakeFiles/excel_record_logging.dir/src/main.cpp.o: /home/dakota/.local/repos/co
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__traits.hpp:
 
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__struct.hpp:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__traits.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp:
@@ -1637,6 +1653,8 @@ CMakeFiles/excel_record_logging.dir/src/main.cpp.o: /home/dakota/.local/repos/co
 /opt/ros/humble/include/rmw/rmw/init.h:
 
 /usr/include/c++/11/bits/refwrap.h:
+
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/detail/control_input__builder.hpp:
 
 /usr/include/c++/11/bits/stl_raw_storage_iter.h:
 
@@ -1751,6 +1769,8 @@ CMakeFiles/excel_record_logging.dir/src/main.cpp.o: /home/dakota/.local/repos/co
 /usr/include/c++/11/bits/basic_ios.tcc:
 
 /usr/include/c++/11/bits/enable_special_members.h:
+
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/msg/control_input.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_value.hpp:
 

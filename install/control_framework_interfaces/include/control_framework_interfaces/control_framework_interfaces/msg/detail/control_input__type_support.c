@@ -12,6 +12,10 @@
 #include "control_framework_interfaces/msg/detail/control_input__struct.h"
 
 
+// Include directives for member types
+// Member `control_input`
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 #ifdef __cplusplus
 extern "C"
 {
@@ -31,23 +35,78 @@ void control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introsp
   control_framework_interfaces__msg__ControlInput__fini(message_memory);
 }
 
+size_t control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__size_function__ControlInput__control_input(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__get_const_function__ControlInput__control_input(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__double__Sequence * member =
+    (const rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__get_function__ControlInput__control_input(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__fetch_function__ControlInput__control_input(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const double * item =
+    ((const double *)
+    control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__get_const_function__ControlInput__control_input(untyped_member, index));
+  double * value =
+    (double *)(untyped_value);
+  *value = *item;
+}
+
+void control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__assign_function__ControlInput__control_input(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  double * item =
+    ((double *)
+    control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__get_function__ControlInput__control_input(untyped_member, index));
+  const double * value =
+    (const double *)(untyped_value);
+  *item = *value;
+}
+
+bool control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__resize_function__ControlInput__control_input(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__double__Sequence * member =
+    (rosidl_runtime_c__double__Sequence *)(untyped_member);
+  rosidl_runtime_c__double__Sequence__fini(member);
+  return rosidl_runtime_c__double__Sequence__init(member, size);
+}
+
 static rosidl_typesupport_introspection_c__MessageMember control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__ControlInput_message_member_array[1] = {
   {
     "control_input",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_FLOAT,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
-    false,  // is array
+    true,  // is array
     0,  // array size
     false,  // is upper bound
     offsetof(control_framework_interfaces__msg__ControlInput, control_input),  // bytes offset in struct
     NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL,  // fetch(index, &value) function pointer
-    NULL,  // assign(index, value) function pointer
-    NULL  // resize(index) function pointer
+    control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__size_function__ControlInput__control_input,  // size() function pointer
+    control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__get_const_function__ControlInput__control_input,  // get_const(index) function pointer
+    control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__get_function__ControlInput__control_input,  // get(index) function pointer
+    control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__fetch_function__ControlInput__control_input,  // fetch(index, &value) function pointer
+    control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__assign_function__ControlInput__control_input,  // assign(index, value) function pointer
+    control_framework_interfaces__msg__ControlInput__rosidl_typesupport_introspection_c__resize_function__ControlInput__control_input  // resize(index) function pointer
   }
 };
 

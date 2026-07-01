@@ -36,31 +36,23 @@ struct ControlInput_
 
   explicit ControlInput_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->control_input = 0.0f;
-    }
+    (void)_init;
   }
 
   explicit ControlInput_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   {
+    (void)_init;
     (void)_alloc;
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->control_input = 0.0f;
-    }
   }
 
   // field types and members
   using _control_input_type =
-    float;
+    std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>>;
   _control_input_type control_input;
 
   // setters for named parameter idiom
   Type & set__control_input(
-    const float & _arg)
+    const std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> & _arg)
   {
     this->control_input = _arg;
     return *this;

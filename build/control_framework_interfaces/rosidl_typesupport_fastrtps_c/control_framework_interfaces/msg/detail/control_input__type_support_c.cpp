@@ -34,6 +34,8 @@ extern "C"
 {
 #endif
 
+#include "rosidl_runtime_c/primitives_sequence.h"  // control_input
+#include "rosidl_runtime_c/primitives_sequence_functions.h"  // control_input
 
 // forward declare type support functions
 
@@ -51,7 +53,10 @@ static bool _ControlInput__cdr_serialize(
   const _ControlInput__ros_msg_type * ros_message = static_cast<const _ControlInput__ros_msg_type *>(untyped_ros_message);
   // Field name: control_input
   {
-    cdr << ros_message->control_input;
+    size_t size = ros_message->control_input.size;
+    auto array_ptr = ros_message->control_input.data;
+    cdr << static_cast<uint32_t>(size);
+    cdr.serializeArray(array_ptr, size);
   }
 
   return true;
@@ -68,7 +73,28 @@ static bool _ControlInput__cdr_deserialize(
   _ControlInput__ros_msg_type * ros_message = static_cast<_ControlInput__ros_msg_type *>(untyped_ros_message);
   // Field name: control_input
   {
-    cdr >> ros_message->control_input;
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+
+    // Check there are at least 'size' remaining bytes in the CDR stream before resizing
+    auto old_state = cdr.getState();
+    bool correct_size = cdr.jump(size);
+    cdr.setState(old_state);
+    if (!correct_size) {
+      fprintf(stderr, "sequence size exceeds remaining buffer\n");
+      return false;
+    }
+
+    if (ros_message->control_input.data) {
+      rosidl_runtime_c__double__Sequence__fini(&ros_message->control_input);
+    }
+    if (!rosidl_runtime_c__double__Sequence__init(&ros_message->control_input, size)) {
+      fprintf(stderr, "failed to create array for field 'control_input'");
+      return false;
+    }
+    auto array_ptr = ros_message->control_input.data;
+    cdr.deserializeArray(array_ptr, size);
   }
 
   return true;
@@ -90,8 +116,13 @@ size_t get_serialized_size_control_framework_interfaces__msg__ControlInput(
 
   // field.name control_input
   {
-    size_t item_size = sizeof(ros_message->control_input);
-    current_alignment += item_size +
+    size_t array_size = ros_message->control_input.size;
+    auto array_ptr = ros_message->control_input.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -125,11 +156,15 @@ size_t max_serialized_size_control_framework_interfaces__msg__ControlInput(
 
   // member: control_input
   {
-    size_t array_size = 1;
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   size_t ret_val = current_alignment - initial_alignment;

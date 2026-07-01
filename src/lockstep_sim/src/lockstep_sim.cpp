@@ -46,7 +46,7 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       change_custom_init_service = this->create_service<control_framework_interfaces::srv::InitState>("change_initial_position", std::bind(&LockStepSim::change_initial_position, this, _1, _2));
       reset_record_service = this->create_service<control_framework_interfaces::srv::ResetRecord>("reset_record", std::bind(&LockStepSim::reset_record, this, _1, _2));
       swap_controllers_service = this->create_service<control_framework_interfaces::srv::ControllerSelect>("controller_select", std::bind(&LockStepSim::controller_select, this, _1, _2));
-      //control_input_publisher = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg
+      control_input_publisher_ = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg
       
       this->declare_parameter("reset_and_record", false);
       this->declare_parameter("prev_reset_and_record", false);
@@ -167,7 +167,7 @@ void LockStepSim::sim_callback()
         
         this->set_parameter(rclcpp::Parameter("reset_and_record", false)); //exit the reset_and_record loop
         this->set_parameter(rclcpp::Parameter("prev_reset_and_record", false)); //exit the reset_and_record loop
-        //rclcpp::sleep_for(std::chrono::seconds(5));//temporarily pause the sim_stepping to allow the extraction of a csv file in foxglove-studio
+        
 
       }
   }
@@ -178,6 +178,7 @@ void LockStepSim::sim_callback()
 
   sensor_msgs::msg::JointState joint_state;
   std_msgs::msg::Float64 sim_time;
+  control_framework_interfaces::msg::ControlInput control_input;
 
   int mujoco_joint_index = 0;
 
@@ -207,10 +208,17 @@ void LockStepSim::sim_callback()
 
   }
 
+  for(int i =0;i < m->nu; i++){
+    control_input.control_input.push_back(d->ctrl[i]);
+  }
+
   sim_time.data = d->time;
+
+
 
   state_publisher_->publish(joint_state);
   sim_time_publisher_->publish(sim_time);
+  control_input_publisher_->publish(control_input);
 
   glfw_render();
 

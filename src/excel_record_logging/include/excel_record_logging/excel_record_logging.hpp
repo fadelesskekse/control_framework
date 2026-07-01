@@ -9,6 +9,7 @@
 #include "sensor_msgs/msg/joint_state.hpp"
 #include "std_msgs/msg/float64.hpp"
 #include "control_framework_interfaces/srv/reset_record.hpp"
+#include "control_framework_interfaces/msg/control_input.hpp"
 
 using namespace std;
 
@@ -26,6 +27,7 @@ class ExcelRecordLogging : public rclcpp::Node
 
         void joint_state_callback(const sensor_msgs::msg::JointState joint_state);
         void sim_time_callback(const std_msgs::msg::Float64 & sim_time);
+        void control_input_callback(const control_framework_interfaces::msg::ControlInput & control_input);
 
         void log_callback();
 
@@ -33,6 +35,8 @@ class ExcelRecordLogging : public rclcpp::Node
         rclcpp::Service<control_framework_interfaces::srv::ResetRecord>::SharedPtr reset_record_service;
         rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr state_subscriber_;
         rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr sim_time_subscriber_;
+        rclcpp::Subscription<control_framework_interfaces::msg::ControlInput>::SharedPtr control_input_subscriber_;
+  
 
         vector<string> urdf_joint_ignore_list;
         vector<string> urdf_joint_total_list;
@@ -46,6 +50,7 @@ class ExcelRecordLogging : public rclcpp::Node
         double raw_sim_time_;
         bool wrote_header_;
         sensor_msgs::msg::JointState joint_state_;
+        control_framework_interfaces::msg::ControlInput control_input_;
         bool recording;
 
 };

@@ -1,1 +1,1 @@
-float32 control_input
+float64[] control_input

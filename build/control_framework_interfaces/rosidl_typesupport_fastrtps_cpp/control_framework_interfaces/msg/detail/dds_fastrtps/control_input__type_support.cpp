@@ -33,7 +33,9 @@ cdr_serialize(
   eprosima::fastcdr::Cdr & cdr)
 {
   // Member: control_input
-  cdr << ros_message.control_input;
+  {
+    cdr << ros_message.control_input;
+  }
   return true;
 }
 
@@ -44,7 +46,9 @@ cdr_deserialize(
   control_framework_interfaces::msg::ControlInput & ros_message)
 {
   // Member: control_input
-  cdr >> ros_message.control_input;
+  {
+    cdr >> ros_message.control_input;
+  }
 
   return true;
 }  // NOLINT(readability/fn_size)
@@ -64,8 +68,12 @@ get_serialized_size(
 
   // Member: control_input
   {
-    size_t item_size = sizeof(ros_message.control_input);
-    current_alignment += item_size +
+    size_t array_size = ros_message.control_input.size();
+
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    size_t item_size = sizeof(ros_message.control_input[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -94,11 +102,15 @@ max_serialized_size_ControlInput(
 
   // Member: control_input
   {
-    size_t array_size = 1;
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   size_t ret_val = current_alignment - initial_alignment;

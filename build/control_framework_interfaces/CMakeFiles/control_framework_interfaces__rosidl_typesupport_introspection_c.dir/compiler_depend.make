@@ -63,7 +63,9 @@ CMakeFiles/control_framework_interfaces__rosidl_typesupport_introspection_c.dir/
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
   rosidl_generator_c/control_framework_interfaces/msg/rosidl_generator_c__visibility_control.h \
-  rosidl_generator_c/control_framework_interfaces/msg/detail/control_input__struct.h
+  rosidl_generator_c/control_framework_interfaces/msg/detail/control_input__struct.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h
 
 CMakeFiles/control_framework_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/control_framework_interfaces/msg/detail/joint_state__type_support.c.o: rosidl_typesupport_introspection_c/control_framework_interfaces/msg/detail/joint_state__type_support.c \
   /usr/include/stdc-predef.h \
@@ -378,9 +380,9 @@ rosidl_generator_c/control_framework_interfaces/msg/rosidl_generator_c__visibili
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/message_initialization.h:
 
-/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h:
-
 rosidl_typesupport_introspection_c/control_framework_interfaces/srv/detail/init_state__type_support.c:
+
+/opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 

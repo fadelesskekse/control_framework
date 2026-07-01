@@ -14,7 +14,7 @@ pub struct ControlInput {
 
     // This member is not documented.
     #[allow(missing_docs)]
-    pub control_input: f32,
+    pub control_input: Vec<f64>,
 
 }
 
@@ -32,17 +32,19 @@ impl rosidl_runtime_rs::Message for ControlInput {
   fn into_rmw_message(msg_cow: std::borrow::Cow<'_, Self>) -> std::borrow::Cow<'_, Self::RmwMsg> {
     match msg_cow {
       std::borrow::Cow::Owned(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
-        control_input: msg.control_input,
+        control_input: msg.control_input.into(),
       }),
       std::borrow::Cow::Borrowed(msg) => std::borrow::Cow::Owned(Self::RmwMsg {
-      control_input: msg.control_input,
+        control_input: msg.control_input.as_slice().into(),
       })
     }
   }
 
   fn from_rmw_message(msg: Self::RmwMsg) -> Self {
     Self {
-      control_input: msg.control_input,
+      control_input: msg.control_input
+          .into_iter()
+          .collect(),
     }
   }
 }
