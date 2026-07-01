@@ -1,0 +1,77 @@
+In file included from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/main.cpp:1[m[K:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:45:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   23 |         rclcpp::Subscription<std_msgs::msg::[01;31m[KFloat64[m[K>::SharedPtr sim_time_subscriber_;
+      |                                             [01;31m[K^~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   23 |         rclcpp::Subscription<std_msgs::msg::Float64[01;31m[K>[m[K::SharedPtr sim_time_subscriber_;
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   23 |         rclcpp::Subscription<std_msgs::msg::Float64>::[01;31m[KSharedPtr[m[K sim_time_subscriber_;
+      |                                                       [01;31m[K^~~~~~~~~[m[K
+      |                                                                [32m[K;[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:65:[m[K [01;31m[Kerror: [m[K‘[01m[Ksim_time_subscriber_[m[K’ does not name a type
+   23 |         rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr [01;31m[Ksim_time_subscriber_[m[K;
+      |                                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:1[m[K:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:45:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   23 |         rclcpp::Subscription<std_msgs::msg::[01;31m[KFloat64[m[K>::SharedPtr sim_time_subscriber_;
+      |                                             [01;31m[K^~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   23 |         rclcpp::Subscription<std_msgs::msg::Float64[01;31m[K>[m[K::SharedPtr sim_time_subscriber_;
+      |                                                    [01;31m[K^[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 4 is invalid
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 5 is invalid
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:55:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+   23 |         rclcpp::Subscription<std_msgs::msg::Float64>::[01;31m[KSharedPtr[m[K sim_time_subscriber_;
+      |                                                       [01;31m[K^~~~~~~~~[m[K
+      |                                                                [32m[K;[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:65:[m[K [01;31m[Kerror: [m[K‘[01m[Ksim_time_subscriber_[m[K’ does not name a type
+   23 |         rclcpp::Subscription<std_msgs::msg::Float64>::SharedPtr [01;31m[Ksim_time_subscriber_[m[K;
+      |                                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:[m[K In constructor ‘[01m[KExcelRecordLogging::ExcelRecordLogging()[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:9:80:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KExcelRecordLogging::create_subscription<sensor_msgs::msg::JointState>(const char [13], int)[m[K’
+    9 |     state_subscriber_ = [01;31m[Kthis->create_subscription<sensor_msgs::msg::JointState>("joint_states", 10)[m[K; //Need custom msg
+      |                         [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:4[m[K,
+                 from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+  219 |   [01;36m[Kcreate_subscription[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:9:80:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 2 provided
+    9 |     state_subscriber_ = [01;36m[Kthis->create_subscription<sensor_msgs::msg::JointState>("joint_states", 10)[m[K; //Need custom msg
+      |                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksim_time_subscriber_[m[K’ was not declared in this scope; did you mean ‘[01m[Kstate_subscriber_[m[K’?
+   10 |     [01;31m[Ksim_time_subscriber_[m[K = this->create_subscription<std_msgs::msg::Float64>("sim_time", 10); //Need custom msg
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |     [32m[Kstate_subscriber_[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:69:[m[K [01;31m[Kerror: [m[K‘[01m[KFloat64[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+   10 |     sim_time_subscriber_ = this->create_subscription<std_msgs::msg::[01;31m[KFloat64[m[K>("sim_time", 10); //Need custom msg
+      |                                                                     [01;31m[K^~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:77:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KExcelRecordLogging::create_subscription<<expression error> >(const char [9], int)[m[K’
+   10 |     sim_time_subscriber_ = [01;31m[Kthis->create_subscription<std_msgs::msg::Float64>("sim_time", 10)[m[K; //Need custom msg
+      |                            [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:4[m[K,
+                 from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+  219 |   [01;36m[Kcreate_subscription[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:77:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   10 |     sim_time_subscriber_ = [01;31m[Kthis->create_subscription<std_msgs::msg::Float64>("sim_time", 10)[m[K; //Need custom msg
+      |                            [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/excel_record_logging.dir/build.make:76: CMakeFiles/excel_record_logging.dir/src/main.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/excel_record_logging.dir/build.make:90: CMakeFiles/excel_record_logging.dir/src/excel_record_logging.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/excel_record_logging.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

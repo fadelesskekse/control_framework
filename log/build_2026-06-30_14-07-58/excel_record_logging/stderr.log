@@ -1,0 +1,27 @@
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:[m[K In constructor ‘[01m[KExcelRecordLogging::ExcelRecordLogging()[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:9:132:[m[K [01;31m[Kerror: [m[K‘[01m[Kjoint_state_callback[m[K’ is not a member of ‘[01m[KExcelRecordLogging[m[K’
+    9 |     state_subscriber_ = this->create_subscription<sensor_msgs::msg::JointState>("joint_states", 10, std::bind(&ExcelRecordLogging::[01;31m[Kjoint_state_callback[m[K, this, _1)); //Need custom msg
+      |                                                                                                                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:124:[m[K [01;31m[Kerror: [m[K‘[01m[Ksim_time_callback[m[K’ is not a member of ‘[01m[KExcelRecordLogging[m[K’
+   10 |     sim_time_subscriber_ = this->create_subscription<std_msgs::msg::Float64>("sim_time", 10,std::bind(&ExcelRecordLogging::[01;31m[Ksim_time_callback[m[K, this, _1)); //Need custom msg
+      |                                                                                                                            [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:[m[K At global scope:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:26:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid ExcelRecordLogging::joint_state_callback(sensor_msgs::msg::JointState)[m[K’
+   26 | void [01;31m[KExcelRecordLogging[m[K::joint_state_callback(const sensor_msgs::msg::JointState joint_state)
+      |      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:26:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid ExcelRecordLogging::joint_state_callback(sensor_msgs::msg::JointState)[m[K’
+In file included from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:1[m[K:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:9:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass ExcelRecordLogging[m[K’ defined here
+    9 | class [01;36m[KExcelRecordLogging[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:32:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid ExcelRecordLogging::sim_time_callback(const Float64&)[m[K’
+   32 | void [01;31m[KExcelRecordLogging[m[K::sim_time_callback(const std_msgs::msg::Float64 & sim_time)
+      |      [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:32:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid ExcelRecordLogging::sim_time_callback(const Float64&)[m[K’
+In file included from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:1[m[K:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:9:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass ExcelRecordLogging[m[K’ defined here
+    9 | class [01;36m[KExcelRecordLogging[m[K : public rclcpp::Node
+      |       [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/excel_record_logging.dir/build.make:90: CMakeFiles/excel_record_logging.dir/src/excel_record_logging.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/excel_record_logging.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

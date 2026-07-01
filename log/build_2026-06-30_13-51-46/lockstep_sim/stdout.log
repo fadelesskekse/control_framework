@@ -1,0 +1,5 @@
+[35m[1mConsolidate compiler generated dependencies of target lockstep_sim[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/main.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/lockstep_sim.cpp.o[0m
+[ 75%] [32m[1mLinking CXX executable lockstep_sim[0m
+[100%] Built target lockstep_sim

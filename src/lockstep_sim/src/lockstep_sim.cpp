@@ -53,14 +53,23 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       this->declare_parameter("use_default_init_for_reset_record", true);
       this->declare_parameter("record_time", 0.0);
 	    this->declare_parameter("model_name", "");
+
+      this->declare_parameter<vector<string>>("urdf_joint_total", vector<string> {});
 	    this->declare_parameter<vector<string>>("controller_list", vector<string> {});
+      this->declare_parameter<vector<string>>("urdf_joint_type", vector<string> {});
+
+      
+
 
 	    vector<string> controller_list = this->get_parameter("controller_list").as_string_array();
+
+  
+      urdf_joint_total_list = this->get_parameter("urdf_joint_total").as_string_array();
+      urdf_joint_type_list = this->get_parameter("urdf_joint_type").as_string_array();
 
 	    std::string controller_names;
 
       for (const auto& controller_name : controller_list) {
-
 
         if (!controller_names.empty()) {
             controller_names += ", ";
@@ -69,7 +78,7 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
 
         set_controllers(controller_name);
 
-        }
+      }
 
 
       RCLCPP_WARN(
@@ -155,21 +164,11 @@ void LockStepSim::sim_callback()
         mj_step(m, d);
       }
       else{
-        RCLCPP_WARN(
-          this->get_logger(),
-          "End of Recording, Pausing sim_step callback to extract csv data: %s"
-          
-        );
         
         this->set_parameter(rclcpp::Parameter("reset_and_record", false)); //exit the reset_and_record loop
         this->set_parameter(rclcpp::Parameter("prev_reset_and_record", false)); //exit the reset_and_record loop
-        rclcpp::sleep_for(std::chrono::seconds(5));//temporarily pause the sim_stepping to allow the extraction of a csv file in foxglove-studio
+        //rclcpp::sleep_for(std::chrono::seconds(5));//temporarily pause the sim_stepping to allow the extraction of a csv file in foxglove-studio
 
-          RCLCPP_WARN(
-          this->get_logger(),
-          "End of Sim Pause for Recording, resuming sim_stepping: %s"
-          
-        );
       }
   }
 
@@ -180,19 +179,33 @@ void LockStepSim::sim_callback()
   sensor_msgs::msg::JointState joint_state;
   std_msgs::msg::Float64 sim_time;
 
-  //double sim_time = d->time;
-  // Specify joints' name which are defined in the r2d2.urdf.xml and their content
-  joint_state.name={"world_to_ground","cart_slide_joint","pole_hinge_joint","pole_to_tip_joint"};
+  int mujoco_joint_index = 0;
 
+  for (size_t i = 0; i < urdf_joint_total_list.size(); ++i) {
 
-  joint_state.position={0,d->qpos[0],d->qpos[1],d->qpos[1]};
-  joint_state.velocity={0,d->qvel[0],d->qvel[1],d->qvel[1]};
+    const std::string & urdf_joint = urdf_joint_total_list[i];
+    const std::string & joint_type = urdf_joint_type_list[i];
 
-  //int32_t sec = static_cast<int32_t>(std::floor(sim_time));
-  //uint32_t nanosec = static_cast<uint32_t>((sim_time - sec) * 1e9);
-  //joint_state.header.stamp.sec = sec;
-  //joint_state.header.stamp.nanosec = nanosec;
-  //joint_state.header.frame_id = "";
+    joint_state.name.push_back(urdf_joint);
+
+    if (joint_type == "fixed") {
+        if (i == 0) {
+            joint_state.position.push_back(0.0);
+            joint_state.velocity.push_back(0.0);
+        } else {
+            joint_state.position.push_back(joint_state.position.back());
+            joint_state.velocity.push_back(joint_state.velocity.back());
+        }
+    } 
+
+    else {
+        joint_state.position.push_back(d->qpos[mujoco_joint_index]);
+        joint_state.velocity.push_back(d->qvel[mujoco_joint_index]);
+
+        mujoco_joint_index++;
+    }
+
+  }
 
   sim_time.data = d->time;
 

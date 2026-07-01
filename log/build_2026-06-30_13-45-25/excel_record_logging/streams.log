@@ -1,0 +1,68 @@
+[0.006s] Invoking command in '/home/dakota/.local/repos/control_framework/build/excel_record_logging': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/home/dakota/.local/repos/control_framework/install/excel_record_logging:/home/dakota/.local/repos/control_framework/install/controller:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:/home/dakota/.local/repos/control_framework/install/controller/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/excel_record_logging -- -j28 -l28
+[0.041s] [35m[1mConsolidate compiler generated dependencies of target excel_record_logging[0m
+[0.057s] [ 66%] [32mBuilding CXX object CMakeFiles/excel_record_logging.dir/src/main.cpp.o[0m
+[0.057s] [ 66%] [32mBuilding CXX object CMakeFiles/excel_record_logging.dir/src/excel_record_logging.cpp.o[0m
+[1.143s] In file included from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:1[m[K:
+[1.143s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:22:17:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+[1.143s]    22 |         rclcpp::[01;31m[KSubscriber[m[K<sensor_msgs::msg::JointState>::SharedPtr state_subscriber_;
+[1.143s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[1.143s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:17:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+[1.143s]    23 |         rclcpp::[01;31m[KSubscriber[m[K<std_msgs::msg::Float64>::SharedPtr sim_time_subscriber_;
+[1.143s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[1.143s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:26:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool ExcelRecordLogging::recording[m[K’ conflicts with a previous declaration
+[1.143s]    26 |         bool [01;31m[Krecording[m[K;
+[1.143s]       |              [01;31m[K^~~~~~~~~[m[K
+[1.143s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:19:14:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid ExcelRecordLogging::recording()[m[K’
+[1.143s]    19 |         void [01;36m[Krecording[m[K();
+[1.143s]       |              [01;36m[K^~~~~~~~~[m[K
+[1.151s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:[m[K In constructor ‘[01m[KExcelRecordLogging::ExcelRecordLogging()[m[K’:
+[1.151s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:9:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_subscriber_[m[K’ was not declared in this scope
+[1.151s]     9 |     [01;31m[Kstate_subscriber_[m[K = this->create_subscriber<sensor_msgs::msg::JointState>("joint_states", 10); //Need custom msg
+[1.151s]       |     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.151s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:9:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ExcelRecordLogging[m[K’ has no member named ‘[01m[Kcreate_subscriber[m[K’; did you mean ‘[01m[Kcreate_subscription[m[K’?
+[1.151s]     9 |     state_subscriber_ = this->[01;31m[Kcreate_subscriber[m[K<sensor_msgs::msg::JointState>("joint_states", 10); //Need custom msg
+[1.151s]       |                               [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.151s]       |                               [32m[Kcreate_subscription[m[K
+[1.151s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:9:49:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_msgs[m[K’ has not been declared
+[1.151s]     9 |     state_subscriber_ = this->create_subscriber<[01;31m[Ksensor_msgs[m[K::msg::JointState>("joint_states", 10); //Need custom msg
+[1.151s]       |                                                 [01;31m[K^~~~~~~~~~~[m[K
+[1.152s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:9:79:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.152s]     9 |     state_subscriber_ = this->create_subscriber<sensor_msgs::msg::JointState>([01;35m[K"joint_states"[m[K, 10); //Need custom msg
+[1.152s]       |                                                                               [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.157s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksim_time_subscriber_[m[K’ was not declared in this scope
+[1.157s]    10 |     [01;31m[Ksim_time_subscriber_[m[K = this->create_subscriber<std_msgs::msg::Float64>("sim_time", 10); //Need custom msg
+[1.157s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[1.157s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ExcelRecordLogging[m[K’ has no member named ‘[01m[Kcreate_subscriber[m[K’; did you mean ‘[01m[Kcreate_subscription[m[K’?
+[1.157s]    10 |     sim_time_subscriber_ = this->[01;31m[Kcreate_subscriber[m[K<std_msgs::msg::Float64>("sim_time", 10); //Need custom msg
+[1.157s]       |                                  [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.157s]       |                                  [32m[Kcreate_subscription[m[K
+[1.157s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ has not been declared
+[1.157s]    10 |     sim_time_subscriber_ = this->create_subscriber<[01;31m[Kstd_msgs[m[K::msg::Float64>("sim_time", 10); //Need custom msg
+[1.157s]       |                                                    [01;31m[K^~~~~~~~[m[K
+[1.157s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:76:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.157s]    10 |     sim_time_subscriber_ = this->create_subscriber<std_msgs::msg::Float64>([01;35m[K"sim_time"[m[K, 10); //Need custom msg
+[1.157s]       |                                                                            [01;35m[K^~~~~~~~~~[m[K
+[1.159s] In file included from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/main.cpp:1[m[K:
+[1.159s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:22:17:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+[1.159s]    22 |         rclcpp::[01;31m[KSubscriber[m[K<sensor_msgs::msg::JointState>::SharedPtr state_subscriber_;
+[1.159s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[1.159s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:[m[K In member function ‘[01m[Kvoid ExcelRecordLogging::reset_record(std::shared_ptr<control_framework_interfaces::srv::ResetRecord_Request_<std::allocator<void> > >, std::shared_ptr<control_framework_interfaces::srv::ResetRecord_Response_<std::allocator<void> > >)[m[K’:
+[1.159s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:19:5:[m[K [01;31m[Kerror: [m[Kinvalid use of member function ‘[01m[Kvoid ExcelRecordLogging::recording()[m[K’ (did you forget the ‘[01m[K()[m[K’ ?)
+[1.159s]    19 |     [01;31m[Krecording[m[K = true;
+[1.159s]       |     [01;31m[K^~~~~~~~~[m[K
+[1.159s]       |              [32m[K()[m[K
+[1.159s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:17:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+[1.159s]    23 |         rclcpp::[01;31m[KSubscriber[m[K<std_msgs::msg::Float64>::SharedPtr sim_time_subscriber_;
+[1.159s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[1.159s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:26:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kbool ExcelRecordLogging::recording[m[K’ conflicts with a previous declaration
+[1.159s]    26 |         bool [01;31m[Krecording[m[K;
+[1.159s]       |              [01;31m[K^~~~~~~~~[m[K
+[1.159s] [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:19:14:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kvoid ExcelRecordLogging::recording()[m[K’
+[1.159s]    19 |         void [01;36m[Krecording[m[K();
+[1.159s]       |              [01;36m[K^~~~~~~~~[m[K
+[1.363s] gmake[2]: *** [CMakeFiles/excel_record_logging.dir/build.make:76: CMakeFiles/excel_record_logging.dir/src/main.cpp.o] Error 1
+[1.363s] gmake[2]: *** Waiting for unfinished jobs....
+[1.441s] gmake[2]: *** [CMakeFiles/excel_record_logging.dir/build.make:90: CMakeFiles/excel_record_logging.dir/src/excel_record_logging.cpp.o] Error 1
+[1.441s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/excel_record_logging.dir/all] Error 2
+[1.441s] gmake: *** [Makefile:146: all] Error 2
+[1.443s] Invoked command in '/home/dakota/.local/repos/control_framework/build/excel_record_logging' returned '2': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/home/dakota/.local/repos/control_framework/install/excel_record_logging:/home/dakota/.local/repos/control_framework/install/controller:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:/home/dakota/.local/repos/control_framework/install/controller/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/excel_record_logging -- -j28 -l28

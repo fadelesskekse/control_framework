@@ -1,0 +1,46 @@
+In file included from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:1[m[K:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:22:17:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+   22 |         rclcpp::[01;31m[KSubscriber[m[K<sensor_msgs::msg::JointState>::SharedPtr state_subscriber_;
+      |                 [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:17:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+   23 |         rclcpp::[01;31m[KSubscriber[m[K<std_msgs::msg::Float64>::SharedPtr sim_time_subscriber_;
+      |                 [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/main.cpp:1[m[K:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:22:17:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+   22 |         rclcpp::[01;31m[KSubscriber[m[K<sensor_msgs::msg::JointState>::SharedPtr state_subscriber_;
+      |                 [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/../include/excel_record_logging/excel_record_logging.hpp:23:17:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ in namespace ‘[01m[Krclcpp[m[K’ does not name a template type
+   23 |         rclcpp::[01;31m[KSubscriber[m[K<std_msgs::msg::Float64>::SharedPtr sim_time_subscriber_;
+      |                 [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:[m[K In constructor ‘[01m[KExcelRecordLogging::ExcelRecordLogging()[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:9:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_subscriber_[m[K’ was not declared in this scope
+    9 |     [01;31m[Kstate_subscriber_[m[K = this->create_subscriber<sensor_msgs::msg::JointState>("joint_states", 10); //Need custom msg
+      |     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:9:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ExcelRecordLogging[m[K’ has no member named ‘[01m[Kcreate_subscriber[m[K’; did you mean ‘[01m[Kcreate_subscription[m[K’?
+    9 |     state_subscriber_ = this->[01;31m[Kcreate_subscriber[m[K<sensor_msgs::msg::JointState>("joint_states", 10); //Need custom msg
+      |                               [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                               [32m[Kcreate_subscription[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:9:49:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_msgs[m[K’ has not been declared
+    9 |     state_subscriber_ = this->create_subscriber<[01;31m[Ksensor_msgs[m[K::msg::JointState>("joint_states", 10); //Need custom msg
+      |                                                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:9:79:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+    9 |     state_subscriber_ = this->create_subscriber<sensor_msgs::msg::JointState>([01;35m[K"joint_states"[m[K, 10); //Need custom msg
+      |                                                                               [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ksim_time_subscriber_[m[K’ was not declared in this scope
+   10 |     [01;31m[Ksim_time_subscriber_[m[K = this->create_subscriber<std_msgs::msg::Float64>("sim_time", 10); //Need custom msg
+      |     [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass ExcelRecordLogging[m[K’ has no member named ‘[01m[Kcreate_subscriber[m[K’; did you mean ‘[01m[Kcreate_subscription[m[K’?
+   10 |     sim_time_subscriber_ = this->[01;31m[Kcreate_subscriber[m[K<std_msgs::msg::Float64>("sim_time", 10); //Need custom msg
+      |                                  [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+      |                                  [32m[Kcreate_subscription[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kstd_msgs[m[K’ has not been declared
+   10 |     sim_time_subscriber_ = this->create_subscriber<[01;31m[Kstd_msgs[m[K::msg::Float64>("sim_time", 10); //Need custom msg
+      |                                                    [01;31m[K^~~~~~~~[m[K
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:10:76:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+   10 |     sim_time_subscriber_ = this->create_subscriber<std_msgs::msg::Float64>([01;35m[K"sim_time"[m[K, 10); //Need custom msg
+      |                                                                            [01;35m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/excel_record_logging.dir/build.make:76: CMakeFiles/excel_record_logging.dir/src/main.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+gmake[2]: *** [CMakeFiles/excel_record_logging.dir/build.make:90: CMakeFiles/excel_record_logging.dir/src/excel_record_logging.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/excel_record_logging.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

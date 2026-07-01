@@ -1,0 +1,5 @@
+[0.006s] Invoking command in '/home/dakota/.local/repos/control_framework/build/excel_record_logging': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/home/dakota/.local/repos/control_framework/install/excel_record_logging:/home/dakota/.local/repos/control_framework/install/controller:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:/home/dakota/.local/repos/control_framework/install/controller/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/excel_record_logging -- -j28 -l28
+[0.032s] [35m[1mConsolidate compiler generated dependencies of target excel_record_logging[0m
+[0.044s] [ 33%] [32mBuilding CXX object CMakeFiles/excel_record_logging.dir/src/excel_record_logging.cpp.o[0m
+[5.424s] [ 66%] [32m[1mLinking CXX executable excel_record_logging[0m
+[5.695s] [100%] Built target excel_record_logging

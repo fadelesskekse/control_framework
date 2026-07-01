@@ -1,0 +1,9 @@
+/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp: In constructor ‘ExcelRecordLogging::ExcelRecordLogging()’:
+/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:8:1: error: expected ‘{’ before ‘:’ token
+    8 | :record_time(0.0),sim_start_log_time(0.0),sim_time_(0.0),recording(false)
+      | ^
+/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp: At global scope:
+/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:8:1: error: expected unqualified-id before ‘:’ token
+gmake[2]: *** [CMakeFiles/excel_record_logging.dir/build.make:90: CMakeFiles/excel_record_logging.dir/src/excel_record_logging.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/excel_record_logging.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

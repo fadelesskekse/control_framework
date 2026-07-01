@@ -1,3 +1,4 @@
+/home/dakota/.local/repos/control_framework/install/excel_record_logging/lib/excel_record_logging/excel_record_logging
 /home/dakota/.local/repos/control_framework/install/excel_record_logging/share/ament_index/resource_index/package_run_dependencies/excel_record_logging
 /home/dakota/.local/repos/control_framework/install/excel_record_logging/share/ament_index/resource_index/parent_prefix_path/excel_record_logging
 /home/dakota/.local/repos/control_framework/install/excel_record_logging/share/excel_record_logging/environment/ament_prefix_path.sh

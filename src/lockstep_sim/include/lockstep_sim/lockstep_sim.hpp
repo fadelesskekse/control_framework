@@ -59,6 +59,9 @@ class LockStepSim : public rclcpp::Node
         int default_init_pos_keyframe;
         int custom_init_pos_keyframe;
 
+        vector<string> urdf_joint_total_list;
+        vector<string> urdf_joint_type_list;
+
         size_t count_;
         size_t render_frame_rate;
         rclcpp::TimerBase::SharedPtr sim_timer_;

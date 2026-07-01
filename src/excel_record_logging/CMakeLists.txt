@@ -8,6 +8,8 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(std_msgs REQUIRED)
 find_package(control_framework_interfaces REQUIRED)
 
 add_executable(excel_record_logging
@@ -16,7 +18,15 @@ src/excel_record_logging.cpp)
 
 ament_target_dependencies(excel_record_logging
 rclcpp
+sensor_msgs
+std_msgs
 control_framework_interfaces)
+
+install(TARGETS
+excel_record_logging
+DESTINATION lib/${PROJECT_NAME}
+
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

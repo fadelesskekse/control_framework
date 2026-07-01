@@ -1,0 +1,8 @@
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:[m[K In member function ‘[01m[Kvoid ExcelRecordLogging::log_callback()[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/excel_record_logging/src/excel_record_logging.cpp:31:8:[m[K [01;31m[Kerror: [m[K‘[01m[Ksim_time[m[K’ was not declared in this scope; did you mean ‘[01m[Ksim_time_[m[K’?
+   31 |     if([01;31m[Ksim_time[m[K < 0){
+      |        [01;31m[K^~~~~~~~[m[K
+      |        [32m[Ksim_time_[m[K
+gmake[2]: *** [CMakeFiles/excel_record_logging.dir/build.make:90: CMakeFiles/excel_record_logging.dir/src/excel_record_logging.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/excel_record_logging.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

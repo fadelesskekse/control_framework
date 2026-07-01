@@ -26,7 +26,7 @@
     </visual>
   </link>
 
-  <joint name="world_to_ground" type="fixed">
+  <joint name="world_to_ground_joint" type="fixed">
     <parent link="world"/>
     <child link="ground_link"/>
     <origin xyz="0 0 0" rpy="0 0 0"/>
@@ -44,7 +44,7 @@
          2 * .0762 = 0.1524
          2 * .0508 = 0.1016
   -->
-  <link name="cart_link">
+  <link name="cart">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -65,9 +65,9 @@
        <joint type="slide" axis="1 0 0"/>
        This becomes a URDF prismatic joint.
   -->
-  <joint name="cart_slide_joint" type="prismatic">
+  <joint name="cart_joint" type="prismatic">
     <parent link="world"/>
-    <child link="cart_link"/>
+    <child link="cart"/>
     <origin xyz="0 0 0.0508" rpy="0 0 0"/>
     <axis xyz="1 0 0"/>
     <limit lower="-5.0" upper="5.0" effort="1000.0" velocity="100.0"/>
@@ -83,7 +83,7 @@
          - sphere at bottom
          - sphere at top
   -->
-  <link name="pole_link">
+  <link name="pole">
     <visual>
       <origin xyz="0 0 0.15" rpy="0 0 0"/>
       <geometry>
@@ -124,9 +124,9 @@
 
        This becomes a URDF continuous joint.
   -->
-  <joint name="pole_hinge_joint" type="continuous">
-    <parent link="cart_link"/>
-    <child link="pole_link"/>
+  <joint name="pole_joint" type="continuous">
+    <parent link="cart"/>
+    <child link="pole"/>
     <origin xyz="0 0 0.0254" rpy="0 0 0"/>
     <axis xyz="0 -1 0"/>
   </joint>
@@ -136,7 +136,7 @@
          body pos="0 0 .3"
          geom type="sphere" mass=".2" size=".025"
   -->
-  <link name="pole_tip_link">
+  <link name="pole_tip">
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0"/>
       <geometry>
@@ -154,8 +154,8 @@
   </link>
 
   <joint name="pole_to_tip_joint" type="fixed">
-    <parent link="pole_link"/>
-    <child link="pole_tip_link"/>
+    <parent link="pole"/>
+    <child link="pole_tip"/>
     <origin xyz="0 0 0.3" rpy="0 0 0"/>
   </joint>
 
