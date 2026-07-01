@@ -1,0 +1,99 @@
+[0.005s] Invoking command in '/home/dakota/.local/repos/control_framework/build/controller': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/home/dakota/.local/repos/control_framework/install/excel_record_logging:/home/dakota/.local/repos/control_framework/install/controller:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:/home/dakota/.local/repos/control_framework/install/controller/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/controller -- -j28 -l28
+[0.031s] [35m[1mConsolidate compiler generated dependencies of target controller[0m
+[0.038s] [ 50%] Built target controller
+[0.047s] [35m[1mConsolidate compiler generated dependencies of target controller_node[0m
+[0.058s] [ 66%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/main.cpp.o[0m
+[0.058s] [ 83%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/controller_node.cpp.o[0m
+[1.189s] [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:[m[K In constructor ‘[01m[KControllerNode::ControllerNode()[m[K’:
+[1.189s] [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:59:36:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KControllerNode::declare_parameter(const std::__cxx11::basic_string<char>&)[m[K’
+[1.189s]    59 |             [01;31m[Kthis->declare_parameter(param_name)[m[K;
+[1.189s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[1.189s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+[1.189s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.189s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[1.189s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.189s]                  from [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/../include/controller/controller_node.hpp:4[m[K,
+[1.189s]                  from [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:2[m[K:
+[1.189s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:195:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterT&, const ParameterDescriptor&, bool)[m[K’
+[1.189s]   195 | [01;36m[KNode[m[K::declare_parameter(
+[1.189s]       | [01;36m[K^~~~[m[K
+[1.189s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:195:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.189s] [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:59:36:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 1 provided
+[1.189s]    59 |             [01;36m[Kthis->declare_parameter(param_name)[m[K;
+[1.189s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[1.189s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.189s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[1.189s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.189s]                  from [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/../include/controller/controller_node.hpp:4[m[K,
+[1.189s]                  from [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:2[m[K:
+[1.189s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterDescriptor&, bool)[m[K’
+[1.189s]   434 |   [01;36m[Kdeclare_parameter[m[K(
+[1.189s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.189s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.189s] [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:59:36:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[KParameterT[m[K’
+[1.189s]    59 |             [01;36m[Kthis->declare_parameter(param_name)[m[K;
+[1.189s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[1.189s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.189s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[1.189s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.189s]                  from [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/../include/controller/controller_node.hpp:4[m[K,
+[1.189s]                  from [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:2[m[K:
+[1.189s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, const rclcpp::ParameterValue&, const ParameterDescriptor&, bool)[m[K’
+[1.190s]   366 |   [01;36m[Kdeclare_parameter[m[K(
+[1.190s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.190s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 1 provided
+[1.190s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, rclcpp::ParameterType, const ParameterDescriptor&, bool)[m[K’
+[1.190s]   391 |   [01;36m[Kdeclare_parameter[m[K(
+[1.190s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.190s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 1 provided
+[1.196s] [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:[m[K In member function ‘[01m[Kvoid ControllerNode::controller_select(std::shared_ptr<control_framework_interfaces::srv::ControllerSelect_Request_<std::allocator<void> > >, std::shared_ptr<control_framework_interfaces::srv::ControllerSelect_Response_<std::allocator<void> > >)[m[K’:
+[1.196s] [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:85:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kactive_controller[m[K’ was not declared in this scope; did you mean ‘[01m[Kset_controllers[m[K’?
+[1.196s]    85 |           [01;31m[Kactive_controller[m[K = controllers[i].get();
+[1.196s]       |           [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[1.196s]       |           [32m[Kset_controllers[m[K
+[1.200s] [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:[m[K In member function ‘[01m[Kvoid ControllerNode::set_controllers(const std::vector<std::__cxx11::basic_string<char> >&)[m[K’:
+[1.200s] [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:138:36:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KControllerNode::declare_parameter(const std::__cxx11::basic_string<char>&)[m[K’
+[1.200s]   138 |             [01;31m[Kthis->declare_parameter(param_name)[m[K;
+[1.200s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[1.200s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+[1.200s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.200s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[1.200s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.200s]                  from [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/../include/controller/controller_node.hpp:4[m[K,
+[1.200s]                  from [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:2[m[K:
+[1.200s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:195:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterT&, const ParameterDescriptor&, bool)[m[K’
+[1.200s]   195 | [01;36m[KNode[m[K::declare_parameter(
+[1.200s]       | [01;36m[K^~~~[m[K
+[1.200s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:195:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.200s] [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:138:36:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 1 provided
+[1.200s]   138 |             [01;36m[Kthis->declare_parameter(param_name)[m[K;
+[1.200s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[1.200s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.200s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[1.200s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.201s]                  from [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/../include/controller/controller_node.hpp:4[m[K,
+[1.201s]                  from [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:2[m[K:
+[1.201s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class ParameterT> auto rclcpp::Node::declare_parameter(const string&, const ParameterDescriptor&, bool)[m[K’
+[1.201s]   434 |   [01;36m[Kdeclare_parameter[m[K(
+[1.201s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.201s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:434:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[1.201s] [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:138:36:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[KParameterT[m[K’
+[1.201s]   138 |             [01;36m[Kthis->declare_parameter(param_name)[m[K;
+[1.201s]       |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[1.201s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[1.201s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[1.201s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.201s]                  from [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/../include/controller/controller_node.hpp:4[m[K,
+[1.201s]                  from [01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:2[m[K:
+[1.201s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, const rclcpp::ParameterValue&, const ParameterDescriptor&, bool)[m[K’
+[1.201s]   366 |   [01;36m[Kdeclare_parameter[m[K(
+[1.201s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.201s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:366:3:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 1 provided
+[1.201s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconst rclcpp::ParameterValue& rclcpp::Node::declare_parameter(const string&, rclcpp::ParameterType, const ParameterDescriptor&, bool)[m[K’
+[1.201s]   391 |   [01;36m[Kdeclare_parameter[m[K(
+[1.201s]       |   [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[1.201s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:391:3:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 1 provided
+[2.427s] gmake[2]: *** [CMakeFiles/controller_node.dir/build.make:90: CMakeFiles/controller_node.dir/src/controller_node.cpp.o] Error 1
+[2.427s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/controller_node.dir/all] Error 2
+[2.428s] gmake: *** [Makefile:146: all] Error 2
+[2.429s] Invoked command in '/home/dakota/.local/repos/control_framework/build/controller' returned '2': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/home/dakota/.local/repos/control_framework/install/excel_record_logging:/home/dakota/.local/repos/control_framework/install/controller:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:/home/dakota/.local/repos/control_framework/install/controller/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/controller -- -j28 -l28

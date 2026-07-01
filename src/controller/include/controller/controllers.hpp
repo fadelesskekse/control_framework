@@ -9,6 +9,7 @@ class Lqr : public BaseController
 {
     public:
         Lqr(size_t lqr_gain_row_num, size_t lqr_gain_col_num, vector<double> K);
+        Lqr(const std::vector<ControllerParamValue>& params);
 
         vector<double> control_passthrough(const vector<double>& state) override;
 
@@ -27,6 +28,7 @@ class Test : public BaseController
 {
     public:
         Test(size_t lqr_gain_row_num, size_t lqr_gain_col_num, vector<double> K);
+        Test(const std::vector<ControllerParamValue>& params);
 
         vector<double> control_passthrough(const vector<double>& state) override;
 

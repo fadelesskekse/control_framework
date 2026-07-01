@@ -1,0 +1,7 @@
+[ 16%] [32mBuilding CXX object CMakeFiles/controller.dir/src/base_controller.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/controller.dir/src/controllers.cpp.o[0m
+[ 50%] [32m[1mLinking CXX static library libcontroller.a[0m
+[ 50%] Built target controller
+[35m[1mConsolidate compiler generated dependencies of target controller_node[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/main.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/controller_node.cpp.o[0m

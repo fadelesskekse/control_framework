@@ -4,6 +4,8 @@
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/pid.yaml
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/test.yaml
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/lqr.yaml
+/home/dakota/.local/repos/control_framework/install/controller/share/controller/launch/__pycache__/test_controller_launch.cpython-310.pyc
+/home/dakota/.local/repos/control_framework/install/controller/share/controller/launch/test_controller_launch.py
 /home/dakota/.local/repos/control_framework/install/controller/lib/libcontroller.a
 /home/dakota/.local/repos/control_framework/install/controller/lib/controller/controller_node
 /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/library_path.sh

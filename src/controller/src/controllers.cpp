@@ -2,6 +2,14 @@
 
 #include <stdexcept>
 
+Lqr::Lqr(const std::vector<ControllerParamValue>& params)
+: Lqr(
+      static_cast<size_t>(std::get<int64_t>(params.at(0))),
+      static_cast<size_t>(std::get<int64_t>(params.at(1))),
+      std::get<std::vector<double>>(params.at(2))
+  )
+{}
+
 Lqr::Lqr(size_t lqr_gain_row_num_, size_t lqr_gain_col_num_, vector<double> K)
 :   BaseController(lqr_gain_row_num_ * lqr_gain_col_num_),
     lqr_gain_row_num(lqr_gain_row_num_),
@@ -42,6 +50,16 @@ vector<double> Lqr::control_passthrough(const vector<double>& state)
 
 
 }
+
+Test::Test(const std::vector<ControllerParamValue>& params)
+: Test(
+      static_cast<size_t>(std::get<int64_t>(params.at(0))),
+      static_cast<size_t>(std::get<int64_t>(params.at(1))),
+      std::get<std::vector<double>>(params.at(2))
+  )
+{
+}
+
 
 Test::Test(size_t lqr_gain_row_num_, size_t lqr_gain_col_num_, vector<double> K)
 :   BaseController(lqr_gain_row_num_ * lqr_gain_col_num_),

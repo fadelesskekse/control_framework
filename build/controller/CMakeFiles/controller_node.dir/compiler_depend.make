@@ -699,7 +699,14 @@ CMakeFiles/controller_node.dir/src/controller_node.cpp.o: /home/dakota/.local/re
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp \
-  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /home/dakota/.local/repos/control_framework/src/controller/include/controller/controllers.hpp \
+  /home/dakota/.local/repos/control_framework/src/controller/include/controller/base_controller.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/controller_select.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/controller_select__struct.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/controller_select__builder.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/controller_select__traits.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/controller_select__type_support.hpp
 
 CMakeFiles/controller_node.dir/src/main.cpp.o: /home/dakota/.local/repos/control_framework/src/controller/src/main.cpp \
   /usr/include/stdc-predef.h \
@@ -1399,10 +1406,25 @@ CMakeFiles/controller_node.dir/src/main.cpp.o: /home/dakota/.local/repos/control
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__type_support.hpp \
-  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /home/dakota/.local/repos/control_framework/src/controller/include/controller/controllers.hpp \
+  /home/dakota/.local/repos/control_framework/src/controller/include/controller/base_controller.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/controller_select.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/controller_select__struct.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/controller_select__builder.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/controller_select__traits.hpp \
+  /home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/controller_select__type_support.hpp
 
 
 /home/dakota/.local/repos/control_framework/src/controller/src/main.cpp:
+
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/controller_select__builder.hpp:
+
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/controller_select__struct.hpp:
+
+/home/dakota/.local/repos/control_framework/src/controller/include/controller/base_controller.hpp:
+
+/home/dakota/.local/repos/control_framework/src/controller/include/controller/controllers.hpp:
 
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/joint_state__builder.hpp:
 
@@ -1543,6 +1565,8 @@ CMakeFiles/controller_node.dir/src/main.cpp.o: /home/dakota/.local/repos/control
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__struct.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_event.hpp:
+
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/controller_select__type_support.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/integer_range__traits.hpp:
 
@@ -1753,6 +1777,8 @@ CMakeFiles/controller_node.dir/src/main.cpp.o: /home/dakota/.local/repos/control
 /usr/include/c++/11/bits/stl_set.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:
+
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/detail/controller_select__traits.hpp:
 
 /usr/include/c++/11/exception:
 
@@ -2325,6 +2351,8 @@ CMakeFiles/controller_node.dir/src/main.cpp.o: /home/dakota/.local/repos/control
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
+
+/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/include/control_framework_interfaces/control_framework_interfaces/srv/controller_select.hpp:
 
 /usr/include/c++/11/istream:
 

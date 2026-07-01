@@ -1,0 +1,8 @@
+[01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:[m[K In constructor ‘[01m[KControllerNode::ControllerNode()[m[K’:
+[01m[K/home/dakota/.local/repos/control_framework/src/controller/src/controller_node.cpp:28:154:[m[K [01;31m[Kerror: [m[K‘[01m[Kcontroller_select[m[K’ is not a member of ‘[01m[KControllerNode[m[K’
+   28 | llerSelect>("controller_select", std::bind(&ControllerNode::[01;31m[Kcontroller_select[m[K, this, _1, _2));
+      |                                                             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/controller_node.dir/build.make:90: CMakeFiles/controller_node.dir/src/controller_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/controller_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

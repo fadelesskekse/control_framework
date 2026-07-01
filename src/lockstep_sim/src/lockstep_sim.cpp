@@ -485,7 +485,7 @@ void LockStepSim::set_controllers(string controller_name){
   }
   
   else if(controller_name == "test"){
-          this->declare_parameter<int64_t>("test_gain_row_num", 0);
+      this->declare_parameter<int64_t>("test_gain_row_num", 0);
       this->declare_parameter<int64_t>("test_gain_col_num", 0);
       this->declare_parameter<std::vector<double>>("test_K", std::vector<double>{});
 

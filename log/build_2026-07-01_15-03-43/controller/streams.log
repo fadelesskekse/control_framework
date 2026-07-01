@@ -1,0 +1,47 @@
+[0.006s] Invoking command in '/home/dakota/.local/repos/control_framework/build/controller': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/home/dakota/.local/repos/control_framework/install/excel_record_logging:/home/dakota/.local/repos/control_framework/install/controller:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:/home/dakota/.local/repos/control_framework/install/controller/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/controller -- -j28 -l28
+[0.037s] [ 50%] Built target controller
+[0.046s] [35m[1mConsolidate compiler generated dependencies of target controller_node[0m
+[0.061s] [ 66%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/controller_node.cpp.o[0m
+[4.035s] [ 83%] [32m[1mLinking CXX executable controller_node[0m
+[4.245s] [100%] Built target controller_node
+[4.253s] Invoked command in '/home/dakota/.local/repos/control_framework/build/controller' returned '0': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/home/dakota/.local/repos/control_framework/install/excel_record_logging:/home/dakota/.local/repos/control_framework/install/controller:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:/home/dakota/.local/repos/control_framework/install/controller/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/controller -- -j28 -l28
+[4.253s] Invoking command in '/home/dakota/.local/repos/control_framework/build/controller': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/home/dakota/.local/repos/control_framework/install/excel_record_logging:/home/dakota/.local/repos/control_framework/install/controller:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:/home/dakota/.local/repos/control_framework/install/controller/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/controller
+[4.259s] -- Install configuration: ""
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/include
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/include/controller
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/include/controller/controllers.hpp
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/include/controller/controller_node.hpp
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/include/controller/base_controller.hpp
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/pid.yaml
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/test.yaml
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/config/cart_pole/lqr.yaml
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/launch
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/launch/__pycache__
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/launch/__pycache__/test_controller_launch.cpython-310.pyc
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/launch/test_controller_launch.py
+[4.259s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/lib/libcontroller.a
+[4.259s] -- Installing: /home/dakota/.local/repos/control_framework/install/controller/lib/controller/controller_node
+[4.262s] -- Set runtime path of "/home/dakota/.local/repos/control_framework/install/controller/lib/controller/controller_node" to ""
+[4.262s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/library_path.sh
+[4.262s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/library_path.dsv
+[4.262s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/package_run_dependencies/controller
+[4.262s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/parent_prefix_path/controller
+[4.262s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/ament_prefix_path.sh
+[4.262s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/ament_prefix_path.dsv
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/path.sh
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/environment/path.dsv
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.bash
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.sh
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.zsh
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/local_setup.dsv
+[4.263s] -- Installing: /home/dakota/.local/repos/control_framework/install/controller/share/controller/package.dsv
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/ament_index/resource_index/packages/controller
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerTargetsExport.cmake
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerTargetsExport-noconfig.cmake
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/ament_cmake_export_targets-extras.cmake
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerConfig.cmake
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/cmake/controllerConfig-version.cmake
+[4.263s] -- Up-to-date: /home/dakota/.local/repos/control_framework/install/controller/share/controller/package.xml
+[4.264s] Invoked command in '/home/dakota/.local/repos/control_framework/build/controller' returned '0': CMAKE_PREFIX_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces:/home/dakota/.local/repos/control_framework/install/lockstep_sim:/home/dakota/.local/repos/control_framework/install/excel_record_logging:/home/dakota/.local/repos/control_framework/install/controller:/opt/ros/humble LD_LIBRARY_PATH=/home/dakota/.local/repos/control_framework/install/control_framework_interfaces/lib:/home/dakota/.local/repos/control_framework/install/controller/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/controller

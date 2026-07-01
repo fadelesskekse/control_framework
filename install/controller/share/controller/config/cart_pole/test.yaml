@@ -1,6 +1,13 @@
 sim:
   ros__parameters:
+    test_param_list: ["test_gain_row_num", "test_gain_col_num", "test_K"]
     test_gain_row_num: 1
     test_gain_col_num: 4
     test_K: [8.82,-13.24,65.9,12.0]
 
+controller_node:
+  ros__parameters:
+    test_param_list: ["test_gain_row_num", "test_gain_col_num", "test_K"]
+    test_gain_row_num: 1
+    test_gain_col_num: 4
+    test_K: [8.82,-13.24,65.9,12.0]
