@@ -94,7 +94,7 @@ def _launch_setup(context, *args, **kwargs):
     actions=[
 
             Node(
-            package="lockstep_sim",
+            package="sim",
             executable="lockstep_sim",
             name="sim",
             output="screen",

@@ -112,8 +112,8 @@ void ControllerNode::control_timer_callback(){
     vector<double> state_position = joint_state_.position;
     vector<double> state_velocity = joint_state_.velocity;
 
-    std::vector<double> state_position = {1.0, 1.0};
-    std::vector<double> state_velocity = {1.0, 1.0};
+    //std::vector<double> state_position = {1.0, 1.0};
+    //std::vector<double> state_velocity = {1.0, 1.0};
 
 
     for (int i=0; i < state_position.size() ; i++){

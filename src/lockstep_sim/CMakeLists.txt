@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(lockstep_sim)
+project(sim)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -18,8 +18,15 @@ find_library(MUJOCO_LIBRARY mujoco REQUIRED)
 
 
 add_executable(lockstep_sim 
-src/main.cpp
+src/main_lockstep.cpp
 src/lockstep_sim.cpp
+src/sim.cpp
+src/render.cpp)
+
+add_executable(parallel_sim
+src/main_parallel.cpp
+src/parallel_sim.cpp
+src/sim.cpp
 src/render.cpp)
 
 
