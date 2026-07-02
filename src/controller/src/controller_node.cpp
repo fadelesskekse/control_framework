@@ -7,6 +7,27 @@ using namespace std::chrono_literals;
 
 static BaseController* active_controller = nullptr;
 
+// static void control_callback(const mjModel* m, mjData* d)
+// {
+//   std::vector<double> state;
+
+//   for (int i=0; i < m->nq; i++){
+//     state.push_back(d->qpos[i]); //Controller derivation always needs the states in this order. 
+//     state.push_back(d->qvel[i]);
+//   }
+
+//   vector<double> control_input = active_controller->control_passthrough(state);
+
+//   if (control_input.size() != m->nu){     
+//     throw std::invalid_argument("Control Input size as calculated from controller doesn't equal the number of actuators assigned in the mjcf model.");
+//   }
+
+//   for(int i = 0; i < m->nu; i++){
+//     d->ctrl[i] = control_input[i];
+//   }
+
+// }
+
 ControllerNode::ControllerNode() :
 Node(
     "controller_node",
@@ -85,6 +106,23 @@ void ControllerNode::joint_state_callback(const sensor_msgs::msg::JointState joi
 void ControllerNode::control_timer_callback(){
 
     control_framework_interfaces::msg::ControlInput control_input_;
+
+    vector<double> state;
+
+    vector<double> state_position = joint_state_.position;
+    vector<double> state_velocity = joint_state_.velocity;
+
+    std::vector<double> state_position = {1.0, 1.0};
+    std::vector<double> state_velocity = {1.0, 1.0};
+
+
+    for (int i=0; i < state_position.size() ; i++){
+        state.push_back(state_position[i]); //Controller derivation always needs the states in this order. 
+        state.push_back(state_velocity[i]);
+    }
+   
+    control_input_.control_input = active_controller->control_passthrough(state);
+
 
     control_publisher_->publish(control_input_);
 
