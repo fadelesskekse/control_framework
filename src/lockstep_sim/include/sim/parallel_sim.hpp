@@ -3,7 +3,7 @@
 
 #include "sim.hpp"
 
-class ParallelSim : public rclcpp::Node
+class ParallelSim : public Simbase
 {
     public:
         ParallelSim();
@@ -12,7 +12,11 @@ class ParallelSim : public rclcpp::Node
     private:
 
       vector<double> control_input_calculate(
-        const vector<double>& state) override;
+          const vector<double>& state) override;
+
+      control_framework_interfaces::msg::ControlInput control_input_;
+      rclcpp::Subscription<control_framework_interfaces::msg::ControlInput>::SharedPtr control_input_subscriber_;
+  
 
 };
   

@@ -9,34 +9,8 @@ using namespace std;
 
 static BaseController* active_controller = nullptr;
 
-static void control_callback(const mjModel* m, mjData* d)
-{
-  std::vector<double> state;
 
-  for (int i=0; i < m->nq; i++){
-    state.push_back(d->qpos[i]); //Controller derivation always needs the states in this order. 
-    state.push_back(d->qvel[i]);
-  }
-
-  vector<double> control_input = active_controller->control_passthrough(state);
-
-  if (control_input.size() != m->nu){     
-    throw std::invalid_argument("Control Input size as calculated from controller doesn't equal the number of actuators assigned in the mjcf model.");
-  }
-
-  for(int i = 0; i < m->nu; i++){
-    d->ctrl[i] = control_input[i];
-  }
-
-}
-
-vector<double> LockStepSim::control_input_calculate(const vector<double>& state)
-{
-
-
-}
-
-LockStepSim::LockStepSim() : Node("lockstep_sim")
+LockStepSim::LockStepSim() : Simbase("lockstep_sim")
 {
      
 
@@ -154,6 +128,11 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
         render_frame_rate = 16; //1/60 fps ~ 16ms per frame
       }
       
+}
+
+vector<double> LockStepSim::control_input_calculate(const vector<double>& state)
+{
+  return active_controller->control_passthrough(state);
 }
 
 void LockStepSim::controller_select(const std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Request> request,

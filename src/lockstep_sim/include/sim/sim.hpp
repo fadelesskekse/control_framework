@@ -16,6 +16,7 @@
 #include "std_srvs/srv/trigger.hpp"
 #include "control_framework_interfaces/srv/init_state.hpp"
 #include "control_framework_interfaces/srv/reset_record.hpp"
+#include "control_framework_interfaces/msg/control_input.hpp"
 
 
 #include "render.hpp"
