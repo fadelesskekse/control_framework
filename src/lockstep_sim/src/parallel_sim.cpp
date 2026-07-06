@@ -10,7 +10,7 @@ ParallelSim::ParallelSim() : Simbase("lockstep_sim")
 
 void ParallelSim::control_input_callback(const control_framework_interfaces::msg::ControlInput & control_input)
 {
-    control_input_ = control_input;
+    control_input_ = control_input;//j
 }
 
 vector<double> ParallelSim::control_input_calculate(const vector<double>& state)
