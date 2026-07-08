@@ -52,10 +52,10 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       this->declare_parameter("prev_reset_and_record", false);
       this->declare_parameter("use_default_init_for_reset_record", true);
       this->declare_parameter("record_time", 0.0);
-	    this->declare_parameter("model_name", "");
+	    this->declare_parameter("model_name", "cart_pole");
 
       this->declare_parameter<vector<string>>("urdf_joint_total", vector<string> {});
-	    this->declare_parameter<vector<string>>("controller_list", vector<string> {});
+	    this->declare_parameter<vector<string>>("controller_list", vector<string> {"lqr"});
       this->declare_parameter<vector<string>>("urdf_joint_type", vector<string> {});
 
       
@@ -415,9 +415,10 @@ void LockStepSim::set_controllers(string controller_name){
 
     if (controller_name == "lqr") {
 
-      this->declare_parameter<int64_t>("lqr_gain_row_num", 0);
-      this->declare_parameter<int64_t>("lqr_gain_col_num", 0);
-      this->declare_parameter<std::vector<double>>("lqr_K", std::vector<double>{});
+      this->declare_parameter<int64_t>("lqr_gain_row_num", 1);
+      this->declare_parameter<int64_t>("lqr_gain_col_num", 4);
+      this->declare_parameter<std::vector<double>>("lqr_K", std::vector<double>{-8.82,-13.24,65.9,12.0});
+
 
       int lqr_gain_row_num =
           this->get_parameter("lqr_gain_row_num").as_int();

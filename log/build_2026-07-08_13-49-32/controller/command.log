@@ -1,0 +1,4 @@
+Invoking command in '/home/dakota/.local/repos/control_framework/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/controller -- -j24 -l24
+Invoked command in '/home/dakota/.local/repos/control_framework/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/dakota/.local/repos/control_framework/build/controller -- -j24 -l24
+Invoking command in '/home/dakota/.local/repos/control_framework/build/controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/controller
+Invoked command in '/home/dakota/.local/repos/control_framework/build/controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/dakota/.local/repos/control_framework/build/controller
