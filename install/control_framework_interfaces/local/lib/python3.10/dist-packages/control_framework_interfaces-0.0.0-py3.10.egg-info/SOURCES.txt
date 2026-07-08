@@ -1,6 +1,0 @@
-setup.py
-control_framework_interfaces/__init__.py
-control_framework_interfaces.egg-info/PKG-INFO
-control_framework_interfaces.egg-info/SOURCES.txt
-control_framework_interfaces.egg-info/dependency_links.txt
-control_framework_interfaces.egg-info/top_level.txt

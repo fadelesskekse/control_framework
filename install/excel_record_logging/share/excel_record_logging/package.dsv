@@ -1,8 +1,0 @@
-source;share/excel_record_logging/hook/cmake_prefix_path.ps1
-source;share/excel_record_logging/hook/cmake_prefix_path.dsv
-source;share/excel_record_logging/hook/cmake_prefix_path.sh
-source;share/excel_record_logging/local_setup.bash
-source;share/excel_record_logging/local_setup.dsv
-source;share/excel_record_logging/local_setup.ps1
-source;share/excel_record_logging/local_setup.sh
-source;share/excel_record_logging/local_setup.zsh
