@@ -1,4 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target excel_record_logging[0m
-[ 33%] [32mBuilding CXX object CMakeFiles/excel_record_logging.dir/src/excel_record_logging.cpp.o[0m
-[ 66%] [32m[1mLinking CXX executable excel_record_logging[0m
-[100%] Built target excel_record_logging
