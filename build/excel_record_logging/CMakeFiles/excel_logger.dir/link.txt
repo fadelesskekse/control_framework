@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/excel_logger.dir/src/main.cpp.o CMakeFiles/excel_logger.dir/src/excel_logger.cpp.o -o excel_logger 

@@ -672,10 +672,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/cmake" TYPE FILE FILES "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/rosidl_cmake/rosidl_cmake_aggregate_target-extras.cmake")
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/control_framework_interfaces/cmake" TYPE FILE FILES
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/ament_cmake_core/control_framework_interfacesConfig.cmake"
     "/home/dakota/.local/repos/control_framework/build/control_framework_interfaces/ament_cmake_core/control_framework_interfacesConfig-version.cmake"
