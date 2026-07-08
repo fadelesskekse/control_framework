@@ -38,15 +38,15 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       sim_timer_ = this->create_wall_timer(
       1ms, std::bind(&LockStepSim::sim_callback, this));
 
-      state_publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("joint_states", 10); //Need custom msg
-      sim_time_publisher_ = this->create_publisher<std_msgs::msg::Float64>("sim_time", 10); //Need custom msg
+      state_publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("joint_states", rclcpp::SensorDataQoS()); //Need custom msg
+      sim_time_publisher_ = this->create_publisher<std_msgs::msg::Float64>("sim_time",rclcpp::SensorDataQoS()); //Need custom msg
 
       default_init_set_service = this->create_service<std_srvs::srv::Trigger>("reset_to_default_initial_position", std::bind(&LockStepSim::reset_to_default_initial_position, this, _1, _2));
       custom_init_set_service = this->create_service<std_srvs::srv::Trigger>("reset_to_custom_initial_position", std::bind(&LockStepSim::reset_to_custom_initial_position, this, _1, _2));
       change_custom_init_service = this->create_service<control_framework_interfaces::srv::InitState>("change_initial_position", std::bind(&LockStepSim::change_initial_position, this, _1, _2));
       reset_record_service = this->create_service<control_framework_interfaces::srv::ResetRecord>("reset_record", std::bind(&LockStepSim::reset_record, this, _1, _2));
       swap_controllers_service = this->create_service<control_framework_interfaces::srv::ControllerSelect>("controller_select", std::bind(&LockStepSim::controller_select, this, _1, _2));
-      control_input_publisher_ = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg
+      control_input_publisher_ = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", rclcpp::SensorDataQoS()); //Need custom msg
       
       this->declare_parameter("reset_and_record", false);
       this->declare_parameter("prev_reset_and_record", false);

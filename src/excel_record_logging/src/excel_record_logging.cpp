@@ -11,9 +11,9 @@ record_time(0.0),sim_start_log_time(0.0),sim_time_(0.0),raw_sim_time_(0.0),wrote
 
 
     reset_record_service = this->create_service<control_framework_interfaces::srv::ResetRecord>("reset_record", std::bind(&ExcelRecordLogging::reset_record, this, _1, _2));
-    state_subscriber_ = this->create_subscription<sensor_msgs::msg::JointState>("joint_states", 10, std::bind(&ExcelRecordLogging::joint_state_callback, this, _1)); //Need custom msg
-    sim_time_subscriber_ = this->create_subscription<std_msgs::msg::Float64>("sim_time", 10,std::bind(&ExcelRecordLogging::sim_time_callback, this, _1)); //Need custom msg
-    control_input_subscriber_ = this->create_subscription<control_framework_interfaces::msg::ControlInput>("control_input", 10,std::bind(&ExcelRecordLogging::control_input_callback, this, _1)); //Need custom msg
+    state_subscriber_ = this->create_subscription<sensor_msgs::msg::JointState>("joint_states", rclcpp::SensorDataQoS(), std::bind(&ExcelRecordLogging::joint_state_callback, this, _1)); //Need custom msg
+    sim_time_subscriber_ = this->create_subscription<std_msgs::msg::Float64>("sim_time", rclcpp::SensorDataQoS(), std::bind(&ExcelRecordLogging::sim_time_callback, this, _1)); //Need custom msg
+    control_input_subscriber_ = this->create_subscription<control_framework_interfaces::msg::ControlInput>("control_input", rclcpp::SensorDataQoS(), std::bind(&ExcelRecordLogging::control_input_callback, this, _1)); //Need custom msg
    
 
     log_timer_ = this->create_wall_timer(

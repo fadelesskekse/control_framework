@@ -71,23 +71,26 @@ def _launch_setup(context, *args, **kwargs):
         }
     ]
 
-    foxglove_bridge_launch = os.path.join(
-        get_package_share_directory("foxglove_bridge"),
-        "launch",
-        "foxglove_bridge_launch.xml",
-    )
+    # foxglove_bridge_launch = os.path.join(
+    #     get_package_share_directory("foxglove_bridge"),
+    #     "launch",
+    #     "foxglove_bridge_launch.xml",
+    # )
 
     return [
         Node(
+              prefix="taskset -c 3,4",
             package="lockstep_sim",
             executable="lockstep_sim",
             name="sim",
             output="screen",
             arguments=["--ros-args", "--log-level", "info"],
             parameters=sim_parameters,
+          
         ),
 
         Node(
+            prefix="taskset -c 0-2,7-23",
             package="excel_record_logging",
             executable="excel_record_logging",
             name="excel_record_logging",
@@ -96,15 +99,27 @@ def _launch_setup(context, *args, **kwargs):
             parameters=[urdf_joint_ignore_file]
         ),
 
-        IncludeLaunchDescription(
-            AnyLaunchDescriptionSource(foxglove_bridge_launch),
+                Node(
+                    prefix="taskset -c 0-2,7-23 nice -n 10",
+            package="foxglove_bridge",
+            executable="foxglove_bridge",
+            name="foxglove_bridge",
+            output="screen",
+            
         ),
+
+        # IncludeLaunchDescription(
+        #     AnyLaunchDescriptionSource(foxglove_bridge_launch),
+        # ),
 ExecuteProcess(
     cmd=[
+        "taskset", "-c", "0-2,7-23",
         "foxglove-studio",
         "--ozone-platform=x11",
         "--disable-features=Vulkan",
         "--disable-accelerated-video-decode",
+        
+        #"nice", "-n", "10",
     ],
     additional_env={
         "__NV_PRIME_RENDER_OFFLOAD": "1",
