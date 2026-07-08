@@ -1,0 +1,4 @@
+/log/
+/install/
+/build/
+csv_data/**/*.csv
