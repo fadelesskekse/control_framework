@@ -2,3 +2,4 @@
 /install/
 /build/
 csv_data/**/*.csv
+/MUJOCO_LOG.TXT
