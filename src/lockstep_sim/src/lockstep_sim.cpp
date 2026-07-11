@@ -140,6 +140,8 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
 void LockStepSim::sim_callback()
 {
 
+  
+
   bool reset_and_record = this->get_parameter("reset_and_record").as_bool();
   bool prev_reset_and_record = this->get_parameter("prev_reset_and_record").as_bool();
 
