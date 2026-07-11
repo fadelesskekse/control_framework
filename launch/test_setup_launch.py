@@ -13,6 +13,7 @@ def _launch_setup(context, *args, **kwargs):
 
     return [
         Node(
+            prefix="taskset -c 3,4",
             package="test_package",
             executable="test_node",
             name="test_node",
@@ -36,6 +37,7 @@ def _launch_setup(context, *args, **kwargs):
 
         ExecuteProcess(
             cmd=[
+                "taskset", "-c", "0-2,7-23",
                 "foxglove-studio",
                 "--ozone-platform=x11",
                 "--disable-features=Vulkan",
@@ -59,3 +61,7 @@ def generate_launch_description():
             OpaqueFunction(function=_launch_setup),
         ]
     )
+
+
+
+
