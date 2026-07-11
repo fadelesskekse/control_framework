@@ -13,7 +13,8 @@ def _launch_setup(context, *args, **kwargs):
 
     return [
         Node(
-            prefix="taskset -c 3,4",
+           # prefix="taskset -c 3,4",
+           prefix="chrt -f 98",
             package="test_package",
             executable="test_node",
             name="test_node",
@@ -28,7 +29,8 @@ def _launch_setup(context, *args, **kwargs):
 
 
         Node(
-            prefix="taskset -c 0-2,7-23 nice -n 10",
+            #prefix="taskset -c 0-2,7-23",
+            prefix="nice -n 10",
             package="foxglove_bridge",
             executable="foxglove_bridge",
             name="foxglove_bridge",
@@ -37,7 +39,8 @@ def _launch_setup(context, *args, **kwargs):
 
         ExecuteProcess(
             cmd=[
-                "taskset", "-c", "0-2,7-23",
+               # "taskset", "-c", "0-2,7-23",
+               "nice", "-n", "10",
                 "foxglove-studio",
                 "--ozone-platform=x11",
                 "--disable-features=Vulkan",
