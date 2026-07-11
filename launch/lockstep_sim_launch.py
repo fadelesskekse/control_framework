@@ -79,7 +79,6 @@ def _launch_setup(context, *args, **kwargs):
 
     return [
         Node(
-            prefix="taskset -c 3,4",
             package="lockstep_sim",
             executable="lockstep_sim",
             name="sim",
@@ -100,24 +99,22 @@ def _launch_setup(context, *args, **kwargs):
         IncludeLaunchDescription(
             AnyLaunchDescriptionSource(foxglove_bridge_launch),
         ),
-
-        ExecuteProcess(
-            cmd=[
-                "taskset", "-c", "0-2,7-23",
-                "foxglove-studio",
-                "--ozone-platform=x11",
-                "--disable-features=Vulkan",
-                "--disable-accelerated-video-decode",
-            ],
-            additional_env={
-                "__NV_PRIME_RENDER_OFFLOAD": "1",
-                "__GLX_VENDOR_LIBRARY_NAME": "nvidia",
-                "__VK_LAYER_NV_optimus": "NVIDIA_only",
-                "VK_ICD_FILENAMES": "/usr/share/vulkan/icd.d/nvidia_icd.json",
-            },
-            name="foxglove_studio",
-            output="screen",
-        ),
+ExecuteProcess(
+    cmd=[
+        "foxglove-studio",
+        "--ozone-platform=x11",
+        "--disable-features=Vulkan",
+        "--disable-accelerated-video-decode",
+    ],
+    additional_env={
+        "__NV_PRIME_RENDER_OFFLOAD": "1",
+        "__GLX_VENDOR_LIBRARY_NAME": "nvidia",
+        "__VK_LAYER_NV_optimus": "NVIDIA_only",
+        "VK_ICD_FILENAMES": "/usr/share/vulkan/icd.d/nvidia_icd.json",
+    },
+    name="foxglove_studio",
+    output="screen",
+),
     ]
 
 
@@ -132,19 +129,3 @@ def generate_launch_description():
             OpaqueFunction(function=_launch_setup),
         ]
     )
-
-
-
-
-
-
-
-#                 Node(
-#                     prefix="taskset -c 0-2,7-23 nice -n 10",
-#             package="foxglove_bridge",
-#             executable="foxglove_bridge",
-#             name="foxglove_bridge",
-#             output="screen",
-            
-#         ),
-

@@ -10,11 +10,6 @@ from launch.launch_description_sources import AnyLaunchDescriptionSource
 def _launch_setup(context, *args, **kwargs):
     msg_n = int(LaunchConfiguration("msg_n").perform(context))
 
-    foxglove_bridge_launch = os.path.join(
-        get_package_share_directory("foxglove_bridge"),
-        "launch",
-        "foxglove_bridge_launch.xml",
-    )
 
     return [
         Node(
@@ -31,9 +26,12 @@ def _launch_setup(context, *args, **kwargs):
         ),
 
 
-
-        IncludeLaunchDescription(
-            AnyLaunchDescriptionSource(foxglove_bridge_launch),
+        Node(
+            prefix="taskset -c 0-2,7-23 nice -n 10",
+            package="foxglove_bridge",
+            executable="foxglove_bridge",
+            name="foxglove_bridge",
+            output="screen",
         ),
 
         ExecuteProcess(
