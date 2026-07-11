@@ -51,7 +51,7 @@ LockStepSim::LockStepSim() : Node("lockstep_sim")
       this->declare_parameter("reset_and_record", false);
       this->declare_parameter("prev_reset_and_record", false);
       this->declare_parameter("use_default_init_for_reset_record", true);
-      this->declare_parameter("record_time", 0.0);
+      this->declare_parameter("record_time", 4.0);
 	    this->declare_parameter("model_name", "cart_pole");
 
       this->declare_parameter<vector<string>>("urdf_joint_total", vector<string> {});
