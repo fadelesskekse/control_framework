@@ -25,6 +25,8 @@ class TestNode : public rclcpp::Node
     private:
         void test_callback();
 
+        int msg_n_;
+
         rclcpp::TimerBase::SharedPtr test_timer_;
         rclcpp::Publisher<control_framework_interfaces::msg::TestMsg>::SharedPtr test_publisher_;
 };

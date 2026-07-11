@@ -1,10 +1,9 @@
 #include <cstdio>
+#include "../include/test_package/test_node.hpp"
 
 int main(int argc, char ** argv)
 {
-  (void) argc;
-  (void) argv;
-
-  printf("hello world test_package package\n");
-  return 0;
+  rclcpp::init(argc, argv);
+  rclcpp::spin(std::make_shared<TestNode>());
+  rclcpp::shutdown();
 }
