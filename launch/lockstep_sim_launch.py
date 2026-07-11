@@ -71,12 +71,6 @@ def _launch_setup(context, *args, **kwargs):
         }
     ]
 
-    # foxglove_bridge_launch = os.path.join(
-    #     get_package_share_directory("foxglove_bridge"),
-    #     "launch",
-    #     "foxglove_bridge_launch.xml",
-    # )
-
     return [
         Node(
              prefix="chrt -f 98",
@@ -89,7 +83,7 @@ def _launch_setup(context, *args, **kwargs):
         ),
 
         Node(
-           # prefix="nice -n 10",
+            prefix="nice -n 10",
             package="excel_record_logging",
             executable="excel_record_logging",
             name="excel_record_logging",
@@ -100,7 +94,6 @@ def _launch_setup(context, *args, **kwargs):
 
 
         Node(
-            #prefix="taskset -c 0-2,7-23",
             prefix="nice -n 10",
             package="foxglove_bridge",
             executable="foxglove_bridge",
@@ -108,54 +101,26 @@ def _launch_setup(context, *args, **kwargs):
             output="screen",
         ),
 
-        # IncludeLaunchDescription(
-        #     AnyLaunchDescriptionSource(foxglove_bridge_launch),
-        # ),
-#ExecuteProcess(
-    # cmd=[
-    #     "nice", "-n", "10",
-    #     "foxglove-studio",
-    #     "--ozone-platform=x11",
-    #     "--disable-features=Vulkan",
-    #     "--disable-accelerated-video-decode",
-    # ],
-    # additional_env={
-    #     "__NV_PRIME_RENDER_OFFLOAD": "1",
-    #     "__GLX_VENDOR_LIBRARY_NAME": "nvidia",
-    #     "__VK_LAYER_NV_optimus": "NVIDIA_only",
-    #     "VK_ICD_FILENAMES": "/usr/share/vulkan/icd.d/nvidia_icd.json",
-    # },
+        ExecuteProcess(
+            cmd=[
+                "nice", "-n", "10",
+                "foxglove-studio",
+                "--ozone-platform=x11",  
+            ],
 
-    #name="foxglove_studio",
-    #output="screen",
-#),
-    ExecuteProcess(
-        cmd=[
-            "nice", "-n", "10",
-            "foxglove-studio",
-            "--ozone-platform=x11",  
-        ],
-
-        name="foxglove_studio",
-        output="screen",
-    ),
+            name="foxglove_studio",
+            output="screen",
+        ),
     ]
 
-# __NV_PRIME_RENDER_OFFLOAD=1 \
-# __GLX_VENDOR_LIBRARY_NAME=nvidia \
-# foxglove-studio \
-#   --ozone-platform=x11 \
-#   --use-gl=desktop \
-#   --disable-features=Vulkan \
-#   --disable-accelerated-video-decode
 
 def generate_launch_description():
     return LaunchDescription(
         [
             DeclareLaunchArgument("excel_recording", default_value="false"),
             DeclareLaunchArgument("glfw_render", default_value="0"),
-            DeclareLaunchArgument("controller_list", default_value=""),
-            DeclareLaunchArgument("model", default_value=""),
+            DeclareLaunchArgument("controller_list", default_value="lqr"),
+            DeclareLaunchArgument("model", default_value="cart_pole"),
             DeclareLaunchArgument("controller_package", default_value="controller"),
             OpaqueFunction(function=_launch_setup),
         ]
