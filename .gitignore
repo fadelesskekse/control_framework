@@ -1,7 +1,6 @@
 /log/
 /install/
 /build/
-csv_data/**/*.csv
 /MUJOCO_LOG.TXT
 __pycache__/
 *.py[cod]

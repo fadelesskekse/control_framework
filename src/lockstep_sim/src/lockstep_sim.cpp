@@ -164,7 +164,10 @@ void LockStepSim::sim_callback()
         mj_step(m, d);
       }
       else{
-        
+            RCLCPP_INFO(
+          this->get_logger(),
+          "Exiting Recording Loop"
+        );
         this->set_parameter(rclcpp::Parameter("reset_and_record", false)); //exit the reset_and_record loop
         this->set_parameter(rclcpp::Parameter("prev_reset_and_record", false)); //exit the reset_and_record loop
         

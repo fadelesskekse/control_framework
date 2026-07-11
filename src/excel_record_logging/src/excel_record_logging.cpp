@@ -60,7 +60,7 @@ void ExcelRecordLogging::log_callback()
             log_file_.close();
         }
 
-        RCLCPP_WARN(
+        RCLCPP_INFO(
           this->get_logger(),
           "CSV File Has Been Closed. Recording Is Stopped"
         );
@@ -202,7 +202,7 @@ void ExcelRecordLogging::reset_record(const std::shared_ptr<control_framework_in
     std::string log_path =
     package_prefix + "/../../csv_data/" + model + "/excel_record_log.csv";
 
-    RCLCPP_WARN(
+    RCLCPP_INFO(
     this->get_logger(),
     "model: %s, log_path: %s",
     model.c_str(),
@@ -215,6 +215,12 @@ void ExcelRecordLogging::reset_record(const std::shared_ptr<control_framework_in
     );
 
     if (!log_file_.is_open()) {
+
+        RCLCPP_WARN(
+          this->get_logger(),
+          "Failed to open CSV log file."
+        );
+
         response->success = false;
         response->message = "Failed to open CSV log file";
         return;
@@ -224,7 +230,7 @@ void ExcelRecordLogging::reset_record(const std::shared_ptr<control_framework_in
     response->success = true;
     response->message = "Hit reset_record service callback in excel_logger. Starting to record";
 
-    RCLCPP_WARN(
+    RCLCPP_INFO(
           this->get_logger(),
           "CSV File Opened. Recording has Begun."
         );
