@@ -11,6 +11,10 @@
 #include "rclcpp/rclcpp.hpp"
 #include "control_framework_interfaces/msg/test_msg.hpp"
 
+using namespace std::chrono_literals;
+using std::placeholders::_1;
+using std::placeholders::_2;
+
 class TestNode : public rclcpp::Node
 {
     public:
@@ -22,7 +26,7 @@ class TestNode : public rclcpp::Node
         void test_callback();
 
         rclcpp::TimerBase::SharedPtr test_timer_;
-        rclcpp::Publisher<control>::SharedPtr test_publisher_;
-}
+        rclcpp::Publisher<control_framework_interfaces::msg::TestMsg>::SharedPtr test_publisher_;
+};
 
 #endif
