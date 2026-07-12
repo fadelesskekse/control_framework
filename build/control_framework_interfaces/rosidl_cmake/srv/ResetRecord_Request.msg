@@ -1,2 +1,0 @@
-bool use_default_init true #Allows us to pick which init_condition to reset to for the recording. 1 for default, 0 for custom
-float64 record_time

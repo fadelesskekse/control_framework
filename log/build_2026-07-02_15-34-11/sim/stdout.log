@@ -1,6 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target parallel_sim[0m
-[35m[1mConsolidate compiler generated dependencies of target lockstep_sim[0m
-[ 25%] [32mBuilding CXX object CMakeFiles/parallel_sim.dir/src/main_parallel.cpp.o[0m
-[ 25%] [32mBuilding CXX object CMakeFiles/parallel_sim.dir/src/render.cpp.o[0m
-[ 37%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/main_lockstep.cpp.o[0m
-[ 50%] [32mBuilding CXX object CMakeFiles/lockstep_sim.dir/src/render.cpp.o[0m
