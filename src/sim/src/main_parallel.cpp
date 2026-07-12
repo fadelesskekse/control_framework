@@ -1,4 +1,4 @@
-#include "../include/lockstep_sim/parallel_sim.hpp"
+#include "../include/sim/parallel_sim.hpp"
 
 int main(int argc, char * argv[])
 {

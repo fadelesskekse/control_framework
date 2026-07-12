@@ -21,12 +21,16 @@
 
 #include "render.hpp"
 
+using namespace std;
+
 class SimBase : public rclcpp::Node
 {
     public:
 
-    SimBase(const std::string& node_name) //Instantiation of Base Node with the passed name of the child.
-    :rclcpp::Node(node_name){}
+    SimBase(const std::string& node_name); //Instantiation of Base Node with the passed name of the child.
+   
+    virtual vector<double> control_input_calculate(const vector<double>& state) = 0; //Child dependent control calculation
+
 
     protected:
 
@@ -63,8 +67,6 @@ class SimBase : public rclcpp::Node
 
       void reset_record(const std::shared_ptr<control_framework_interfaces::srv::ResetRecord::Request> request,
         std::shared_ptr<control_framework_interfaces::srv::ResetRecord::Response> response);
-
-      virtual vector<double> control_input_calculate(const vector<double>& state) = 0; //Child dependent control calculation
 
       void sim_callback();
       void glfw_render();

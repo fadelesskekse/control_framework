@@ -1,6 +1,6 @@
 #include "../include/sim/sim.hpp"
 
-static Simbase* active_sim = nullptr;
+static SimBase* active_sim = nullptr;
 
 static void control_callback(const mjModel* m, mjData* d)
 {

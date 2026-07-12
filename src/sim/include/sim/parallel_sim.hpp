@@ -3,7 +3,7 @@
 
 #include "sim.hpp"
 
-class ParallelSim : public Simbase
+class ParallelSim : public SimBase
 {
     public:
         ParallelSim();

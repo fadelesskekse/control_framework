@@ -2,7 +2,7 @@
 #include "../include/sim/parallel_sim.hpp"
 
 
-ParallelSim::ParallelSim() : Simbase("lockstep_sim")
+ParallelSim::ParallelSim() : SimBase("lockstep_sim")
 {
     control_input_subscriber_ = this->create_subscription<control_framework_interfaces::msg::ControlInput>("control_input", 10,std::bind(&ParallelSim::control_input_callback, this, _1)); //Need custom msg
    
