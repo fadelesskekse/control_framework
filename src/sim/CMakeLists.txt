@@ -37,6 +37,13 @@ sensor_msgs
 std_srvs
 )
 
+ament_target_dependencies(parallel_sim 
+rclcpp 
+control_framework_interfaces
+sensor_msgs
+std_srvs
+)
+
 
 #target_include_directories(lockstep_sim PRIVATE   #THIS IS WHAT FIND_PACKAGE() DOES FOR US
  # $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../../install/controller/include/> #THIS IS WHAT FIND_PACKAGE() DOES FOR US
@@ -51,8 +58,14 @@ target_link_libraries(lockstep_sim
     glfw
     #${CMAKE_CURRENT_SOURCE_DIR}/../../install/controller/lib/libcontroller.a #THIS IS WHAT FIND_PACKAGE() DOES FOR US
     controller::controller
-   
     #"${CMAKE_CURRENT_SOURCE_DIR}/../glfw/build/src/libglfw3.a"
+)
+
+target_link_libraries(parallel_sim
+
+    ${MUJOCO_LIBRARY}
+    glfw
+    controller::controller
 )
 
 if(BUILD_TESTING)
@@ -68,7 +81,7 @@ if(BUILD_TESTING)
 endif()
 
 install(TARGETS
-lockstep_sim
+lockstep_sim parallel_sim
 DESTINATION lib/${PROJECT_NAME}
 
 )

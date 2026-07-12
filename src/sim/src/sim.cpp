@@ -31,7 +31,7 @@ SimBase::SimBase(const std::string& node_name) : Node(node_name)
     this->declare_parameter("prev_reset_and_record", false);
     this->declare_parameter("use_default_init_for_reset_record", true);
     this->declare_parameter("record_time", 0.0);
-	this->declare_parameter("model_name", "");
+	  this->declare_parameter("model_name", "");
 
 
     //Create common pubs/subs/timers

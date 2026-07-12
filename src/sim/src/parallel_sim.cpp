@@ -16,14 +16,6 @@ void ParallelSim::control_input_callback(const control_framework_interfaces::msg
 vector<double> ParallelSim::control_input_calculate(const vector<double>& state)
 {
 
-    //vector<double> control_input;
-
-    //for(int i = 0; i < control_input_.control_input.size(); i++){
-    //    control_input.push_back(control_input_.control_input[i]);
-   // }
-
-    //return control_input;
-
     return control_input_.control_input;
 
 }
