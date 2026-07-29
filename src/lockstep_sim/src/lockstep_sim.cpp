@@ -55,13 +55,33 @@ LockStepSim::LockStepSim() : Node("lockstep_sim",  rclcpp::NodeOptions().automat
       this->declare_parameter("prev_reset_and_record", false);
       this->declare_parameter("use_default_init_for_reset_record", true);
       this->declare_parameter("record_time", 4.0);
-	    this->declare_parameter("model_name", "cart_pole");
+	   // this->declare_parameter("model_name", "cart_pole");
 
-      this->declare_parameter<vector<string>>("urdf_joint_total", vector<string> {});
-	    this->declare_parameter<vector<string>>("controller_list", vector<string> {"lqr"});
-      this->declare_parameter<vector<string>>("urdf_joint_type", vector<string> {});
+      //this->declare_parameter<vector<string>>("urdf_joint_total", vector<string> {});
+	    //this->declare_parameter<vector<string>>("controller_list", vector<string> {"lqr"});
+     // this->declare_parameter<vector<string>>("urdf_joint_type", vector<string> {});
 
-      
+      if (!this->has_parameter("model_name")) {
+          this->declare_parameter("model_name", "cart_pole");
+      }
+
+      if (!this->has_parameter("urdf_joint_total")) {
+          this->declare_parameter<std::vector<std::string>>(
+              "urdf_joint_total", {}
+          );
+      }
+
+      if (!this->has_parameter("controller_list")) {
+          this->declare_parameter<std::vector<std::string>>(
+              "controller_list", {"lqr"}
+          );
+      }
+
+      if (!this->has_parameter("urdf_joint_type")) {
+          this->declare_parameter<std::vector<std::string>>(
+              "urdf_joint_type", {}
+          );
+      }
 
 
 	    vector<string> controller_list = this->get_parameter("controller_list").as_string_array();
@@ -70,26 +90,7 @@ LockStepSim::LockStepSim() : Node("lockstep_sim",  rclcpp::NodeOptions().automat
       urdf_joint_total_list = this->get_parameter("urdf_joint_total").as_string_array();
       urdf_joint_type_list = this->get_parameter("urdf_joint_type").as_string_array();
 
-	    std::string controller_names;
-
-      for (const auto& controller_name : controller_list) {
-
-        if (!controller_names.empty()) {
-            controller_names += ", ";
-        }
-        controller_names += controller_name;
-
-        set_controllers(controller_name);
-
-      }
-
-
-      RCLCPP_WARN(
-          this->get_logger(),
-          "Controller list: [%s]",
-          controller_names.c_str()
-      );
-
+      set_controllers(controller_list);
 
 
       string model_name = this->get_parameter("model_name").as_string();
@@ -129,7 +130,7 @@ LockStepSim::LockStepSim() : Node("lockstep_sim",  rclcpp::NodeOptions().automat
       mj_forward(m,d);
 
       // Set a ros parameter to choose whether to render using glfw or not. 
-      this->declare_parameter("glfw_render", 0);
+    //  this->declare_parameter("glfw_render", 0);
       int glfw_render = this->get_parameter("glfw_render").as_int();
 
       if (glfw_render == 1){

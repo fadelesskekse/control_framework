@@ -48,7 +48,10 @@ class LockStepSim : public rclcpp::Node
         void controller_select(const std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Request> request,
           std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Response> response);
 
-        void set_controllers(string controller_name);
+
+        void set_controllers(const std::vector<std::string>& controller_list)
+
+       // void set_controllers(string controller_name);
 	      std::vector<std::unique_ptr<BaseController>> controllers;
 
         void glfw_render();
