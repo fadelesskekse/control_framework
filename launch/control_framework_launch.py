@@ -24,6 +24,23 @@ def _launch_setup(context, *args, **kwargs):
     controller_package = LaunchConfiguration("controller_package").perform(context)
     sim_type = LaunchConfiguration("sim_type").perform(context)
 
+    sim_executables = {
+        "lockstep": "lockstep_sim",
+        "parallel": "parallel_sim",
+    }
+
+    try:
+        executable = sim_executables[sim_type]
+
+    except KeyError:
+
+        raise RuntimeError(
+            f"Unsupported sim_type {sim_type!r}. "
+            f"Valid types: {', '.join(sim_executables)}"
+        )
+ 
+
+
     sim_share = get_package_share_directory("lockstep_sim")
     urdf_joint_ignore_file = os.path.join(sim_share,
                 "config",
@@ -95,7 +112,7 @@ def _launch_setup(context, *args, **kwargs):
 
             Node(
             package="sim",
-            executable="lockstep_sim",
+            executable=executable,
             name="sim",
             output="screen",
             arguments=["--ros-args", "--log-level", "info"],
@@ -145,10 +162,10 @@ def generate_launch_description():
         [
             DeclareLaunchArgument("excel_recording", default_value="false"),
             DeclareLaunchArgument("glfw_render", default_value="0"),
-            DeclareLaunchArgument("controller_list", default_value=""),
-            DeclareLaunchArgument("model", default_value=""),
+            DeclareLaunchArgument("controller_list", default_value="lqr"),
+            DeclareLaunchArgument("model", default_value="cart_pole"),
             DeclareLaunchArgument("controller_package", default_value="controller"),
-            DeclareLaunchArgument("sim_type", default_value="parallel"),
+            DeclareLaunchArgument("sim_type", default_value="lockstep"),
             OpaqueFunction(function=_launch_setup),
         ]
     )

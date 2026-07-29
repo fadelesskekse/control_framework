@@ -10,42 +10,29 @@ using namespace std;
 static BaseController* active_controller = nullptr;
 
 
-LockStepSim::LockStepSim() : Simbase("lockstep_sim")
+LockStepSim::LockStepSim() : SimBase("lockstep_sim")
 {
      
+    swap_controllers_service = this->create_service<control_framework_interfaces::srv::ControllerSelect>("controller_select", std::bind(&LockStepSim::controller_select, this, _1, _2));
+      
+    auto publishers = this->get_publishers_info_by_topic("/control_input"); //If we are in lockstep, there shouldn't exist another node publishing control as this sim should be publishign control
 
-      default_init_set_service = this->create_service<std_srvs::srv::Trigger>("reset_to_default_initial_position", std::bind(&LockStepSim::reset_to_default_initial_position, this, _1, _2));
-      custom_init_set_service = this->create_service<std_srvs::srv::Trigger>("reset_to_custom_initial_position", std::bind(&LockStepSim::reset_to_custom_initial_position, this, _1, _2));
-      change_custom_init_service = this->create_service<control_framework_interfaces::srv::InitState>("change_initial_position", std::bind(&LockStepSim::change_initial_position, this, _1, _2));
-      reset_record_service = this->create_service<control_framework_interfaces::srv::ResetRecord>("reset_record", std::bind(&LockStepSim::reset_record, this, _1, _2));
-      swap_controllers_service = this->create_service<control_framework_interfaces::srv::ControllerSelect>("controller_select", std::bind(&LockStepSim::controller_select, this, _1, _2));
-      
-      auto publishers = this->get_publishers_info_by_topic("/control_input");
+    if (!publishers.empty()) {
+    RCLCPP_ERROR(
+        this->get_logger(),
+        "Another node is already publishing to /control_input. This node should not run at the same time."
+    );
 
-      if (!publishers.empty()) {
-        RCLCPP_ERROR(
-            this->get_logger(),
-            "Another node is already publishing to /control_input. This node should not run at the same time."
-        );
+    throw std::runtime_error("Duplicate /control_input publisher detected");
+    }
 
-        throw std::runtime_error("Duplicate /control_input publisher detected");
-      }
-
-      else{
-         control_input_publisher_ = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg;
-      } 
+    else{
+        control_input_publisher_ = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg;
+    } 
       
       
       
       
-      
-      
-      
-      this->declare_parameter("reset_and_record", false);
-      this->declare_parameter("prev_reset_and_record", false);
-      this->declare_parameter("use_default_init_for_reset_record", true);
-      this->declare_parameter("record_time", 0.0);
-	    this->declare_parameter("model_name", "");
 
       this->declare_parameter<vector<string>>("urdf_joint_total", vector<string> {});
 	    this->declare_parameter<vector<string>>("controller_list", vector<string> {});
@@ -80,28 +67,6 @@ LockStepSim::LockStepSim() : Simbase("lockstep_sim")
           controller_names.c_str()
       );
 
-
-
-      string model_name = this->get_parameter("model_name").as_string();
-
-
-      //Load Model and Data
-      std::string package_share = ament_index_cpp::get_package_share_directory("lockstep_sim");
-      //std::string model_path = package_share + "/models/cart_pole_mjcf.xml";
-      std::string model_path = package_share + "/models/" + model_name + ".xml";
-      
-      char error[1000];
-
-  
-      m = mj_loadXML(model_path.c_str(), NULL, error, 1000);
-    
-
-      if (!m) {
-          
-          printf("%s\n", error);   
-      }
-
-      d = mj_makeData(m);
 
       active_controller = controllers[0].get(); //set a default controller
       mjcb_control = control_callback;

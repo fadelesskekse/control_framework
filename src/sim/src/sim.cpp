@@ -42,10 +42,10 @@ SimBase::SimBase(const std::string& node_name) : Node(node_name)
     sim_time_publisher_ = this->create_publisher<std_msgs::msg::Float64>("sim_time", 10); //Need custom msg
 
 
-    default_init_set_service = this->create_service<std_srvs::srv::Trigger>("reset_to_default_initial_position", std::bind(&LockStepSim::reset_to_default_initial_position, this, _1, _2));
-    custom_init_set_service = this->create_service<std_srvs::srv::Trigger>("reset_to_custom_initial_position", std::bind(&LockStepSim::reset_to_custom_initial_position, this, _1, _2));
-    change_custom_init_service = this->create_service<control_framework_interfaces::srv::InitState>("change_initial_position", std::bind(&LockStepSim::change_initial_position, this, _1, _2));
-    reset_record_service = this->create_service<control_framework_interfaces::srv::ResetRecord>("reset_record", std::bind(&LockStepSim::reset_record, this, _1, _2));
+    default_init_set_service = this->create_service<std_srvs::srv::Trigger>("reset_to_default_initial_position", std::bind(&SimBase::reset_to_default_initial_position, this, _1, _2));
+    custom_init_set_service = this->create_service<std_srvs::srv::Trigger>("reset_to_custom_initial_position", std::bind(&SimBase::reset_to_custom_initial_position, this, _1, _2));
+    change_custom_init_service = this->create_service<control_framework_interfaces::srv::InitState>("change_initial_position", std::bind(&SimBase::change_initial_position, this, _1, _2));
+    reset_record_service = this->create_service<control_framework_interfaces::srv::ResetRecord>("reset_record", std::bind(&SimBase::reset_record, this, _1, _2));
 
     this->declare_parameter<vector<string>>("urdf_joint_total", vector<string> {});
     this->declare_parameter<vector<string>>("urdf_joint_type", vector<string> {});
