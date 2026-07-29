@@ -24,6 +24,25 @@ class Lqr : public BaseController
 
 };
 
+class Test : public BaseController
+{
+    public:
+        Test(size_t lqr_gain_row_num, size_t lqr_gain_col_num, vector<double> K);
+        Test(const std::vector<ControllerParamValue>& params);
+
+        vector<double> control_passthrough(const vector<double>& state) override;
+
+    private:
+        
+        size_t lqr_gain_row_num;
+        size_t lqr_gain_col_num;
+        size_t lqr_gain_length;
+
+        double* K_;
+
+
+};
+
 // class Lqr : public BaseController
 // {
 //     public:
