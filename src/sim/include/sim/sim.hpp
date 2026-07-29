@@ -30,7 +30,7 @@ class SimBase : public rclcpp::Node
 {
     public:
 
-    SimBase(const std::string& node_name); //Instantiation of Base Node with the passed name of the child.
+    SimBase(const std::string& node_name, const rclcpp::NodeOptions& options); //Instantiation of Base Node with the passed name of the child.
    
     virtual vector<double> control_input_calculate(const vector<double>& state) = 0; //Child dependent control calculation
 

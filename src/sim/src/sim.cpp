@@ -23,7 +23,7 @@ static void control_callback(const mjModel* m, mjData* d)
 
 }
 
-SimBase::SimBase(const std::string& node_name) : Node(node_name)
+SimBase::SimBase(const std::string& node_name, const rclcpp::NodeOptions& options) : Node(node_name, options)
 {
     active_sim = this;
 
