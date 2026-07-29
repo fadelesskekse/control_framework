@@ -114,6 +114,10 @@ LockStepSim::LockStepSim() : Node("lockstep_sim",  rclcpp::NodeOptions().automat
 
       d = mj_makeData(m);
 
+      if (controllers.empty()) {
+          throw std::runtime_error("No controllers were created");
+      }
+
       active_controller = controllers[0].get(); //set a default controller
       mjcb_control = control_callback;
 
@@ -431,10 +435,10 @@ void LockStepSim::set_controllers(const std::vector<std::string>& controller_lis
 
         std::string param_list_name = controller_name + "_param_list";
 
-        if (!this->has_parameter(param_list_name)) { //param_list_name shoudl have been auto declared due to nodeoptions used
-            this->declare_parameter<std::vector<std::string>>(
-                param_list_name,
-                std::vector<std::string>{}
+        if (!this->has_parameter(param_list_name)) {
+            throw std::runtime_error(
+                "Required parameter '" + param_list_name +
+                "' was not supplied"
             );
         }
 
