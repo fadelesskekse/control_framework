@@ -128,7 +128,7 @@ void LockStepSim::controller_select(const std::shared_ptr<control_framework_inte
         );
 
 }
-
+//
 void LockStepSim::set_controllers(string controller_name){
 
     if (controller_name == "lqr") {
