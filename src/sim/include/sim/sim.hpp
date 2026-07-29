@@ -18,6 +18,8 @@
 #include "control_framework_interfaces/srv/reset_record.hpp"
 #include "control_framework_interfaces/msg/control_input.hpp"
 
+#include "ament_index_cpp/get_package_share_directory.hpp"
+
 
 #include "render.hpp"
 
