@@ -4,7 +4,19 @@
 
     #include <vector>
     #include <numeric>
-    
+    #include <string>
+    #include <variant>
+
+    using ControllerParamValue = std::variant<
+    bool,
+    int64_t,
+    double,
+    std::string,
+    std::vector<int64_t>,
+    std::vector<double>,
+    std::vector<std::string>
+    >;
+
 
     using namespace std;
 
@@ -22,4 +34,10 @@
     };
 
 
+
 #endif
+
+
+
+
+
