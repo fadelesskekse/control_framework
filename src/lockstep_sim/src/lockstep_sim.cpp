@@ -32,7 +32,10 @@ static void control_callback(const mjModel* m, mjData* d)
 
 }
 
-LockStepSim::LockStepSim() : Node("lockstep_sim")
+
+
+
+LockStepSim::LockStepSim() : Node("lockstep_sim",  rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true))
 {
       //Create pubs/subs
       sim_timer_ = this->create_wall_timer(
