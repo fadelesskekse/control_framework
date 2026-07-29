@@ -507,6 +507,12 @@ void LockStepSim::set_controllers(const std::vector<std::string>& controller_lis
             controllers.push_back(std::make_unique<Test>(controller_params));
         }
 
+        else {
+            throw std::runtime_error(
+                "Unsupported controller: '" + controller_name + "'"
+            );
+        }
+
     }
 
 }
