@@ -61,22 +61,22 @@ class Test : public BaseController
 
 // };
 
-class Test : public BaseController
-{
-    public:
-        Test(size_t lqr_gain_row_num, size_t lqr_gain_col_num, vector<double> K);
+// class Test : public BaseController
+// {
+//     public:
+//         Test(size_t lqr_gain_row_num, size_t lqr_gain_col_num, vector<double> K);
 
-        vector<double> control_passthrough(const vector<double>& state) override;
+//         vector<double> control_passthrough(const vector<double>& state) override;
 
-    private:
+//     private:
         
-        size_t lqr_gain_row_num;
-        size_t lqr_gain_col_num;
-        size_t lqr_gain_length;
+//         size_t lqr_gain_row_num;
+//         size_t lqr_gain_col_num;
+//         size_t lqr_gain_length;
 
-        double* K_;
+//         double* K_;
 
 
-};
+// };
 
 #endif
