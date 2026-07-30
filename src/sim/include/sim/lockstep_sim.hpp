@@ -26,6 +26,8 @@ class LockStepSim : public SimBase
   
 
 	      std::vector<std::unique_ptr<BaseController>> controllers;
+        control_framework_interfaces::msg::ControlInput control_input_;
+
 
         rclcpp::Publisher<control_framework_interfaces::msg::ControlInput>::SharedPtr control_input_publisher_;
         rclcpp::Service<control_framework_interfaces::srv::ControllerSelect>::SharedPtr swap_controllers_service;
