@@ -39,6 +39,8 @@ class SimBase : public rclcpp::Node
 
     protected:
 
+
+
       mjModel* m = NULL;
       mjData* d= NULL;
 
@@ -75,8 +77,13 @@ class SimBase : public rclcpp::Node
 
       vector<double> control_input_;
 
+      virtual void timer_callback();
+      
       void sim_callback();
       void glfw_render();
+
+      static void control_callback(const mjModel* m, mjData* d);
+
 
 };
 

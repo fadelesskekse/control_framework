@@ -42,13 +42,25 @@ LockStepSim::LockStepSim() : SimBase("lockstep_sim", rclcpp::NodeOptions().autom
     mj_forward(m,d);
 }
 
+void LockStepSim::timer_callback(){
+    SimBase::sim_callback();
+
+    control_framework_interfaces::msg::ControlInput control_input_msg;
+
+    control_input_msg.control_input = control_input_;
+
+    control_input_publisher_->publish(control_input_msg);
+
+   
+}
+
 vector<double> LockStepSim::control_input_calculate(const vector<double>& state)
 {
-    vector<double> control_input = active_controller->control_passthrough(state);
-    control_input_.control_input = control_input;
-    control_input_publisher_->publish(control_input_);
-    return control_input;
-  //  return active_controller->control_passthrough(state);
+  //  vector<double> control_input = active_controller->control_passthrough(state);
+  //  control_input_.control_input = control_input;
+   // control_input_publisher_->publish(control_input_);
+    //return control_input;
+    return active_controller->control_passthrough(state);
 }
 
 void LockStepSim::controller_select(const std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Request> request,

@@ -16,6 +16,8 @@ class LockStepSim : public SimBase
 
     private:
 
+        void timer_callback() override;
+
         vector<double> control_input_calculate(
           const vector<double>& state) override;
 
@@ -26,7 +28,7 @@ class LockStepSim : public SimBase
   
 
 	      std::vector<std::unique_ptr<BaseController>> controllers;
-        control_framework_interfaces::msg::ControlInput control_input_;
+       //control_framework_interfaces::msg::ControlInput control_input_;
 
 
         rclcpp::Publisher<control_framework_interfaces::msg::ControlInput>::SharedPtr control_input_publisher_;

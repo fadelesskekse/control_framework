@@ -2,7 +2,7 @@
 
 static SimBase* active_sim = nullptr;
 
-static void control_callback(const mjModel* m, mjData* d)
+void SimBase::control_callback(const mjModel* m, mjData* d)
 {
   std::vector<double> state;
 
@@ -11,17 +11,18 @@ static void control_callback(const mjModel* m, mjData* d)
     state.push_back(d->qvel[i]);
   }
 
-   control_input_ = active_sim->control_input_calculate(state);
+   active_sim->control_input_ = active_sim->control_input_calculate(state);
 
-  if (control_input_.size() != m->nu){     
+  if (active_sim->control_input_.size() != m->nu){     
     throw std::invalid_argument("Control Input size as calculated from controller doesn't equal the number of actuators assigned in the mjcf model.");
   }
 
   for(int i = 0; i < m->nu; i++){
-    d->ctrl[i] = control_input[i];
+    d->ctrl[i] =  active_sim->control_input_[i];
   }
 
 }
+
 
 SimBase::SimBase(const std::string& node_name, const rclcpp::NodeOptions& options) : Node(node_name, options)
 {
@@ -36,7 +37,7 @@ SimBase::SimBase(const std::string& node_name, const rclcpp::NodeOptions& option
 
     //Create common pubs/subs/timers
     sim_timer_ = this->create_wall_timer(
-    1ms, std::bind(&SimBase::sim_callback, this));
+    1ms, std::bind(&SimBase::timer_callback, this));
 
     state_publisher_ = this->create_publisher<sensor_msgs::msg::JointState>("joint_states", 10); //Need custom msg
     sim_time_publisher_ = this->create_publisher<std_msgs::msg::Float64>("sim_time", 10); //Need custom msg
@@ -98,6 +99,10 @@ SimBase::SimBase(const std::string& node_name, const rclcpp::NodeOptions& option
 
 }
 
+void SimBase::timer_callback(){
+  sim_callback();
+}
+
 void SimBase::sim_callback(){
 
     bool reset_and_record = this->get_parameter("reset_and_record").as_bool();
@@ -138,7 +143,7 @@ void SimBase::sim_callback(){
 
     sensor_msgs::msg::JointState joint_state;
     std_msgs::msg::Float64 sim_time;
-    control_framework_interfaces::msg::ControlInput control_input;
+    //control_framework_interfaces::msg::ControlInput control_input;
 
     sim_time.data = d->time;
 
