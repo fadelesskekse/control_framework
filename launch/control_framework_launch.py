@@ -101,12 +101,6 @@ def _launch_setup(context, *args, **kwargs):
             }
         ]
 
-    foxglove_bridge_launch = os.path.join(
-        get_package_share_directory("foxglove_bridge"),
-        "launch",
-        "foxglove_bridge_launch.xml",
-    )
-
 
     actions=[
 
@@ -144,12 +138,21 @@ def _launch_setup(context, *args, **kwargs):
             parameters=[urdf_joint_ignore_file]
             ),
 
-                    IncludeLaunchDescription(
-            AnyLaunchDescriptionSource(foxglove_bridge_launch),
+            Node(
+                prefix="nice -n 10",
+                package="foxglove_bridge",
+                executable="foxglove_bridge",
+                name="foxglove_bridge",
+                output="screen",
             ),
 
             ExecuteProcess(
-                cmd=["foxglove-studio"],
+                cmd=[
+                    "nice", "-n", "10",
+                    "foxglove-studio",
+                    "--ozone-platform=x11",  
+                ],
+
                 name="foxglove_studio",
                 output="screen",
             ),
@@ -172,49 +175,3 @@ def generate_launch_description():
             OpaqueFunction(function=_launch_setup),
         ]
     )
-
-
-    #     }
-    # ]
-
-    # return [
-    #     Node(
-    #          prefix="chrt -f 98",
-    #         package="lockstep_sim",
-    #         executable="lockstep_sim",
-    #         name="sim",
-    #         output="screen",
-    #         arguments=["--ros-args", "--log-level", "info"],
-    #         parameters=sim_parameters,
-    #     ),
-
-    #     Node(
-    #         prefix="nice -n 10",
-    #         package="excel_record_logging",
-    #         executable="excel_record_logging",
-    #         name="excel_record_logging",
-    #         output="screen",
-    #         condition=IfCondition(LaunchConfiguration("excel_recording")),
-    #         parameters=[urdf_joint_ignore_file]
-    #     ),
-
-
-    #     Node(
-    #         prefix="nice -n 10",
-    #         package="foxglove_bridge",
-    #         executable="foxglove_bridge",
-    #         name="foxglove_bridge",
-    #         output="screen",
-    #     ),
-
-    #     ExecuteProcess(
-    #         cmd=[
-    #             "nice", "-n", "10",
-    #             "foxglove-studio",
-    #             "--ozone-platform=x11",  
-    #         ],
-
-    #         name="foxglove_studio",
-    #         output="screen",
-    #     ),
-    # ]
