@@ -41,7 +41,7 @@ def _launch_setup(context, *args, **kwargs):
  
 
 
-    sim_share = get_package_share_directory("lockstep_sim")
+    sim_share = get_package_share_directory("sim")
     urdf_joint_ignore_file = os.path.join(sim_share,
                 "config",
                 model,

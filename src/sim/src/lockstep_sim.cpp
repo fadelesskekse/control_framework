@@ -27,6 +27,12 @@ LockStepSim::LockStepSim() : SimBase("lockstep_sim", rclcpp::NodeOptions().autom
     }
 
     else{
+
+            RCLCPP_WARN(
+          this->get_logger(),
+          "hi"
+        );
+
         control_input_publisher_ = this->create_publisher<control_framework_interfaces::msg::ControlInput>("control_input", 10); //Need custom msg;
     } 
 
@@ -36,14 +42,10 @@ LockStepSim::LockStepSim() : SimBase("lockstep_sim", rclcpp::NodeOptions().autom
     set_controllers(controller_list);
 
 
-      RCLCPP_WARN(
-          this->get_logger(),
-          "Controller list: [%s]",
-          controller_names.c_str()
-      );
+    active_controller = controllers[0].get(); //set a default controller
 
-
-      active_controller = controllers[0].get(); //set a default controller
+    mj_resetDataKeyframe(m,d,default_init_pos_keyframe);
+    mj_forward(m,d);
 }
 
 vector<double> LockStepSim::control_input_calculate(const vector<double>& state)

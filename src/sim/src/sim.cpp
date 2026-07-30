@@ -31,7 +31,7 @@ SimBase::SimBase(const std::string& node_name, const rclcpp::NodeOptions& option
     this->declare_parameter("prev_reset_and_record", false);
     this->declare_parameter("use_default_init_for_reset_record", true);
     this->declare_parameter("record_time", 0.0);
-	  this->declare_parameter("model_name", "");
+	//  this->declare_parameter("model_name", "");
 
 
     //Create common pubs/subs/timers
@@ -47,8 +47,8 @@ SimBase::SimBase(const std::string& node_name, const rclcpp::NodeOptions& option
     change_custom_init_service = this->create_service<control_framework_interfaces::srv::InitState>("change_initial_position", std::bind(&SimBase::change_initial_position, this, _1, _2));
     reset_record_service = this->create_service<control_framework_interfaces::srv::ResetRecord>("reset_record", std::bind(&SimBase::reset_record, this, _1, _2));
 
-    this->declare_parameter<vector<string>>("urdf_joint_total", vector<string> {});
-    this->declare_parameter<vector<string>>("urdf_joint_type", vector<string> {});
+   // this->declare_parameter<vector<string>>("urdf_joint_total", vector<string> {});
+  //  this->declare_parameter<vector<string>>("urdf_joint_type", vector<string> {});
 
     urdf_joint_total_list = this->get_parameter("urdf_joint_total").as_string_array();
     urdf_joint_type_list = this->get_parameter("urdf_joint_type").as_string_array();
@@ -83,11 +83,11 @@ SimBase::SimBase(const std::string& node_name, const rclcpp::NodeOptions& option
         throw std::runtime_error("Could not find keyframe named 'default_initial'");
     }
 
-    mj_resetDataKeyframe(m,d,default_init_pos_keyframe);
-    mj_forward(m,d);
+   // mj_resetDataKeyframe(m,d,default_init_pos_keyframe);
+   // mj_forward(m,d);
 
     // Set a ros parameter to choose whether to render using glfw or not. 
-    this->declare_parameter("glfw_render", 0);
+    //this->declare_parameter("glfw_render", 0);
     int glfw_render = this->get_parameter("glfw_render").as_int();
 
     if (glfw_render == 1){
