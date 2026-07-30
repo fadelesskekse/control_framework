@@ -73,6 +73,8 @@ class SimBase : public rclcpp::Node
       void reset_record(const std::shared_ptr<control_framework_interfaces::srv::ResetRecord::Request> request,
         std::shared_ptr<control_framework_interfaces::srv::ResetRecord::Response> response);
 
+      vector<double> control_input_;
+
       void sim_callback();
       void glfw_render();
 

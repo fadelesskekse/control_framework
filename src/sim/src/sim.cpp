@@ -11,9 +11,9 @@ static void control_callback(const mjModel* m, mjData* d)
     state.push_back(d->qvel[i]);
   }
 
-  vector<double> control_input = active_sim->control_input_calculate(state);
+   control_input_ = active_sim->control_input_calculate(state);
 
-  if (control_input.size() != m->nu){     
+  if (control_input_.size() != m->nu){     
     throw std::invalid_argument("Control Input size as calculated from controller doesn't equal the number of actuators assigned in the mjcf model.");
   }
 
