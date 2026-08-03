@@ -18,7 +18,7 @@
         private:
 
             void control_timer_callback();
-            void joint_state_callback(const sensor_msgs::msg::JointState joint_state);
+            void joint_state_callback(const sensor_msgs::msg::JointState& joint_state_unfiltered);
 
             void controller_select(const std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Request> request,
                 std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Response> response);
@@ -26,7 +26,9 @@
 
             void set_controllers(const std::vector<std::string>& controller_list);
   
+            bool joint_state_received_{false};
 
+            vector<string> urdf_joint_ignore_list;
             
             sensor_msgs::msg::JointState joint_state_;
 

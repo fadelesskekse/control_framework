@@ -11,12 +11,18 @@ class ParallelSim : public SimBase
 
     private:
 
-      vector<double> control_input_calculate(
+
+    void timer_callback() override;
+
+
+    bool control_input_received_{false};
+
+    vector<double> control_input_calculate(
           const vector<double>& state) override;
 
     void control_input_callback(const control_framework_interfaces::msg::ControlInput & control_input);
 
-      control_framework_interfaces::msg::ControlInput control_input_;
+      control_framework_interfaces::msg::ControlInput control_input_msg;
       rclcpp::Subscription<control_framework_interfaces::msg::ControlInput>::SharedPtr control_input_subscriber_;
   
 

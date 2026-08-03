@@ -56,10 +56,6 @@ void LockStepSim::timer_callback(){
 
 vector<double> LockStepSim::control_input_calculate(const vector<double>& state)
 {
-  //  vector<double> control_input = active_controller->control_passthrough(state);
-  //  control_input_.control_input = control_input;
-   // control_input_publisher_->publish(control_input_);
-    //return control_input;
     return active_controller->control_passthrough(state);
 }
 

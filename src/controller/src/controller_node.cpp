@@ -66,7 +66,8 @@ Node(
 
     active_controller = controllers[0].get(); //set a default controller
 
-   
+    urdf_joint_ignore_list = this->get_parameter("urdf_joint_ignore").as_string_array();
+
 }
 
 void ControllerNode::controller_select(const std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Request> request,
@@ -98,12 +99,69 @@ void ControllerNode::controller_select(const std::shared_ptr<control_framework_i
 
 }
 
-void ControllerNode::joint_state_callback(const sensor_msgs::msg::JointState joint_state){
-    joint_state_ = joint_state;
+void ControllerNode::joint_state_callback(const sensor_msgs::msg::JointState& joint_state_unfiltered){
+    
+    sensor_msgs::msg::JointState joint_state_filtered;
+    //Revisit for real time issues
+
+
+    for (std::size_t i = 0;
+         i < joint_state_unfiltered.name.size();
+         ++i)
+    {
+        const std::string& joint_name =
+            joint_state_unfiltered.name[i];
+
+        const bool should_ignore =
+            std::find(
+                urdf_joint_ignore_list.begin(),
+                urdf_joint_ignore_list.end(),
+                joint_name
+            ) != urdf_joint_ignore_list.end();
+
+        if (should_ignore) {
+            continue;
+        }
+
+        joint_state_filtered.name.push_back(joint_name);
+        joint_state_filtered.position.push_back(
+            joint_state_unfiltered.position[i]
+        );
+        joint_state_filtered.velocity.push_back(
+            joint_state_unfiltered.velocity[i]
+        );
+
+        // JointState effort may legitimately be empty.
+        if (i < joint_state_unfiltered.effort.size()) {
+            joint_state_filtered.effort.push_back(
+                joint_state_unfiltered.effort[i]
+            );
+        }
+    }
+
+    if (joint_state_filtered.name.empty()) {
+        RCLCPP_WARN(
+            this->get_logger(),
+            "All received joints were filtered out"
+        );
+        return;
+    }
+
+    joint_state_ = std::move(joint_state_filtered);
+
+    // joint_state_ = joint_state;
+
+    if(joint_state_received_ == false){
+         joint_state_received_ = true;
+    }
 }
 
 
 void ControllerNode::control_timer_callback(){
+
+    if (!joint_state_received_) {
+        return;
+    }
 
     control_framework_interfaces::msg::ControlInput control_input_;
 

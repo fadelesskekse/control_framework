@@ -121,7 +121,7 @@ def _launch_setup(context, *args, **kwargs):
             name="controller_node",
             output="screen",
             condition=LaunchConfigurationEquals("sim_type", "parallel"),
-            parameters=controller_param_files + [
+            parameters=controller_param_files + [urdf_joint_ignore_file] + [
                     {
                         "controller_list": controllers,
                     }
