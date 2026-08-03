@@ -27,7 +27,8 @@ record_time(0.0),sim_start_log_time(0.0),sim_time_(0.0),raw_sim_time_(0.0),wrote
     urdf_joint_ignore_list = this->get_parameter("urdf_joint_ignore").as_string_array();
     urdf_joint_total_list = this->get_parameter("urdf_joint_total").as_string_array();
   
-
+    this->declare_parameter("sim_type", "lockstep");
+    sim_type = this->get_parameter("sim_type").as_string();
 
 }
 
@@ -51,6 +52,8 @@ void ExcelRecordLogging::log_callback()
         //In the sim, once the reset record callback is finished, the sim_timer() will 
         //reset the sim and the time will go to 0. Don't start recording until this is actually 0. 
     }
+
+    
 
     if (sim_time_ > record_time) {
         recording = false;
@@ -200,13 +203,14 @@ void ExcelRecordLogging::reset_record(const std::shared_ptr<control_framework_in
 
 
     std::string log_path =
-    package_prefix + "/../../csv_data/" + model + "/excel_record_log.csv";
+    package_prefix + "/../../csv_data/" + model + "/" + sim_type + "/excel_record_log.csv";
 
     RCLCPP_WARN(
-    this->get_logger(),
-    "model: %s, log_path: %s",
-    model.c_str(),
-    log_path.c_str()
+        this->get_logger(),
+        "model: %s, sim_type: %s, log_path: %s",
+        model.c_str(),
+        sim_type.c_str(),
+        log_path.c_str()
     );
 
     log_file_.open(
