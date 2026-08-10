@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(lockstep_sim)
+project(sim)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -18,12 +18,26 @@ find_library(MUJOCO_LIBRARY mujoco REQUIRED)
 
 
 add_executable(lockstep_sim 
-src/main.cpp
+src/main_lockstep.cpp
 src/lockstep_sim.cpp
+src/sim.cpp
+src/render.cpp)
+
+add_executable(parallel_sim
+src/main_parallel.cpp
+src/parallel_sim.cpp
+src/sim.cpp
 src/render.cpp)
 
 
 ament_target_dependencies(lockstep_sim 
+rclcpp 
+control_framework_interfaces
+sensor_msgs
+std_srvs
+)
+
+ament_target_dependencies(parallel_sim 
 rclcpp 
 control_framework_interfaces
 sensor_msgs
@@ -44,8 +58,14 @@ target_link_libraries(lockstep_sim
     glfw
     #${CMAKE_CURRENT_SOURCE_DIR}/../../install/controller/lib/libcontroller.a #THIS IS WHAT FIND_PACKAGE() DOES FOR US
     controller::controller
-   
     #"${CMAKE_CURRENT_SOURCE_DIR}/../glfw/build/src/libglfw3.a"
+)
+
+target_link_libraries(parallel_sim
+
+    ${MUJOCO_LIBRARY}
+    glfw
+    controller::controller
 )
 
 if(BUILD_TESTING)
@@ -61,7 +81,7 @@ if(BUILD_TESTING)
 endif()
 
 install(TARGETS
-lockstep_sim
+lockstep_sim parallel_sim
 DESTINATION lib/${PROJECT_NAME}
 
 )

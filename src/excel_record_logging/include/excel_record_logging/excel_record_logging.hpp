@@ -42,7 +42,6 @@ class ExcelRecordLogging : public rclcpp::Node
         vector<string> urdf_joint_total_list;
       
       
-
         std::ofstream log_file_;
         double record_time;
         double sim_start_log_time;
@@ -52,6 +51,8 @@ class ExcelRecordLogging : public rclcpp::Node
         sensor_msgs::msg::JointState joint_state_;
         control_framework_interfaces::msg::ControlInput control_input_;
         bool recording;
+
+        string sim_type;
 
 };
 

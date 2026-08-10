@@ -7,6 +7,7 @@ from launch.launch_description_sources import AnyLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 from launch.conditions import IfCondition
+from launch.conditions import IfCondition, LaunchConfigurationEquals
 
 def _split_controller_list(controller_list):
     return [
@@ -21,9 +22,26 @@ def _launch_setup(context, *args, **kwargs):
     controller_list = LaunchConfiguration("controller_list").perform(context)
     model = LaunchConfiguration("model").perform(context)
     controller_package = LaunchConfiguration("controller_package").perform(context)
-    
+    sim_type = LaunchConfiguration("sim_type").perform(context)
 
-    sim_share = get_package_share_directory("lockstep_sim")
+    sim_executables = {
+        "lockstep": "lockstep_sim",
+        "parallel": "parallel_sim",
+    }
+
+    try:
+        executable = sim_executables[sim_type]
+
+    except KeyError:
+
+        raise RuntimeError(
+            f"Unsupported sim_type {sim_type!r}. "
+            f"Valid types: {', '.join(sim_executables)}"
+        )
+ 
+
+
+    sim_share = get_package_share_directory("sim")
     urdf_joint_ignore_file = os.path.join(sim_share,
                 "config",
                 model,
@@ -63,56 +81,86 @@ def _launch_setup(context, *args, **kwargs):
 
             controller_param_files.append(controller_param_file)
 
-    sim_parameters = controller_param_files + [urdf_joint_ignore_file] + [
-        {
-            "glfw_render": int(glfw_render),
-            "controller_list": controllers,
-            #"model_name": model, #grabbed from urdf_joint_ignore_file
-        }
-    ]
+    if sim_type == "lockstep":
 
-    return [
-        Node(
-             prefix="chrt -f 98",
-            package="lockstep_sim",
-            executable="lockstep_sim",
+        sim_parameters = controller_param_files + [urdf_joint_ignore_file] + [
+            {
+                "glfw_render": int(glfw_render),
+                "controller_list": controllers,
+                #"model_name": model, #grabbed from urdf_joint_ignore_file
+            }
+        ]
+
+    elif sim_type == "parallel":
+
+        sim_parameters = [urdf_joint_ignore_file] + [
+            {
+                "glfw_render": int(glfw_render),
+                "controller_list": controllers,
+                #"model_name": model, #grabbed from urdf_joint_ignore_file
+            }
+        ]
+
+
+    actions=[
+
+            Node(
+            prefix="chrt -f 98",
+            package="sim",
+            executable=executable,
             name="sim",
             output="screen",
             arguments=["--ros-args", "--log-level", "info"],
             parameters=sim_parameters,
-        ),
+            ),
 
-        Node(
+            Node(
+            prefix="chrt -f 98",
+            package="controller",
+            executable="controller_node",
+            name="controller_node",
+            output="screen",
+            condition=LaunchConfigurationEquals("sim_type", "parallel"),
+            parameters=controller_param_files + [urdf_joint_ignore_file] + [
+                    {
+                        "controller_list": controllers,
+                    }
+                ],
+            ),
+
+            Node(
             prefix="nice -n 10",
             package="excel_record_logging",
             executable="excel_record_logging",
             name="excel_record_logging",
             output="screen",
             condition=IfCondition(LaunchConfiguration("excel_recording")),
-            parameters=[urdf_joint_ignore_file]
-        ),
-        
+            parameters=[urdf_joint_ignore_file, {"sim_type": sim_type}]
+            ),
 
+            Node(
+                prefix="nice -n 10",
+                package="foxglove_bridge",
+                executable="foxglove_bridge",
+                name="foxglove_bridge",
+                output="screen",
+            ),
 
-        Node(
-            prefix="nice -n 10",
-            package="foxglove_bridge",
-            executable="foxglove_bridge",
-            name="foxglove_bridge",
-            output="screen",
-        ),
+            ExecuteProcess(
+                cmd=[
+                    "nice", "-n", "10",
+                    "foxglove-studio",
+                    "--ozone-platform=x11",  
+                ],
 
-        ExecuteProcess(
-            cmd=[
-                "nice", "-n", "10",
-                "foxglove-studio",
-                "--ozone-platform=x11",  
-            ],
+                name="foxglove_studio",
+                output="screen",
+            ),
 
-            name="foxglove_studio",
-            output="screen",
-        ),
     ]
+
+
+    return actions
 
 
 def generate_launch_description():
@@ -123,6 +171,7 @@ def generate_launch_description():
             DeclareLaunchArgument("controller_list", default_value="lqr"),
             DeclareLaunchArgument("model", default_value="cart_pole"),
             DeclareLaunchArgument("controller_package", default_value="controller"),
+            DeclareLaunchArgument("sim_type", default_value="lockstep"),
             OpaqueFunction(function=_launch_setup),
         ]
     )

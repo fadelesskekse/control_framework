@@ -1,7 +1,7 @@
 
 //#include <chrono>
 
-#include "../include/lockstep_sim/lockstep_sim.hpp"
+#include "../include/sim/lockstep_sim.hpp"
 //#include "rclcpp/executor.hpp"
 //#include "../include/lockstep_sim/utilities.hpp"
 
@@ -45,7 +45,8 @@ int main(int argc, char * argv[])
   sim_thread.join();
   rclcpp::shutdown();
   
-  
-  return 0;
+
   */
+
+  return 0;
 }
