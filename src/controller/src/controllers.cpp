@@ -11,15 +11,12 @@ Lqr::Lqr(const std::vector<ControllerParamValue>& params)
 {}
 
 Lqr::Lqr(size_t lqr_gain_row_num_, size_t lqr_gain_col_num_, vector<double> K)
-:   BaseController(lqr_gain_row_num_ * lqr_gain_col_num_),
+:   BaseController(),
     lqr_gain_row_num(lqr_gain_row_num_),
     lqr_gain_col_num(lqr_gain_col_num_),
     lqr_gain_length(lqr_gain_row_num * lqr_gain_col_num),
-    K_(gains.data())
-{
-    gains = K;
-    K_ = gains.data();
-}
+    K_(K.data())
+{}
 
 vector<double> Lqr::control_passthrough(const vector<double>& state)
 {
@@ -62,15 +59,12 @@ Test::Test(const std::vector<ControllerParamValue>& params)
 
 
 Test::Test(size_t lqr_gain_row_num_, size_t lqr_gain_col_num_, vector<double> K)
-:   BaseController(lqr_gain_row_num_ * lqr_gain_col_num_),
+:   BaseController(),
     lqr_gain_row_num(lqr_gain_row_num_),
     lqr_gain_col_num(lqr_gain_col_num_),
     lqr_gain_length(lqr_gain_row_num * lqr_gain_col_num),
-    K_(gains.data())
-{
-    gains = K;
-    K_ = gains.data();
-}
+    K_(K.data())
+{}
 
 vector<double> Test::control_passthrough(const vector<double>& state)
 {

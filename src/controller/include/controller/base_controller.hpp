@@ -27,10 +27,10 @@
             virtual ~BaseController() = default;
 
         protected:
-            BaseController(size_t gain_count);
+            BaseController();
 
 
-            vector<double> gains;
+           
             
     };
 
