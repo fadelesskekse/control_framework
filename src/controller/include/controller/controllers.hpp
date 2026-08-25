@@ -19,7 +19,7 @@ class Lqr : public BaseController
         size_t lqr_gain_col_num;
         size_t lqr_gain_length;
 
-        double* K_;
+        std::vector<double> K_;
 
 
 };
@@ -38,7 +38,7 @@ class Test : public BaseController
         size_t lqr_gain_col_num;
         size_t lqr_gain_length;
 
-        double* K_;
+        std::vector<double> K_;
 
 
 };
