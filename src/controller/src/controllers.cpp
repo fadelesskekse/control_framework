@@ -17,7 +17,6 @@ Lqr::Lqr(size_t lqr_gain_row_num_, size_t lqr_gain_col_num_, vector<double> K)
     lqr_gain_length(lqr_gain_row_num * lqr_gain_col_num),
     K_(K)
 {
-
 }
 
 vector<double> Lqr::control_passthrough(const vector<double>& state)

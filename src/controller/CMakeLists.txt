@@ -12,6 +12,69 @@ find_package(rclcpp REQUIRED)
 find_package(control_framework_interfaces REQUIRED)
 find_package(sensor_msgs REQUIRED)
 
+
+#####Start C Code yaml based file generation########
+
+find_package(Python3 REQUIRED COMPONENTS Interpreter)
+
+file(GLOB_RECURSE CONTROLLER_YAML_FILES
+    CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/config/*.yaml"
+)
+
+set(GENERATED_CONTROLLER_FILES)
+
+foreach(yaml_file IN LISTS CONTROLLER_YAML_FILES)
+    get_filename_component(
+        controller_name
+        "${yaml_file}"
+        NAME_WE
+    )
+
+    get_filename_component(
+        model_directory
+        "${yaml_file}"
+        DIRECTORY
+    )
+
+    set(generated_header
+        "${model_directory}/${controller_name}_config.h"
+    )
+
+    set(generated_source
+        "${model_directory}/${controller_name}_config.c"
+    )
+
+    add_custom_command(
+        OUTPUT
+            "${generated_header}"
+            "${generated_source}"
+        COMMAND
+            "${Python3_EXECUTABLE}"
+            "${CMAKE_CURRENT_SOURCE_DIR}/scripts/generate_controller_config.py"
+            --input "${yaml_file}"
+            --output-dir "${model_directory}"
+        DEPENDS
+            "${yaml_file}"
+            "${CMAKE_CURRENT_SOURCE_DIR}/scripts/generate_controller_config.py"
+        COMMENT
+            "Generating C configuration from ${yaml_file}"
+        VERBATIM
+    )
+
+    list(APPEND GENERATED_CONTROLLER_FILES
+        "${generated_header}"
+        "${generated_source}"
+    )
+endforeach()
+
+add_custom_target(
+    generate_controller_configs ALL
+    DEPENDS ${GENERATED_CONTROLLER_FILES}
+)
+
+#####End C Code yaml based file generation########
+
 add_library(controller 
 src/base_controller.cpp
 src/controllers.cpp
