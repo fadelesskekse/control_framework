@@ -38,7 +38,7 @@ LockStepSim::LockStepSim() : SimBase("lockstep_sim", rclcpp::NodeOptions().autom
 
     active_controller = controllers[0].get(); //set a default controller
 
-    mj_resetDataKeyframe(m,d,default_init_pos_keyframe);compile
+    mj_resetDataKeyframe(m,d,default_init_pos_keyframe);
     mj_forward(m,d);
 }
 
