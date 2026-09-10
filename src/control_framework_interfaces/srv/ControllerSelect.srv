@@ -1,3 +1,12 @@
+uint8 CONTROLLER_TYPE_NONE=0
+uint8 CONTROLLER_TYPE_LQR=1
+uint8 CONTROLLER_TYPE_PID=2
+uint8 CONTROLLER_TYPE_TEST=3
+
+#IMPORTANT: The enum above needs to have the same ordering as defined in 
+#controllers.h
+
+uint8 controller_type
 string controller_name
 ---
 bool success

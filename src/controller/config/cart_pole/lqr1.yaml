@@ -1,0 +1,13 @@
+sim:
+  ros__parameters:
+    lqr1_param_list: ["lqr1_gain_row_num", "lqr1_gain_col_num", "lqr1_K"]
+    lqr1_gain_row_num: 1
+    lqr1_gain_col_num: 4
+    lqr1_K: [-8.82,-13.24,65.9,12.0]
+
+controller_node:
+  ros__parameters:
+    lqr1_param_list: ["lqr1_gain_row_num", "lqr1_gain_col_num", "lqr1_K"]
+    lqr1_gain_row_num: 1
+    lqr1_gain_col_num: 4
+    lqr1_K: [-8.82,-13.24,65.9,12.0]

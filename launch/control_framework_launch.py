@@ -2,7 +2,7 @@ import os
 
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription, OpaqueFunction
+from launch.actions import DeclareLaunchArgument, ExecuteProcess, IncludeLaunchDescription, OpaqueFunction, TimerAction
 from launch.launch_description_sources import AnyLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
@@ -23,10 +23,45 @@ def _launch_setup(context, *args, **kwargs):
     model = LaunchConfiguration("model").perform(context)
     controller_package = LaunchConfiguration("controller_package").perform(context)
     sim_type = LaunchConfiguration("sim_type").perform(context)
+    controller_execution_type = LaunchConfiguration("controller_execution_type").perform(context)
+
+    microros_workspace = os.path.expanduser(
+    "~/.local/repos/microros_ws"
+)
+
+    zephyr_executable = os.path.join(
+        microros_workspace,
+        "firmware",
+        "build",
+        "zephyr",
+        "zephyr.exe",
+    )
+
+    if (
+        controller_execution_type == "hil" and
+        not os.path.isfile(zephyr_executable)
+    ):
+        raise RuntimeError(
+            "Zephyr emulator does not exist: "
+            f"{zephyr_executable}. Build the firmware first."
+        )
+
+    valid_controller_executions = {
+        "sil",
+        "hil",
+    }
+
+    if controller_execution_type not in valid_controller_executions:
+        raise RuntimeError(
+            f"Unsupported controller_execution "
+            f"{controller_execution_type!r}. "
+            f"Valid values: "
+            f"{', '.join(valid_controller_executions)}"
+        )
 
     sim_executables = {
         "lockstep": "lockstep_sim",
-        "parallel": "parallel_sim",
+        "parallel" : "parallel_sim",
     }
 
     try:
@@ -114,19 +149,19 @@ def _launch_setup(context, *args, **kwargs):
             parameters=sim_parameters,
             ),
 
-            Node(
-            prefix="chrt -f 98",
-            package="controller",
-            executable="controller_node",
-            name="controller_node",
-            output="screen",
-            condition=LaunchConfigurationEquals("sim_type", "parallel"),
-            parameters=controller_param_files + [urdf_joint_ignore_file] + [
-                    {
-                        "controller_list": controllers,
-                    }
-                ],
-            ),
+            # Node(
+            # prefix="chrt -f 98",
+            # package="controller",
+            # executable="controller_node",
+            # name="controller_node",
+            # output="screen",
+            # condition=LaunchConfigurationEquals("sim_type", "parallel"),
+            # parameters=controller_param_files + [urdf_joint_ignore_file] + [
+            #         {
+            #             "controller_list": controllers,
+            #         }
+            #     ],
+            # ),
 
             Node(
             prefix="nice -n 10",
@@ -159,6 +194,67 @@ def _launch_setup(context, *args, **kwargs):
 
     ]
 
+    if (
+        sim_type == "parallel" and
+        controller_execution_type == "sil"
+    ):
+        actions.append(
+            Node(
+                prefix="chrt -f 98",
+                package="controller",
+                executable="controller_node",
+                name="controller_node",
+                output="screen",
+                parameters=(
+                    controller_param_files +
+                    [urdf_joint_ignore_file] +
+                    [
+                        {
+                            "controller_list": controllers,
+                        }
+                    ]
+                ),
+            )
+        )
+
+    if (
+        sim_type == "parallel" and
+        controller_execution_type == "hil"
+    ):
+        actions.extend([
+            Node(
+                package="micro_ros_agent",
+                executable="micro_ros_agent",
+                name="micro_ros_agent",
+                output="screen",
+                prefix="chrt -f 98",
+                arguments=[
+                    "udp4",
+                    "--port",
+                    "8888",
+                ],
+            ),
+
+        TimerAction(
+            period=1.0,
+            actions=[
+                ExecuteProcess(
+                    cmd=[
+                        "chrt",
+                        "-f",
+                        "98",
+                        zephyr_executable,
+                    ],
+                    name="zephyr_controller_emulator",
+                    output="screen",
+                    emulate_tty=True,
+                ),
+            ],
+        ),
+        ])
+
+    
+
 
     return actions
 
@@ -172,6 +268,8 @@ def generate_launch_description():
             DeclareLaunchArgument("model", default_value="cart_pole"),
             DeclareLaunchArgument("controller_package", default_value="controller"),
             DeclareLaunchArgument("sim_type", default_value="lockstep"),
+            DeclareLaunchArgument("controller_execution_type", default_value="sil"),
+
             OpaqueFunction(function=_launch_setup),
         ]
     )

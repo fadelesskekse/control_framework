@@ -5,6 +5,61 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+find_package(Python3 REQUIRED COMPONENTS Interpreter)
+
+file(GLOB_RECURSE JOINT_FILTER_YAML_FILES
+    CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/config/*/urdf_joint_ignore.yaml"
+)
+
+set(GENERATED_JOINT_FILTER_FILES)
+
+foreach(yaml_file IN LISTS JOINT_FILTER_YAML_FILES)
+    get_filename_component(
+        model_directory
+        "${yaml_file}"
+        DIRECTORY
+    )
+
+    set(
+        generated_header
+        "${model_directory}/joint_filter_config.h"
+    )
+
+    set(
+        generated_source
+        "${model_directory}/joint_filter_config.c"
+    )
+
+    add_custom_command(
+        OUTPUT
+            "${generated_header}"
+            "${generated_source}"
+        COMMAND
+            "${Python3_EXECUTABLE}"
+            "${CMAKE_CURRENT_SOURCE_DIR}/scripts/generate_joint_filter_config.py"
+            --input "${yaml_file}"
+            --output-dir "${model_directory}"
+        DEPENDS
+            "${yaml_file}"
+            "${CMAKE_CURRENT_SOURCE_DIR}/scripts/generate_joint_filter_config.py"
+        COMMENT
+            "Generating joint filter from ${yaml_file}"
+        VERBATIM
+    )
+
+    list(APPEND
+        GENERATED_JOINT_FILTER_FILES
+        "${generated_header}"
+        "${generated_source}"
+    )
+endforeach()
+
+add_custom_target(
+    generate_joint_filter_configs ALL
+    DEPENDS ${GENERATED_JOINT_FILTER_FILES}
+)
+
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)

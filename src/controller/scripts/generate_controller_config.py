@@ -106,6 +106,7 @@ def generate_files(
     source_path = output_directory / f"{controller_name}_config.c"
 
     symbol = f"{model_name}_{controller_name}"
+    alias_prefix = f"{controller_name}_CONFIG".upper()
     guard = (
         f"CONTROLLER_GENERATED_"
         f"{model_name}_{controller_name}_CONFIG_H"
@@ -126,6 +127,11 @@ extern "C" {{
 extern const size_t {symbol}_gain_rows;
 extern const size_t {symbol}_gain_columns;
 extern const double {symbol}_gain_matrix[{gain_length}];
+
+#define {alias_prefix}_GAIN_ROWS {symbol}_gain_rows
+#define {alias_prefix}_GAIN_COLUMNS {symbol}_gain_columns
+#define {alias_prefix}_GAIN_MATRIX {symbol}_gain_matrix
+
 
 #ifdef __cplusplus
 }}
