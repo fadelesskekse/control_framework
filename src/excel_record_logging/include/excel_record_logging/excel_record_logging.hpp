@@ -4,6 +4,9 @@
 #include <fstream>
 #include <iomanip>
 
+#include <filesystem>
+#include <system_error>
+
 #include "rclcpp/rclcpp.hpp"
 #include "ament_index_cpp/get_package_prefix.hpp"
 #include "sensor_msgs/msg/joint_state.hpp"
@@ -53,6 +56,7 @@ class ExcelRecordLogging : public rclcpp::Node
         bool recording;
 
         string sim_type;
+        string controller_execution_type;
 
 };
 

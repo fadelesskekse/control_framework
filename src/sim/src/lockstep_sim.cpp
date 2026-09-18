@@ -74,6 +74,8 @@ void LockStepSim::controller_select(const std::shared_ptr<control_framework_inte
 
           response->success = true;
           response->message = "Controller changed to: " + active_controller_name_request;
+          mj_resetDataKeyframe(m, d, default_init_pos_keyframe);
+          mj_forward(m, d);
 
           return;
         }
@@ -85,6 +87,9 @@ void LockStepSim::controller_select(const std::shared_ptr<control_framework_inte
           this->get_logger(),
           "Not a valid Controller Requested, Controller Is not Changed"
         );
+
+    mj_resetDataKeyframe(m, d, default_init_pos_keyframe);
+    mj_forward(m, d);
 
 }
 

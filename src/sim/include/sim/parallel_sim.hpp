@@ -2,6 +2,7 @@
 #define PARALLEL_SIM_NODE_HPP_
 
 #include "sim.hpp"
+#include "control_framework_interfaces/srv/controller_select.hpp"
 
 class ParallelSim : public SimBase
 {
@@ -20,11 +21,15 @@ class ParallelSim : public SimBase
     vector<double> control_input_calculate(
           const vector<double>& state) override;
 
+    void controller_select(const std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Request> request,
+          std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Response> response);
+
+
     void control_input_callback(const control_framework_interfaces::msg::ControlInput & control_input);
 
       control_framework_interfaces::msg::ControlInput control_input_msg;
       rclcpp::Subscription<control_framework_interfaces::msg::ControlInput>::SharedPtr control_input_subscriber_;
-  
+     
 
 };
   

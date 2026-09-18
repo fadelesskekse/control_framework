@@ -19,6 +19,10 @@ record_time(0.0),sim_start_log_time(0.0),sim_time_(0.0),raw_sim_time_(0.0),wrote
     log_timer_ = this->create_wall_timer(
       10ms, std::bind(&ExcelRecordLogging::log_callback, this));
 
+    this->declare_parameter("controller_execution_type", "sil");
+
+    controller_execution_type = this->get_parameter("controller_execution_type").as_string();
+        
     this->declare_parameter("model_name", "");
     this->declare_parameter<vector<string>>("urdf_joint_total", vector<string> {});
 	this->declare_parameter<vector<string>>("urdf_joint_ignore", vector<string> {});
@@ -202,8 +206,32 @@ void ExcelRecordLogging::reset_record(const std::shared_ptr<control_framework_in
 
 
 
-    std::string log_path =
-    package_prefix + "/../../csv_data/" + model + "/" + sim_type + "/excel_record_log.csv";
+   const std::string log_directory =
+    package_prefix + "/../../csv_data/" + model + "/" +
+    sim_type + "_" + controller_execution_type;
+
+    std::error_code directory_error;
+    std::filesystem::create_directories(
+        log_directory,
+        directory_error
+    );
+
+    if (directory_error) {
+        response->success = false;
+        response->message =
+            "Failed to create CSV directory: " +
+            directory_error.message();
+
+        RCLCPP_ERROR(
+            this->get_logger(),
+            "%s",
+            response->message.c_str()
+        );
+        return;
+    }
+
+    const std::string log_path =
+        log_directory + "/excel_record_log.csv";
 
     RCLCPP_WARN(
         this->get_logger(),

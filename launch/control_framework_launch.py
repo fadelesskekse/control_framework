@@ -170,7 +170,7 @@ def _launch_setup(context, *args, **kwargs):
             name="excel_record_logging",
             output="screen",
             condition=IfCondition(LaunchConfiguration("excel_recording")),
-            parameters=[urdf_joint_ignore_file, {"sim_type": sim_type}]
+            parameters=[urdf_joint_ignore_file, {"sim_type": sim_type}, {"controller_execution_type" : controller_execution_type}]
             ),
 
             Node(

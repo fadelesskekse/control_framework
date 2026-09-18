@@ -97,7 +97,7 @@ def generate_launch_description():
         # A value of zero disables real-time scheduling.
         DeclareLaunchArgument(
             "realtime_priority",
-            default_value="0",
+            default_value="97",
         ),
 
         OpaqueFunction(

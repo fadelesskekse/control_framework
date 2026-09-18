@@ -204,10 +204,16 @@ void SimBase::reset_to_custom_initial_position(const std::shared_ptr<std_srvs::s
           std::shared_ptr<std_srvs::srv::Trigger::Response> response)
 {
 
+  control_input_.assign(
+    static_cast<std::size_t>(m->nu),
+    0.0
+  );
+
  // Set model position to intiial position parameter
   mj_resetDataKeyframe(m, d, custom_init_pos_keyframe);
   mj_forward(m, d);
 
+ 
   response->success = 1;
   response->message = "Model Set to Custom Initial Position";
 
@@ -222,6 +228,10 @@ void SimBase::reset_to_custom_initial_position(const std::shared_ptr<std_srvs::s
 void SimBase::reset_to_default_initial_position(const std::shared_ptr<std_srvs::srv::Trigger::Request> request,
           std::shared_ptr<std_srvs::srv::Trigger::Response> response)
 {
+  control_input_.assign(
+    static_cast<std::size_t>(m->nu),
+    0.0
+ );
 
  // Set model position to intiial position parameter
   mj_resetDataKeyframe(m, d, default_init_pos_keyframe);

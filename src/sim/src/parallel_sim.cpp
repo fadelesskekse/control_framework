@@ -5,8 +5,31 @@
 ParallelSim::ParallelSim() : SimBase("parallel_sim",rclcpp::NodeOptions().automatically_declare_parameters_from_overrides(true))
 {
     control_input_subscriber_ = this->create_subscription<control_framework_interfaces::msg::ControlInput>("control_input", 10,std::bind(&ParallelSim::control_input_callback, this, _1)); //Need custom msg
-   
+   // swap_controllers_service = this->create_service<control_framework_interfaces::srv::ControllerSelect>("controller_select", std::bind(&ParallelSim::controller_select, this, _1, _2));
+      
 }  
+
+
+// void ParallelSim::controller_select(const std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Request> request,
+//           std::shared_ptr<control_framework_interfaces::srv::ControllerSelect::Response> response)
+// {
+ 
+//     control_input_msg.control_input.assign(
+//     static_cast<std::size_t>(m->nu),
+//     0.0
+//     );
+
+//     control_input_.assign(
+//         static_cast<std::size_t>(m->nu),
+//         0.0
+//     );
+//     mj_resetDataKeyframe(m, d, default_init_pos_keyframe);
+//     mj_forward(m, d);
+
+//     response->success = true;
+//     response->message = "Sim Reset to Default IC";
+  
+// }
 
 void ParallelSim::timer_callback(){
 
